@@ -6,29 +6,25 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>WTFPL</project_license>
   <developer_name>Hydrus Network</developer_name>
-  <url type="homepage">https://hydrusnetwork.github.io</url>
+  <url type="homepage">https://hydrusnetwork.github.io/hydrus/</url>
   <summary>A booru-like media organizer for the desktop</summary>
   <description>
     <p>The hydrus network client is a desktop application written for Anonymous and other internet enthusiasts with large media collections. It organises your files into an internal database and browses them with tags instead of folders, a little like a booru on your desktop. Tags and files can be anonymously shared through custom servers that any user may run. Everything is free, nothing phones home, and the source code is included with the release. It is developed mostly for Windows, but builds for Linux and macOS are available (perhaps with some limitations, depending on your situation).</p>
     <p>The software is constantly being improved. I try to put out a new release every Wednesday by 8pm Eastern.</p>
-    <p>
-        Currently importable filetypes are:
-        <ul>
-            <li>images - jpg, gif (including animated), png (including animated!), tiff, webp, bmp</li>
-            <li>video - webm, mp4, mpeg, avi, mov, mkv, flv, wmv</li>
-            <li>audio - mp3, flac, ogg, wma</li>
-            <li>misc - swf, pdf, psd, zip, rar, 7z</li>
-        </ul>
-    </p>
-    <p>
-        The client can download files and parse tags from a number of websites, including by default:
-        <ul>
-            <li>various imageboards, with a thread watcher</li>
-            <li>the popular boorus</li>
-            <li>gallery sites like deviant art, and pixiv</li>
-            <li>tumblr and twitter</li>
-        </ul>
-    </p>
+    <p>Currently importable filetypes are:</p>
+    <ul>
+        <li>images - jpg, gif (including animated), png (including animated!), tiff, webp, bmp</li>
+        <li>video - webm, mp4, mpeg, avi, mov, mkv, flv, wmv</li>
+        <li>audio - mp3, flac, ogg, wma</li>
+        <li>misc - swf, pdf, psd, zip, rar, 7z</li>
+    </ul>
+    <p>The client can download files and parse tags from a number of websites, including by default:</p>
+    <ul>
+        <li>various imageboards, with a thread watcher</li>
+        <li>the popular boorus</li>
+        <li>gallery sites like deviant art, and pixiv</li>
+        <li>tumblr and twitter</li>
+    </ul>
     <p>And can be extended to download from more locations using easily shareable user-made downloaders. It can also be set to 'subscribe' to any gallery search, repeating it every few days to keep up with new results.</p>
     <p>The program's emphasis is on your freedom. There is no DRM, no spying, no censorship. The program never phones home.</p>
   </description>
