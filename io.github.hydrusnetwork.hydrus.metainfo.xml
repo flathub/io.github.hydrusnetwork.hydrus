@@ -52,6 +52,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="496" date="2022-08-17"/>
     <release version="495" date="2022-08-10"/>
   </releases>
 </component>
