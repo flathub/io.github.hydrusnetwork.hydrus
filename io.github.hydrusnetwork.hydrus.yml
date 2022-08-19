@@ -3,6 +3,9 @@ app-id: io.github.hydrusnetwork.hydrus
 runtime: org.kde.Platform
 runtime-version: '6.3'
 sdk: org.kde.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.llvm14
 
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: '6.3'
@@ -26,7 +29,7 @@ finish-args:
   - --filesystem=host
 
 modules:
-  - python3-requests.json
+  - python3-sources.json
 
   - name: ffmpeg
     config-opts:

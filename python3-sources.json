@@ -1,5 +1,5 @@
 {
-    "name": "python3-req",
+    "name": "python3-sources",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
@@ -26,13 +26,13 @@
             "name": "python3-cbor2",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cbor2\" --no-build-isolation"
+                "pip3 install --verbose --use-deprecated=legacy-resolver --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cbor2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b4/6c/02b19eeafb7161f70516d5caf385f9d27eab2d20abd4d462ccd38fc2eecf/cbor2-5.4.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "6fab0e00c28305db59f7005150447d08dd13da6a82695a2132c28beba590fd2c"
+                    "url": "https://files.pythonhosted.org/packages/9d/c9/cfa5c35a62642a19c14bf9a12dfbf0ee134466be1f062df2258a2ec2f2f7/cbor2-5.4.3.tar.gz",
+                    "sha256": "62b863c5ee6ced4032afe948f3c1484f375550995d3b8498145237fe28e546c2"
                 }
             ]
         },
@@ -122,8 +122,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f1/34/d89ba1e18c2c1720bfd6ec69d1861f3d6bcc6e7a845b28b983f13297e948/lxml-4.9.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl",
-                    "sha256": "edffbe3c510d8f4bf8640e02ca019e48a9b72357318383ca60e3330c23aaffc7"
+                    "url": "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz",
+                    "sha256": "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
                 }
             ]
         },
@@ -136,8 +136,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/a1/b64159546cbb9ace0e419a2ea6e35496df4d9cdc72c1a3c878d7eaf59c5f/lz4-4.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "d2b18a6d6d9071c03dbf9e30bbe22e4476f24f1a4d73b1e975605ad3ce725e6c"
+                    "url": "https://files.pythonhosted.org/packages/65/8d/4d913798e17735839c7666e81985bd230f739927d066890b511a78c542d8/lz4-4.0.2.tar.gz",
+                    "sha256": "083b7172c2938412ae37c3a090250bfdd9e4a6e855442594f86c3608ed12729b"
                 }
             ]
         },
@@ -164,8 +164,27 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8d/d6/cc2330e512936a904a4db1629b71d697fb309115f6d2ede94d183cdfe185/numpy-1.23.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "a35c4e64dfca659fe4d0f1421fc0f05b8ed1ca8c46fb73d9e5a7f175f85696bb"
+                    "url": "https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz",
+                    "sha256": "b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01"
+                }
+            ]
+        },
+        {
+            "name": "python3-scikit-build",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"scikit-build==0.15.0\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/e3/36/34551e5035757ba17582eb530402a16612ec0446f67f3c7d509f6e9d8e63/scikit_build-0.15.0-py2.py3-none-any.whl",
+                    "sha256": "14ae341652ac42eabd1e830bccfec9b2551a4d9c34329a5580591fdeb86b23a4"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/e1/54/d08d1ad53788515392bec14d2d6e8c410bffdc127780a9a4aa8e6854d502/distro-1.7.0-py3-none-any.whl",
+                    "sha256": "d596311d707e692c2160c37807f83e3820c5d539d5a83e87cfb6babd8ba3a06b"
                 }
             ]
         },
@@ -173,18 +192,18 @@
             "name": "python3-opencv-python-headless",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"opencv-python-headless>=4.0.0,<=4.5.3.56\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"opencv-python-headless<=4.6.0.66,>=4.0.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8d/d6/cc2330e512936a904a4db1629b71d697fb309115f6d2ede94d183cdfe185/numpy-1.23.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "a35c4e64dfca659fe4d0f1421fc0f05b8ed1ca8c46fb73d9e5a7f175f85696bb"
+                    "url": "https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz",
+                    "sha256": "b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/11/52052411eebc30773b997c21be637b7a78dec1c1d440ad08b5bd870088fb/opencv_python_headless-4.5.3.56-cp39-cp39-manylinux2014_x86_64.whl",
-                    "sha256": "c7a1d365f2f8ce413847479a2d39bee2be6d5027119b08c4c5f6594f1f57673d"
+                    "url": "https://files.pythonhosted.org/packages/fe/5d/f99eb2182c6f7bf9647babe6f86f5e397f6be07a2035bbdf272e7cb16cd4/opencv-python-headless-4.6.0.66.tar.gz",
+                    "sha256": "d5291d7e10aa2c19cab6fd86f0d61af8617290ecd2d7ffcb051e446868d04cc5"
                 }
             ]
         },
@@ -197,8 +216,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/01/61/3ff85fb4bb596ce3d223c8fcf93c8df5c12bc8899dfb4fb3cb1c5b20dd5f/Pillow-9.2.0-cp39-cp39-manylinux_2_28_x86_64.whl",
-                    "sha256": "13b725463f32df1bfeacbf3dd197fb358ae8ebcd8c5548faa75126ea425ccb60"
+                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
+                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
                 }
             ]
         },
@@ -211,8 +230,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/1f/f14225bda76417ab9bd808ff21d5cd59d5435a9796ca09b34d4cb0edcd88/psutil-5.9.1-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "645bd4f7bb5b8633803e0b6746ff1628724668681a434482546887d22c7a9537"
+                    "url": "https://files.pythonhosted.org/packages/d6/de/0999ea2562b96d7165812606b18f7169307b60cd378bc29cf3673322c7e9/psutil-5.9.1.tar.gz",
+                    "sha256": "57f1819b5d9e95cdfb0c881a8a5b7d542ed0b7c522d575706a80bedc848c8954"
                 }
             ]
         },
@@ -231,10 +250,36 @@
             ]
         },
         {
-            "name": "python3-pyOpenSSL",
+            "name": "python3-setuptools-rust",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyOpenSSL>=19.1.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"setuptools-rust<=1.5.0\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/be/19/a9356aac40b2432cd159264be98843af062877ff27422cdd7cf023828835/setuptools_rust-1.3.0-py3-none-any.whl",
+                    "sha256": "7ead7398d6b6fe70a7743408dc2f7257dbcb8ca9b2d7a9f8b281c09bd86f36a5"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl",
+                    "sha256": "de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177"
+                }
+            ]
+        },
+        {
+            "name": "python3-cryptography",
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/python3-cryptography/cargo",
+                    "CARGO_NET_OFFLINE": "true"
+                }
+            },
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cryptography>=37.0.4\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -244,14 +289,24 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/86/3ca57cddfa0419f6a95d1c8478f8f622ba597e3581fd501bbb915b20eb75/cffi-1.15.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "5d598b938678ebf3c67377cdd45e09d431369c3b1a5b331058c338e201f12b27"
+                    "url": "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz",
+                    "sha256": "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/86/82/5e81dbf8a94c011e5240595149626d92e78a110f01311face1ab08431566/cryptography-37.0.4-cp36-abi3-manylinux_2_24_x86_64.whl",
-                    "sha256": "b7f8dd0d4c1f21759695c05a5ec8536c12f31611541f8904083f3dc582604280"
+                    "url": "https://files.pythonhosted.org/packages/89/d9/5fcd312d5cce0b4d7ee8b551a0ea99e4ea9db0fdbf6dd455a19042e3370b/cryptography-37.0.4.tar.gz",
+                    "sha256": "63f9c17c0e2474ccbebc9302ce2f07b55b3b3fcb211ded18a42d5764f5c10a82"
                 },
+                "cargo-sources.json"
+            ]
+        },
+        {
+            "name": "python3-pyOpenSSL",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyOpenSSL>=19.1.0\" --no-build-isolation"
+            ],
+            "sources": [
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/d5/9f/9c0e3288b85f907a008f9d31318b0e4de31b2f67724a8745e633741f609c/pyOpenSSL-22.0.0-py2.py3-none-any.whl",
@@ -261,31 +316,36 @@
         },
         {
             "name": "python3-PySide6",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6_essentials\" --no-build-isolation"
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DBUILD_TESTS=OFF"
             ],
+            "build-options":{
+                "append-path": "/usr/lib/sdk/llvm14/bin",
+                "prepend-ld-library-path": "/usr/lib/sdk/llvm14/lib",
+                "ldflags":"-pthread -lpthread"
+            },
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4c/a1/0562e98d39347530af4b03327bf66dde4a51f2420b64b8e6bfde005d6e70/PySide6_Essentials-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "e27962beb2cc45fe13a1a1c24a454c3c3c3c3082c4a84bc5dcf6b306979ba013"
-                }
-            ],
-            "modules": [
+                    "type": "archive",
+                    "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.3.1-src/pyside-setup-opensource-src-6.3.1.zip",
+                    "sha256": "1fb30399dc7fb3198f1db0f9673d379d373750c02608dd9d49784bd8cc5c5973"
+                },
                 {
-                    "name": "python3-shiboken6",
-                    "buildsystem": "simple",
-                    "build-commands": [
-                        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"shiboken6\" --no-build-isolation"
-                    ],
-                    "sources": [
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/10/5b/f7b2b492bfeaf9cefce98a1e31b75af0cf316b7988f634ef824bd58d7d00/shiboken6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl",
-                            "sha256": "aad9aa8e7ecd3c889cc789e41abf3990101126b5b02edfcf87f1ef331c9dc45a"
-                        }
+                    "type": "shell",
+                    "commands": [
+                        "mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787",
+                        "cp /usr/include/pthread.h /app/include/qt6tmp/pthread.h",
+                        "sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake",
+
+                        "sed -i $'s/\r$//' sources/pyside6/cmake/Macros/PySideModules.cmake # replace CRLF to LF to apply patch for https://bugreports.qt.io/broswse/PYSIDE-2002"
                     ]
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/PYSIDE-2002.patch"
                 }
             ]
         },
@@ -326,8 +386,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/12/fc/a4d5a7554e0067677823f7265cb3ae22aed8a238560b5133b58cda252dad/PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl",
-                    "sha256": "40527857252b61eacd1d9af500c3337ba8deb8fc298940291486c465c8b46ec0"
+                    "url": "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz",
+                    "sha256": "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
                 }
             ]
         },
@@ -417,8 +477,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/86/3ca57cddfa0419f6a95d1c8478f8f622ba597e3581fd501bbb915b20eb75/cffi-1.15.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "5d598b938678ebf3c67377cdd45e09d431369c3b1a5b331058c338e201f12b27"
+                    "url": "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz",
+                    "sha256": "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
                 },
                 {
                     "type": "file",
@@ -432,8 +492,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/86/82/5e81dbf8a94c011e5240595149626d92e78a110f01311face1ab08431566/cryptography-37.0.4-cp36-abi3-manylinux_2_24_x86_64.whl",
-                    "sha256": "b7f8dd0d4c1f21759695c05a5ec8536c12f31611541f8904083f3dc582604280"
+                    "url": "https://files.pythonhosted.org/packages/89/d9/5fcd312d5cce0b4d7ee8b551a0ea99e4ea9db0fdbf6dd455a19042e3370b/cryptography-37.0.4.tar.gz",
+                    "sha256": "63f9c17c0e2474ccbebc9302ce2f07b55b3b3fcb211ded18a42d5764f5c10a82"
                 },
                 {
                     "type": "file",
@@ -461,8 +521,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/77/47/d1c9fe73ee5a4d0a2e26e7e58b5d3abbf84e546b37c61902d1b03d4cc889/zope.interface-5.4.0-cp39-cp39-manylinux2010_x86_64.whl",
-                    "sha256": "5208ebd5152e040640518a77827bdfcc73773a15a33d6644015b763b9c9febc1"
+                    "url": "https://files.pythonhosted.org/packages/ae/58/e0877f58daa69126a5fb325d6df92b20b77431cd281e189c5ec42b722f58/zope.interface-5.4.0.tar.gz",
+                    "sha256": "5dba5f530fec3f0988d83b78cc591b58c0b6eb8431a85edd1569a0539a8a5a0e"
                 },
                 {
                     "type": "file",

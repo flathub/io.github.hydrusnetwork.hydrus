@@ -1,0 +1,25 @@
+diff --git a/sources/pyside6/cmake/Macros/PySideModules.cmake b/sources/pyside6/cmake/Macros/PySideModules.cmake
+index d722b46..bd60582 100644
+--- a/sources/pyside6/cmake/Macros/PySideModules.cmake
++++ b/sources/pyside6/cmake/Macros/PySideModules.cmake
+@@ -230,13 +230,13 @@ macro(create_pyside_module)
+             list(APPEND generate_pyi_options "--quiet")
+         endif()
+ 
+-        add_custom_target("${module_NAME}_pyi" ALL
+-                          COMMAND
+-                              ${CMAKE_COMMAND} -E env ${ld_prefix}
+-                              "${SHIBOKEN_PYTHON_INTERPRETER}"
+-                              "${CMAKE_CURRENT_SOURCE_DIR}/../support/generate_pyi.py"
+-                              ${generate_pyi_options})
+-        add_dependencies("${module_NAME}_pyi" ${module_NAME})
++        # add_custom_target("${module_NAME}_pyi" ALL
++        #                  COMMAND
++        #                      ${CMAKE_COMMAND} -E env ${ld_prefix}
++        #                      "${SHIBOKEN_PYTHON_INTERPRETER}"
++        #                      "${CMAKE_CURRENT_SOURCE_DIR}/../support/generate_pyi.py"
++        #                      ${generate_pyi_options})
++        # add_dependencies("${module_NAME}_pyi" ${module_NAME})
+ 
+         file(GLOB hinting_stub_files
+              RELATIVE
