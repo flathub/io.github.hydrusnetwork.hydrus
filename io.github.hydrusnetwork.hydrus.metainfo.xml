@@ -27,6 +27,11 @@
     </ul>
     <p>And can be extended to download from more locations using easily shareable user-made downloaders. It can also be set to 'subscribe' to any gallery search, repeating it every few days to keep up with new results.</p>
     <p>The program's emphasis is on your freedom. There is no DRM, no spying, no censorship. The program never phones home.</p>
+    <p>To pass arguments (e.g. change database location) : </p>
+    <ul>
+      <li>From shell : flatpak run --command=hydrus_client io.github.hydrusnetwork.hydrus --db_dir=/home/ben/.local/share/hydrus/db</li>
+      <li>From desktop entry : Exec=/usr/bin/flatpak run --command=hydrus_client --file-forwarding io.github.hydrusnetwork.hydrus --db_dir=~/path/to/db  @@u %U @@</li>
+    </ul>
   </description>
   <content_rating type="oars-1.1"/>
   <screenshots>
