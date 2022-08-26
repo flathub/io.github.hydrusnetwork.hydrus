@@ -103,7 +103,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v496
+        tag: v497
       - type: file
         path: io.github.hydrusnetwork.hydrus.128.png
       - type: file
