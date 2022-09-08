@@ -192,7 +192,7 @@
             "name": "python3-opencv-python-headless",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"opencv-python-headless<=4.6.0.66,>=4.0.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"opencv-python-headless>=4.0.0\" --no-build-isolation"
             ],
             "sources": [
                 {
