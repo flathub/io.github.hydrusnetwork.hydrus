@@ -41,8 +41,8 @@ modules:
       - --disable-ffplay
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-5.1.tar.gz
-        sha256: c0b2ec290abd5ad31b5e0a8c455c34f90306ecd2ede6ace5db5ca3a07f3b842f
+        url: https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.gz
+        sha256: 87fe8defa37ce5f7449e36047171fed5e4c3f4bb73eaccea8c954ee81393581c
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -64,10 +64,10 @@ modules:
     sources:
       - type: archive
         url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.34.1.tar.gz
-        sha256: '32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746'
+        sha256: 32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746
       - type: file
-        url: 'https://waf.io/waf-2.0.21'
-        sha256: '7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306'
+        url: https://waf.io/waf-2.0.21
+        sha256: 7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306
         dest-filename: waf
     modules:
       - name: libass
@@ -76,11 +76,11 @@ modules:
           - /lib/*.la
           - /lib/pkgconfig
         config-opts:
-          - '--disable-static'
+          - --disable-static
         sources:
           - type: archive
-            url: 'https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.gz'
-            sha256: '9cbddee5e8c87e43a5fe627a19cd2aa4c36552156eb4edcf6c5a30bd4934fe58'
+            url: https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.gz
+            sha256: 9cbddee5e8c87e43a5fe627a19cd2aa4c36552156eb4edcf6c5a30bd4934fe58
 
   - name: miniupnpc
     buildsystem: cmake-ninja
