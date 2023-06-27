@@ -91,7 +91,7 @@ modules:
           - /lib/*.la
           - /lib/pkgconfig
         config-opts:
-          - '--disable-static'
+          - --disable-static
         sources:
           - type: archive
             url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz
@@ -118,12 +118,14 @@ modules:
       - install -Dm644 io.github.hydrusnetwork.hydrus.128.png /app/share/icons/hicolor/128x128/apps/io.github.hydrusnetwork.hydrus.png
       - mkdir -p /app/hydrus
       - mv * /app/hydrus/
-      - ln -s /app/hydrus/client.pyw /app/bin/hydrus_client
-      - ln -s /app/hydrus/server.py /app/bin/hydrus_server
+      - chmod +x /app/hydrus/hydrus_client.py /app/hydrus/hydrus_server.py
+      - ln -s /app/hydrus/hydrus_client.py /app/bin/hydrus_client
+      - ln -s /app/hydrus/hydrus_server.py /app/bin/hydrus_server
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v499
+        tag: v534
+        commit: 623e430dedb5cfd1faea2796c6dca57808faf79b
       - type: file
         path: io.github.hydrusnetwork.hydrus.128.png
       - type: file
