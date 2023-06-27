@@ -27,6 +27,7 @@ finish-args:
   - --share=network
   - --device=dri
   - --filesystem=host
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 modules:
   - python3-sources.json
