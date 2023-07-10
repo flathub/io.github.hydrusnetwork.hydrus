@@ -57,6 +57,8 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="534" date="2023-07-09"/>
+    <release version="532" date="2023-06-22"/>
     <release version="499" date="2022-09-07"/>
     <release version="498" date="2022-08-31"/>
     <release version="497" date="2022-08-24"/>

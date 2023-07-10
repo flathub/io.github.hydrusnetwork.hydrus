@@ -1,14 +1,14 @@
 app-id: io.github.hydrusnetwork.hydrus
 
 runtime: org.kde.Platform
-runtime-version: '6.3'
+runtime-version: '6.5'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
   - org.freedesktop.Sdk.Extension.llvm14
 
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.3'
+base-version: '6.5'
 
 command: hydrus_client
 
@@ -27,6 +27,7 @@ finish-args:
   - --share=network
   - --device=dri
   - --filesystem=host
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 modules:
   - python3-sources.json
@@ -37,12 +38,15 @@ modules:
       - --disable-static
       - --enable-gnutls
       - --disable-doc
+      - --disable-manpages
+      - --disable-podpages
+      - --disable-txtpages
       - --disable-ffprobe
       - --disable-ffplay
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-5.1.tar.gz
-        sha256: c0b2ec290abd5ad31b5e0a8c455c34f90306ecd2ede6ace5db5ca3a07f3b842f
+        url: https://ffmpeg.org/releases/ffmpeg-6.0.tar.gz
+        sha256: f4ccf961403752c93961927715f524576d1f4dd02cd76d8c76aed3bbe6686656
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -51,24 +55,45 @@ modules:
     cleanup:
       - /share/ffmpeg/examples
 
+  - name: libXmu
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libxmu.git
+        tag: libXmu-1.1.4
+        commit: b29c739b577ee142877e69eb3fb07c7312d81557
+        x-checker-data:
+          type: git
+          tag-pattern: ^libXmu-([\d.]+)$
+
+  - name: libXpresent
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/xorg/lib/libxpresent.git
+        tag: libXpresent-1.0.1
+        commit: 37507b5f44332accfb1064ee69a4f6a833994747
+        x-checker-data:
+          type: git
+          tag-pattern: ^libXpresent-([\d.]+)$
+
   - name: mpv
+    buildsystem: meson
+    config-opts:
+      - -Dbuild-date=false
+      - -Dlibmpv=true
+      - -Dmanpage-build=disabled
     cleanup:
       - /include
       - /lib/pkgconfig
-      - /share/man
-    buildsystem: simple
-    build-commands:
-      - python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer
-      - python3 waf build
-      - python3 waf install
     sources:
-      - type: archive
-        url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.34.1.tar.gz
-        sha256: '32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746'
-      - type: file
-        url: 'https://waf.io/waf-2.0.21'
-        sha256: '7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306'
-        dest-filename: waf
+      - type: git
+        url: https://github.com/mpv-player/mpv.git
+        tag: v0.35.1
+        commit: 140ec21c89d671d392877a7f3b91d67e7d7b9239
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
     modules:
       - name: libass
         cleanup:
@@ -76,18 +101,32 @@ modules:
           - /lib/*.la
           - /lib/pkgconfig
         config-opts:
-          - '--disable-static'
+          - --disable-static
         sources:
           - type: archive
-            url: 'https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.gz'
-            sha256: '9cbddee5e8c87e43a5fe627a19cd2aa4c36552156eb4edcf6c5a30bd4934fe58'
+            url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz
+            sha256: d653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d
+            x-checker-data:
+              type: anitya
+              project-id: 1560
+              stable-only: true
+              url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.gz
 
   - name: miniupnpc
     buildsystem: cmake-ninja
+    config-opts:
+      - -DUPNPC_BUILD_STATIC=FALSE
+      - -DUPNPC_BUILD_SHARED=TRUE
+      - -DUPNPC_BUILD_TESTS=FALSE
+      - -DUPNPC_BUILD_SAMPLE=FALSE
     sources:
       - type: archive
-        sha256: 888fb0976ba61518276fe1eda988589c700a3f2a69d71089260d75562afd3687
-        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.2.2.tar.gz
+        sha256: 38acd5f4602f7cf8bcdc1ec30b2d58db2e9912e5d9f5350dd99b06bfdffb517c
+        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.2.5.tar.gz
+        x-checker-data:
+          type: anitya
+          project-id: 1986
+          url-template: https://miniupnp.tuxfamily.org/files/miniupnpc-$version.tar.gz
 
   - name: hydrus
     buildsystem: simple
@@ -98,12 +137,17 @@ modules:
       - install -Dm644 io.github.hydrusnetwork.hydrus.128.png /app/share/icons/hicolor/128x128/apps/io.github.hydrusnetwork.hydrus.png
       - mkdir -p /app/hydrus
       - mv * /app/hydrus/
-      - ln -s /app/hydrus/client.pyw /app/bin/hydrus_client
-      - ln -s /app/hydrus/server.py /app/bin/hydrus_server
+      - chmod +x /app/hydrus/hydrus_client.py /app/hydrus/hydrus_server.py
+      - ln -s /app/hydrus/hydrus_client.py /app/bin/hydrus_client
+      - ln -s /app/hydrus/hydrus_server.py /app/bin/hydrus_server
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v499
+        tag: v534
+        commit: 623e430dedb5cfd1faea2796c6dca57808faf79b
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
       - type: file
         path: io.github.hydrusnetwork.hydrus.128.png
       - type: file
