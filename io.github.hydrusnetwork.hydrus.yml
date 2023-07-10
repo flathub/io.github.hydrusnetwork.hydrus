@@ -32,17 +32,51 @@ finish-args:
 modules:
   - python3-sources.json
 
+  - name: libass
+    config-opts:
+      - --disable-static
+    sources:
+      - type: git
+        url: https://github.com/libass/libass.git
+        tag: 0.17.1
+        commit: e8ad72accd3a84268275a9385beb701c9284e5b3
+        x-checker-data:
+          type: git
+          tag-pattern: ^(\d\.\d{1,3}\.\d{1,2})$
+
+  - name: opencl-headers
+    buildsystem: simple
+    build-commands:
+      - cp -av CL /app/include
+    sources:
+      - type: archive
+        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.04.17.tar.gz
+        sha256: 0ce992f4167f958f68a37918dec6325be18f848dee29a4521c633aae3304915d
+        x-checker-data:
+          type: anitya
+          project-id: 223257
+          stable-only: true
+          url-template: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v$version.tar.gz
+
   - name: ffmpeg
     config-opts:
-      - --enable-shared
-      - --disable-static
       - --enable-gnutls
+      - --enable-gpl
+      - --enable-opencl
+      - --enable-opengl
+      - --enable-libaom
+      - --enable-libass
+      - --enable-libdav1d
+      - --enable-libdrm
+      - --enable-libopenjpeg
+      - --enable-libvpx
+      - --enable-shared
+      - --enable-version3
       - --disable-doc
       - --disable-manpages
       - --disable-podpages
+      - --disable-static
       - --disable-txtpages
-      - --disable-ffprobe
-      - --disable-ffplay
     sources:
       - type: archive
         url: https://ffmpeg.org/releases/ffmpeg-6.0.tar.gz
@@ -83,9 +117,6 @@ modules:
       - -Dbuild-date=false
       - -Dlibmpv=true
       - -Dmanpage-build=disabled
-    cleanup:
-      - /include
-      - /lib/pkgconfig
     sources:
       - type: git
         url: https://github.com/mpv-player/mpv.git
@@ -94,23 +125,6 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-    modules:
-      - name: libass
-        cleanup:
-          - /include
-          - /lib/*.la
-          - /lib/pkgconfig
-        config-opts:
-          - --disable-static
-        sources:
-          - type: archive
-            url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz
-            sha256: d653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d
-            x-checker-data:
-              type: anitya
-              project-id: 1560
-              stable-only: true
-              url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.gz
 
   - name: miniupnpc
     buildsystem: cmake-ninja
@@ -156,3 +170,21 @@ modules:
         path: io.github.hydrusnetwork.hydrus.server.desktop
       - type: file
         path: io.github.hydrusnetwork.hydrus.metainfo.xml
+
+cleanup:
+  - '*.la'
+  - /lib/*.la
+  - /include
+  - /man
+  - /lib/pkgconfig
+  - /share/applications/mpv.desktop
+  - /share/bash-completion
+  - /share/doc
+  - /share/man
+  - /share/zsh
+  - /share/icons/hicolor/16x16
+  - /share/icons/hicolor/32x32
+  - /share/icons/hicolor/64x64
+  - /share/icons/hicolor/128x128/apps/mpv.png
+  - /share/icons/hicolor/scalable/apps/mpv.svg
+  - /share/icons/hicolor/symbolic/apps/mpv-symbolic.svg
