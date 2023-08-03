@@ -353,14 +353,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.59.crate",
-        "sha256": "6aeca18b86b413c660b781aa319e4e2648a3e6f9eadc9b47e9038e6fe9f3451b",
-        "dest": "cargo/vendor/proc-macro2-1.0.59"
+        "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.64.crate",
+        "sha256": "78803b62cbf1f46fde80d7c0e803111524b9877184cfe7c3033659490ac7a7da",
+        "dest": "cargo/vendor/proc-macro2-1.0.64"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"6aeca18b86b413c660b781aa319e4e2648a3e6f9eadc9b47e9038e6fe9f3451b\", \"files\": {}}",
-        "dest": "cargo/vendor/proc-macro2-1.0.59",
+        "contents": "{\"package\": \"78803b62cbf1f46fde80d7c0e803111524b9877184cfe7c3033659490ac7a7da\", \"files\": {}}",
+        "dest": "cargo/vendor/proc-macro2-1.0.64",
         "dest-filename": ".cargo-checksum.json"
     },
     {
