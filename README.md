@@ -1,7 +1,7 @@
 # Pass arguments (e.g. change database location)
 ## From shell
 ```
-flatpak run --command=hydrus_client io.github.hydrusnetwork.hydrus --db_dir=/home/ben/.local/share/hydrus/db
+flatpak run --command=hydrus_client io.github.hydrusnetwork.hydrus --db_dir=/home/<user>/.local/share/hydrus/db
 ```
 ## From desktop entry
 ```

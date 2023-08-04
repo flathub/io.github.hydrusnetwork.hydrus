@@ -157,19 +157,19 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v536
-        commit: 50e5482740835a1727ae44134e3ec85bebe1ad19
+        tag: v537
+        commit: 812a82eea6797f06fa8a8c7e1b8fc4698f079692
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
       - type: file
-        path: io.github.hydrusnetwork.hydrus.128.png
+        path: assets/icon/io.github.hydrusnetwork.hydrus.128.png
       - type: file
-        path: io.github.hydrusnetwork.hydrus.desktop
+        path: assets/io.github.hydrusnetwork.hydrus.desktop
       - type: file
-        path: io.github.hydrusnetwork.hydrus.server.desktop
+        path: assets/io.github.hydrusnetwork.hydrus.server.desktop
       - type: file
-        path: io.github.hydrusnetwork.hydrus.metainfo.xml
+        path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
 
 cleanup:
   - '*.la'
