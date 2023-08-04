@@ -163,13 +163,13 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
       - type: file
-        path: io.github.hydrusnetwork.hydrus.128.png
+        path: assets/icon/io.github.hydrusnetwork.hydrus.128.png
       - type: file
-        path: io.github.hydrusnetwork.hydrus.desktop
+        path: assets/io.github.hydrusnetwork.hydrus.desktop
       - type: file
-        path: io.github.hydrusnetwork.hydrus.server.desktop
+        path: assets/io.github.hydrusnetwork.hydrus.server.desktop
       - type: file
-        path: io.github.hydrusnetwork.hydrus.metainfo.xml
+        path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
 
 cleanup:
   - '*.la'

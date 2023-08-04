@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.hydrusnetwork.hydrus</id>
+  <name>Hydrus</name>
+  <launchable type="desktop-id">io.github.hydrusnetwork.hydrus.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>WTFPL</project_license>
+  <developer_name>Hydrus Network</developer_name>
+  <summary>Organize media on the desktop</summary>
+  <description>
+    <p>The hydrus network client is a desktop application written for Anonymous and other internet enthusiasts with large media collections. It organises your files into an internal database and browses them with tags instead of folders, a little like a booru on your desktop. Tags and files can be anonymously shared through custom servers that any user may run. Everything is free, nothing phones home, and the source code is included with the release. It is developed mostly for Windows, but builds for Linux and macOS are available (perhaps with some limitations, depending on your situation).</p>
+    <p>Currently importable filetypes are:</p>
+    <ul>
+        <li>images - jpg, gif (including animated), png (including animated!), tiff, webp, bmp</li>
+        <li>video - webm, mp4, mpeg, avi, mov, mkv, flv, wmv</li>
+        <li>audio - mp3, flac, ogg, wma</li>
+        <li>misc - swf, pdf, psd, zip, rar, 7z</li>
+    </ul>
+    <p>The client can download files and parse tags from a number of websites, including by default:</p>
+    <ul>
+        <li>various imageboards, with a thread watcher</li>
+        <li>the popular boorus</li>
+        <li>gallery sites like deviant art, and pixiv</li>
+        <li>tumblr and twitter</li>
+    </ul>
+    <p>And can be extended to download from more locations using easily shareable user-made downloaders. It can also be set to 'subscribe' to any gallery search, repeating it every few days to keep up with new results.</p>
+    <p>The program's emphasis is on your freedom. There is no DRM, no spying, no censorship. The program never phones home.</p>
+  </description>
+  <content_rating type="oars-1.1"/>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_general_search.png</image>
+      <caption>A simple tag search</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_desu.png</image>
+      <caption>Media viewer</caption>
+    </screenshot>
+   <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_thread_watcher.png</image>
+      <caption>The thread watcher works for 4chan and 8chan</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_deviant_art.png</image>
+      <caption>Gallery downloader</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_big_search.png</image>
+      <caption>Display and manage thousands of files</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_gunnerkrigg_collect.png</image>
+      <caption>Files can be sorted and collected by their tags</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_fullscreen_blame.png</image>
+      <caption>Media viewer in fullscreen</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_video.png</image>
+      <caption>Many file formats are supported</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_booru.png</image>
+      <caption>You can run your own (simple!) booru</caption>
+    </screenshot>
+ </screenshots>
+  <url type="bugtracker">https://github.com/hydrusnetwork/hydrus/issues</url>
+  <url type="homepage">https://hydrusnetwork.github.io/hydrus/</url>
+  <url type="donation">https://www.patreon.com/hydrus_dev</url>
+  <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
+  <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
+  <releases>
+    <release version="537" date="2023-08-03">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_537</url>
+      <description>
+        <p>Changes in Version 537</p>
+        <ul>
+          <li>New filetype selector</li>
+          <li>Fast database delete</li>
+        </ul>
+      </description>
+    </release>
+    <release version="536" date="2023-07-26">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_536</url>
+      <description>
+        <p>Changes in Version 536</p>
+        <ul>
+          <li>More new filetypes: xcf and gzip filetype</li>
+        </ul>
+      </description>
+    </release>
+    <release version="535" date="2023-07-19">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_535</url>
+    </release>
+    <release version="534" date="2023-07-09">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_534</url>
+    </release>
+    <release version="532" date="2023-06-22">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_532</url>
+    </release>
+    <release version="499" date="2022-09-07"/>
+    <release version="498" date="2022-08-31"/>
+    <release version="497" date="2022-08-24"/>
+    <release version="496" date="2022-08-17"/>
+    <release version="495" date="2022-08-10"/>
+  </releases>
+</component>
