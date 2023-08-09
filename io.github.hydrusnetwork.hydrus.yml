@@ -157,8 +157,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v537
-        commit: 812a82eea6797f06fa8a8c7e1b8fc4698f079692
+        tag: v538
+        commit: 6efda30e6b52ea688326769485c4e2728f3c3cde
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
