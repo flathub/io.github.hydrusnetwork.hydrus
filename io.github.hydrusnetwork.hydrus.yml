@@ -58,6 +58,25 @@ modules:
           stable-only: true
           url-template: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v$version.tar.gz
 
+  - name: libaom
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DBUILD_SHARED_LIBS=1
+      - -DENABLE_EXAMPLES=OFF
+      - -DENABLE_TESTDATA=OFF
+      - -DENABLE_TESTS=OFF
+      - -DENABLE_TOOLS=OFF
+    sources:
+      - type: archive
+        url: https://storage.googleapis.com/aom-releases/libaom-3.6.1.tar.gz
+        sha256: 42b862f58b3d00bd3902d2dc469526574f5b012e5b178e6a9652845a113d6887
+        x-checker-data:
+          type: anitya
+          project-id: 17628
+          stable-only: true
+          url-template: https://storage.googleapis.com/aom-releases/libaom-$version.tar.gz
+
   - name: ffmpeg
     config-opts:
       - --enable-gnutls
