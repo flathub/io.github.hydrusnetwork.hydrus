@@ -259,8 +259,15 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/52/27/39f219e702744c6d7075626517de4ffe331550229e95897a26ba3e55b979/pillow_heif-0.13.0.tar.gz",
-                    "sha256": "be337495d0be5accf4d6ea6614f61293c40c86dc8d3e5e6eb63661f90f472362"
+                    "url": "https://files.pythonhosted.org/packages/c7/e2/3fcac4689e18d06f69bce46cd34f1de9bb02ee064fea295c2a58e77cd15e/pillow_heif-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "ded3a1a467dace13511b3de0d1976c25096e440429214d2cebbdcfd42f2b3fbb",
+                    "only-arches": ["x86_64"]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/de/b1/a85ec87df82075a7b2d428a9e23d90477c1b4e1bd19353650109b0623124/pillow_heif-0.13.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "2c3a42e5ba890f4b27ad9d5a1bb77f33a3ca5eb5490f21d784b02e4055614eae",
+                    "only-arches": ["aarch64"]
                 }
             ]
         },
