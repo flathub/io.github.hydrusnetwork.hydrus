@@ -71,6 +71,23 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="538" date="2023-08-10">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_538</url>
+      <description>
+        <p>Important note on index regeneration</p>
+        <ul>
+          <li>If you get a note on update about missing indices that need to be regenerated, don't panic!
+              Everything is fine, nothing to worry about, let it do its work
+          </li>
+        </ul>
+        <p>Changes in Version 538</p>
+        <ul>
+          <li>New Qt and OpenCV</li>
+          <li>Deferred delete system</li>
+          <li>HEIF support</li>
+        </ul>
+      </description>
+    </release>
     <release version="537" date="2023-08-03">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_537</url>
       <description>
