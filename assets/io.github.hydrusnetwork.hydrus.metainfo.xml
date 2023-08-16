@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="539" date="2023-08-17">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_539</url>
+      <description>
+        <p>Changes in Version 539</p>
+        <ul>
+          <li>Viewable PSD files</li>
+          <li>The program now treats still and animated gifs as separate file types</li>
+          <li>Parseable rating predicates</li>
+        </ul>
+      </description>
+    </release>
     <release version="538" date="2023-08-10">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_538</url>
       <description>
