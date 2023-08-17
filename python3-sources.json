@@ -279,6 +279,20 @@
             ]
         },
         {
+            "name": "python3-pybind11",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pybind11\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/06/55/9f73c32dda93fa4f539fafa268f9504e83c489f460c380371d94296126cd/pybind11-2.11.1-py3-none-any.whl",
+                    "sha256": "33cdd02a6453380dd71cc70357ce388ad1ee8d32bd0e38fc22b273d050aa29b3"
+                }
+            ]
+        },
+        {
             "name": "python3-pythran",
             "buildsystem": "simple",
             "build-commands": [
@@ -313,6 +327,21 @@
             ]
         },
         {
+            "name": "meson",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-index --no-build-isolation --prefix=\"${FLATPAK_DEST}\" --ignore-installed ."
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/f2/21/3326fe66aa091b3653d12affd1c3928e17c9ac386708ec42b4fad87eefac/meson-1.2.1.tar.gz",
+                    "sha256": "b1db3a153087549497ee52b1c938d2134e0338214fe14f7efd16fecd57b639f5"
+                }
+            ],
+            "cleanup": ['*']
+        },
+        {
             "name": "python3-meson-python",
             "buildsystem": "simple",
             "build-commands": [
@@ -340,7 +369,7 @@
             "name": "python3-scipy",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"scipy\" --no-build-isolation"
+                "PYTHONPATH=/app/lib/python3.10/site-packages python3 setup.py install --prefix=\"${FLATPAK_DEST}\" --root=/"
             ],
             "build-options": {
                 "env": {
@@ -352,12 +381,7 @@
             },
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a0/41/8f53eff8e969dd8576ddfb45e7ed315407d27c7518ae49418be8ed532b07/numpy-1.25.2.tar.gz",
-                    "sha256": "fd608e19c8d7c55021dffd43bfe5492fab8cc105cc8986f813f8c3c048b38760"
-                },
-                {
-                    "type": "file",
+                    "type": "archive",
                     "url": "https://files.pythonhosted.org/packages/a6/98/fceb84466a74b8fe74ce2dcc3a0a89cb7b4a689d4775e0fb4c95f335ef6a/scipy-1.11.1.tar.gz",
                     "sha256": "fb5b492fa035334fd249f0973cc79ecad8b09c604b42a127a677b45a9a3d4289"
                 }
