@@ -210,6 +210,25 @@ modules:
           project-id: 1986
           url-template: https://miniupnp.tuxfamily.org/files/miniupnpc-$version.tar.gz
 
+  - name: lapack
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DBUILD_SHARED_LIBS=ON
+      - -DBUILD_TESTING=OFF
+      - -DLAPACKE=ON
+      - -DCBLAS=ON
+      - -DCMAKE_Fortran_COMPILER=gfortran
+    sources:
+      - type: git
+        url: https://github.com/Reference-LAPACK/lapack.git
+        tag: v3.11.0
+        commit: 7866626840f5d5e7e27f027a55182da8b3303872
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+
+
   - python3-sources.json
 
   - name: hydrus
@@ -227,8 +246,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v538
-        commit: 6efda30e6b52ea688326769485c4e2728f3c3cde
+        tag: v539
+        commit: ebb0fe66c107ab5c642ddac22d878f50b8731cca
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
