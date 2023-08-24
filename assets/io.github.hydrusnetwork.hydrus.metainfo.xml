@@ -71,6 +71,19 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="540" date="2023-08-24">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_540</url>
+      <description>
+        <p>Changes in Version 540</p>
+        <ul>
+          <li>The system predicate parser can now handle 'system:filetype is xxx' for more general human-friendly filetypes like 'video' and 'mkv'</li>
+          <li>Fixed many bitmap imports</li>
+          <li>If a file has multiple jobs pending, the file maintenance manager now processes all those jobs at once, saving significant disk I/O</li>
+          <li>Simplified and cleaned up some of the duplicate system king-fetching code</li>
+          <li>Client api version is now 50</li>
+        </ul>
+      </description>
+    </release>
     <release version="539" date="2023-08-17">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_539</url>
       <description>
