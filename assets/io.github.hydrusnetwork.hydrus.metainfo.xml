@@ -71,6 +71,19 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="541" date="2023-08-31">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_541</url>
+      <description>
+        <p>Changes in Version 541</p>
+        <ul>
+          <li>Fixed the gallery downloader and thread watcher loading with the 'clear highlight' button enabled despite there being nothing currently highlighted</li>
+          <li>We now have support for QOI (a png-like lossless image type) and procreate (Apple image project file) files. the former has full support; the latter has thumbnails</li>
+          <li>Rewrote the apng parser to work much faster on large files</li>
+          <li>Updated the database to hold 'max num bytes' per file storage location</li>
+          <li>Reworked the layout of the 'media' options page</li>
+        </ul>
+      </description>
+    </release>
     <release version="540" date="2023-08-24">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_540</url>
       <description>
