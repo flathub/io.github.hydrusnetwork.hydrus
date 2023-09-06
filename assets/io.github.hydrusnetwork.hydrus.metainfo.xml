@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="542" date="2023-09-07">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_542</url>
+      <description>
+        <p>Changes in Version 542</p>
+        <ul>
+          <li>Thanks to a user, we now have pdf thumbnails!</li>
+          <li>Newer and better word count for PDFs</li>
+          <li>Human-readable file metadata for PDFs</li>
+        </ul>
+      </description>
+    </release>
     <release version="541" date="2023-08-31">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_541</url>
       <description>
