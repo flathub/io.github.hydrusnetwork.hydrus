@@ -1,9 +1,9 @@
-From 3081545d541fd8a915b88bc0c670008eea52c7ab Mon Sep 17 00:00:00 2001
+From 9515a7e1201274124d0239f587efee1a9591249e Mon Sep 17 00:00:00 2001
 From: bbhtt <bbhtt.zn0i8@slmail.me>
-Date: Thu, 3 Aug 2023 09:17:32 +0530
+Date: Thu, 7 Sep 2023 07:48:30 +0530
 Subject: [PATCH] Patch for PYSIDE-2002
 
-https://bugreports.qt.io/broswse/PYSIDE-2002
+https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-2002
 ---
  sources/pyside6/cmake/Macros/PySideModules.cmake | 14 +++++++-------
  1 file changed, 7 insertions(+), 7 deletions(-)
@@ -15,7 +15,7 @@ index 463c609..6d40ebb 100644
 @@ -251,13 +251,13 @@ macro(create_pyside_module)
              list(APPEND generate_pyi_options "--quiet")
          endif()
- 
+
 -        add_custom_target("${module_NAME}_pyi" ALL
 -                          COMMAND
 -                              ${CMAKE_COMMAND} -E env ${ld_prefix}
@@ -30,9 +30,9 @@ index 463c609..6d40ebb 100644
 +#                              "${CMAKE_CURRENT_SOURCE_DIR}/../support/generate_pyi.py"
 +#                              ${generate_pyi_options})
 +#        add_dependencies("${module_NAME}_pyi" ${module_NAME})
- 
+
          install(FILES "${CMAKE_CURRENT_BINARY_DIR}/../${module_NAME}.pyi"
                  DESTINATION "${PYTHON_SITE_PACKAGES}/PySide6")
--- 
+--
 2.41.0
 
