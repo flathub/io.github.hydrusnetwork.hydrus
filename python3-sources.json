@@ -639,39 +639,6 @@
             ]
         },
         {
-            "name": "python3-PySide6",
-            "buildsystem": "cmake-ninja",
-            "builddir": true,
-            "config-opts": [
-                "-DBUILD_TESTS=OFF"
-            ],
-            "build-options":{
-                "append-path": "/usr/lib/sdk/llvm14/bin",
-                "prepend-ld-library-path": "/usr/lib/sdk/llvm14/lib",
-                "ldflags":"-pthread -lpthread"
-            },
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz",
-                    "sha256": "90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787",
-                        "cp /usr/include/pthread.h /app/include/qt6tmp/pthread.h",
-                        "sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake",
-                        "sed -i $'s/\r$//' sources/pyside6/cmake/Macros/PySideModules.cmake # replace CRLF to LF to apply patch for https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-2002"
-                    ]
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/PYSIDE-2002.patch"
-                }
-            ]
-        },
-        {
             "name": "python3-PySocks",
             "buildsystem": "simple",
             "build-commands": [
