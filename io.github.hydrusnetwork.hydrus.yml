@@ -288,8 +288,10 @@ cleanup:
   - '*.la'
   - /lib/*.la
   - /include
+  - /etc
   - /man
   - /lib/pkgconfig
+  - /lib/metatypes
   - /share/applications/mpv.desktop
   - /share/bash-completion
   - /share/doc
