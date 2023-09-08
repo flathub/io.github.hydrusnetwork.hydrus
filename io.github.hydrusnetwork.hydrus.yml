@@ -26,7 +26,7 @@ finish-args:
   - --share=ipc
   - --share=network
   - --device=dri
-  - --filesystem=host
+  - --filesystem=home
   - --talk-name=org.kde.StatusNotifierWatcher
 
 modules:
@@ -228,32 +228,49 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
 
-  - name: pyside6
+  - python3-sources.json
+
+  - name: python3-patchelf
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "patchelf==0.15" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/5f/e8/15f86533acbb50ad672c18e2fc2a0e6975b4dcc19dcd01ca24e2cb8b6fd9/patchelf-0.15.0.0.tar.gz
+        sha256: 0f8dcf0df0ba919ce37e8aef67a08bde5326897098451df94ab3a5eedc9e08d9
+    cleanup:
+      - "*"
+
+  - name: python3-shiboken6
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/llvm15/bin
       prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
     build-commands:
-      - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
-      - cp /usr/include/pthread.h ${FLATPAK_DEST}/include/qt6tmp/pthread.h
-      - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
-      - cmake -B ./_flatpak_build -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_BUILD_TYPE=None -DSHIBOKEN_PYTHON_LIBRARIES=`pkgconf python3-embed --libs` -DBUILD_TESTS=OFF -DNO_QT_TOOLS=yes
-      - PYTHONPATH="$PWD"/_flatpak_build/sources cmake --build _flatpak_build
-      - cmake --install ./_flatpak_build/sources/shiboken6
-      - python setup.py egg_info --build-type=shiboken6
-      - python setup.py egg_info --build-type=shiboken6-generator
-      - cp -r shiboken6*.egg-info ${FLATPAK_DEST}/lib/python$(python -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages
-      - cmake --install ./_flatpak_build/sources/pyside6
-      - python setup.py egg_info --build-type=pyside6
-      - cp -r PySide6.egg-info ${FLATPAK_DEST}/lib/python$(python -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages
-      - cmake --install ./_flatpak_build/sources/pyside-tools
-      - install -Dm644 ./_flatpak_build/sources/pyside6/PySide6/*.pyi -t ${FLATPAK_DEST}/lib/python$(python -c 'import sys; print("%s.%s" %sys.version_info[0:2])')/site-packages/PySide6
+       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS} --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz
         sha256: 90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8
 
-  - python3-sources.json
+  - name: pyside6
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DBUILD_TESTS=OFF
+      - -DNO_QT_TOOLS=yes
+    build-options:
+      append-path: /usr/lib/sdk/llvm15/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
+    sources:
+      - type: archive
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz
+        sha256: 90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8
+      - type: shell
+        commands:
+          - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
+          - cp /usr/include/pthread.h ${FLATPAK_DEST}/include/qt6tmp/pthread.h
+          - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
 
   - name: hydrus
     buildsystem: simple
@@ -272,9 +289,9 @@ modules:
         url: https://github.com/hydrusnetwork/hydrus.git
         tag: v542
         commit: 7d63c5d90c9c0ff53c0a116f0ac40d93b42b66b8
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+#        x-checker-data:
+#          type: git
+#          tag-pattern: ^v([\d.]+)$
       - type: file
         path: assets/icon/io.github.hydrusnetwork.hydrus.128.png
       - type: file
@@ -288,8 +305,10 @@ cleanup:
   - '*.la'
   - /lib/*.la
   - /include
+  - /etc
   - /man
   - /lib/pkgconfig
+  - /lib/metatypes
   - /share/applications/mpv.desktop
   - /share/bash-completion
   - /share/doc

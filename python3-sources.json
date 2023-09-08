@@ -210,7 +210,8 @@
                     "url": "https://files.pythonhosted.org/packages/fa/af/b3ef8fe0bb96bf7308e1f9d196fc069f0c75d9c74cfaad851e418cc704f4/scikit_build-0.17.6-py3-none-any.whl",
                     "sha256": "18bd55e81841106eec93f30a297df4f301003791c41be46ef6428d58bd42d6b3"
                 }
-            ]
+            ],
+            "cleanup": ['*']
         },
         {
             "name": "python3-opencv-python-headless",
@@ -232,53 +233,6 @@
             ]
         },
         {
-            "name": "python3-gast",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"gast\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fa/39/5aae571e5a5f4de9c3445dae08a530498e5c53b0e74410eeeb0991c79047/gast-0.5.4-py3-none-any.whl",
-                    "sha256": "6fc4fa5fa10b72fb8aab4ae58bcb023058386e67b6fa2e3e34cec5c769360316"
-                }
-            ]
-        },
-        {
-            "name": "python3-beniget",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"beniget\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cc/4a/af3f1b3d00efd47309b7a0e28351e06453727fa55d9b3a45fd4b91031a63/beniget-0.4.1-py3-none-any.whl",
-                    "sha256": "cb061256631313f9d06031b824f7f403baecaf609b2d3d14d43f23356cf143f2"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fa/39/5aae571e5a5f4de9c3445dae08a530498e5c53b0e74410eeeb0991c79047/gast-0.5.4-py3-none-any.whl",
-                    "sha256": "6fc4fa5fa10b72fb8aab4ae58bcb023058386e67b6fa2e3e34cec5c769360316"
-                }
-            ]
-        },
-        {
-            "name": "python3-ply",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ply\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a3/58/35da89ee790598a0700ea49b2a66594140f44dec458c07e8e3d4979137fc/ply-3.11-py2.py3-none-any.whl",
-                    "sha256": "096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce"
-                }
-            ]
-        },
-        {
             "name": "python3-pybind11",
             "buildsystem": "simple",
             "build-commands": [
@@ -290,7 +244,8 @@
                     "url": "https://files.pythonhosted.org/packages/06/55/9f73c32dda93fa4f539fafa268f9504e83c489f460c380371d94296126cd/pybind11-2.11.1-py3-none-any.whl",
                     "sha256": "33cdd02a6453380dd71cc70357ce388ad1ee8d32bd0e38fc22b273d050aa29b3"
                 }
-            ]
+            ],
+            "cleanup": ['*']
         },
         {
             "name": "python3-pythran",
@@ -324,7 +279,8 @@
                     "url": "https://files.pythonhosted.org/packages/82/2d/a79fa10f76541d0bc9216b49b29d68768783daf45d81f2f87d6063f61b92/pythran-0.13.1-py3-none-any.whl",
                     "sha256": "35909272167afc2955f62f33734e460ac6c23603f0d95ceff465723109e482fd"
                 }
-            ]
+            ],
+            "cleanup": ['*']
         },
         {
             "name": "meson",
@@ -363,7 +319,8 @@
                     "url": "https://files.pythonhosted.org/packages/c4/cb/4678dfd70cd2f2d8969e571cdc1bb1e9293c698f8d1cf428fadcf48d6e9f/pyproject_metadata-0.7.1-py3-none-any.whl",
                     "sha256": "28691fbb36266a819ec56c9fa1ecaf36f879d6944dfde5411e87fc4ff793aa60"
                 }
-            ]
+            ],
+            "cleanup": ['*']
         },
         {
             "name": "python3-scipy",
@@ -521,20 +478,6 @@
             ]
         },
         {
-            "name": "python3-pylzma",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pylzma\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/03/d8/10ef072c3cd4301a65a1b762b09eefa02baf8da23b9ea77ebe9546499975/pylzma-0.5.0.tar.gz",
-                    "sha256": "b874172afbf37770e643bf2dc9d9b6b03eb95d8f8162e157145b3fe9e1b68a1c"
-                }
-            ]
-        },
-        {
             "name": "python3-setuptools-rust",
             "buildsystem": "simple",
             "build-commands": [
@@ -556,7 +499,8 @@
                     "url": "https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl",
                     "sha256": "440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36"
                 }
-            ]
+            ],
+            "cleanup": ['*']
         },
         {
             "name": "python3-cffi",
