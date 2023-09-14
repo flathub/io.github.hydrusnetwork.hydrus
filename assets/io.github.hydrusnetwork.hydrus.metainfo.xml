@@ -71,6 +71,18 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="543" date="2023-09-14">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_543</url>
+      <description>
+        <p>Changes in Version 543</p>
+        <ul>
+          <li>A new string converter rule now allows for extremely easy date parsing, thanks to the dateparser library</li>
+          <li>PSD rendering is now much faster and uses less memory</li>
+          <li>Description note parsing for the default e621 downloader</li>
+          <li>PDF thumbnail generation fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="542" date="2023-09-07">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_542</url>
       <description>
