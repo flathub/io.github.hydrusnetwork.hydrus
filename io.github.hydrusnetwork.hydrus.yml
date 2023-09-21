@@ -228,6 +228,27 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
 
+  - name: openblas
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DBUILD_SHARED_LIBS=ON
+      - -DBUILD_TESTING=OFF
+      - -DNO_AFFINITY=ON
+      - -DUSE_OPENMP=1
+      - -DNO_WARMUP=1
+      - -DCORE=CORE2
+      - -DNUM_THREADS=64
+      - -DDYNAMIC_ARCH=ON
+    sources:
+      - type: archive
+        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.24.tar.gz
+        sha256: ceadc5065da97bd92404cac7254da66cc6eb192679cf1002098688978d4d5132
+        x-checker-data:
+          type: anitya
+          project-id: 2540
+          url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
+
   - python3-sources.json
 
   - name: python3-patchelf
@@ -287,8 +308,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v543
-        commit: b840d0778c0842d64967fbc877afa60dda1faf26
+        tag: v544
+        commit: 428372fb576e85d2a9968a9c464437519b64a039
 #        x-checker-data:
 #          type: git
 #          tag-pattern: ^v([\d.]+)$
