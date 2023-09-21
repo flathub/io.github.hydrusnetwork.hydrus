@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="544" date="2023-09-21">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_544</url>
+      <description>
+        <p>Changes in Version 544</p>
+        <ul>
+          <li>The migrate database dialog now allows you to set a max size</li>
+          <li>The 'edit num bytes' widget now supports terabytes (TB)</li>
+          <li>Fixed an issue with the recent PSD code updates that was breaking boot for clients running from source without the psd-tools library</li>
+        </ul>
+      </description>
+    </release>
     <release version="543" date="2023-09-14">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_543</url>
       <description>
