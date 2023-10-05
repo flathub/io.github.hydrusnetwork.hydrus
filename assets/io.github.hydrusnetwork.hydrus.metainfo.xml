@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="546" date="2023-10-05">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_546</url>
+      <description>
+        <p>Changes in Version 546</p>
+        <ul>
+          <li>Fixed the recent messed up colours in PSD thumbnail generation</li>
+          <li>Fixed up some borked button-enabling and status-displaying logic in the file history chart</li>
+          <li>Added a checkbox to options->thumbnails to turn off the new blurhash thumbnail fallback</li>
+        </ul>
+      </description>
+    </release>
     <release version="545" date="2023-09-28">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_545</url>
       <description>
