@@ -287,6 +287,8 @@ modules:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz
         sha256: 90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8
+      - type: patch
+        path: patches/pyside6/pyside6-qt-6.5.3.patch
       - type: shell
         commands:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
@@ -308,8 +310,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v545
-        commit: b4afedb6178669f8263f0818c866d25576f8ac5c
+        tag: v546
+        commit: 343e12a94d722bd00689047ae566d1428b8fae8f
 #        x-checker-data:
 #          type: git
 #          tag-pattern: ^v([\d.]+)$
