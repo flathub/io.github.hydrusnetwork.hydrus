@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="547" date="2023-10-12">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_547</url>
+      <description>
+        <p>Changes in Version 547</p>
+        <ul>
+          <li>MPV is less crashy now</li>
+          <li>Import support for djvu files</li>
+          <li>Cleaned up some filetype parsing code</li>
+        </ul>
+      </description>
+    </release>
     <release version="546" date="2023-10-05">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_546</url>
       <description>
