@@ -271,8 +271,8 @@ modules:
        - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS} --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz
-        sha256: 90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
+        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
 
   - name: pyside6
     buildsystem: cmake-ninja
@@ -285,10 +285,8 @@ modules:
       prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.2-src/pyside-setup-everywhere-src-6.5.2.tar.xz
-        sha256: 90dbf1d14fcd41c98a7cbea44b8a4951e10d0b798e154749756e4946654d1ba8
-      - type: patch
-        path: patches/pyside6/pyside6-qt-6.5.3.patch
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
+        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
       - type: shell
         commands:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
@@ -310,8 +308,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v546
-        commit: 343e12a94d722bd00689047ae566d1428b8fae8f
+        tag: v547
+        commit: d8ff8bec6bdc778fb076ab70443662e6a657c384
 #        x-checker-data:
 #          type: git
 #          tag-pattern: ^v([\d.]+)$
