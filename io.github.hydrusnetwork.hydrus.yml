@@ -115,8 +115,8 @@ modules:
       - -DWITH_EXAMPLES=OFF
     sources:
       - type: archive
-        url: https://github.com/strukturag/libheif/archive/v1.16.2/libheif-1.16.2.tar.gz
-        sha256: d207f2ff5c86e6af3621c237f186130b985b7a9ff657875944b58ac5d27ba71c
+        url: https://github.com/strukturag/libheif/archive/v1.17.0/libheif-1.17.0.tar.gz
+        sha256: 80185d9e7319ab2ae622a131eea11b4d573e2ece38f5a1586cf4d1ffd66bb4d7
         x-checker-data:
           type: json
           url: https://api.github.com/repos/strukturag/libheif/releases/latest
@@ -254,13 +254,14 @@ modules:
   - name: python3-patchelf
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "patchelf==0.15" --no-build-isolation
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "patchelf==0.15" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/5f/e8/15f86533acbb50ad672c18e2fc2a0e6975b4dcc19dcd01ca24e2cb8b6fd9/patchelf-0.15.0.0.tar.gz
         sha256: 0f8dcf0df0ba919ce37e8aef67a08bde5326897098451df94ab3a5eedc9e08d9
     cleanup:
-      - "*"
+      - '*'
 
   - name: python3-shiboken6
     buildsystem: simple
@@ -268,7 +269,8 @@ modules:
       append-path: /usr/lib/sdk/llvm15/bin
       prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
     build-commands:
-       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS} --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
+      - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS}
+        --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
