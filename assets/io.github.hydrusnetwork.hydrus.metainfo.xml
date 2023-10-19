@@ -71,6 +71,19 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="548" date="2023-10-19">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_548</url>
+      <description>
+        <p>Changes in Version 548</p>
+        <ul>
+          <li>Thanks to a user, krita files are now renderable</li>
+          <li>Thanks to a user, setting an IPFS 'nocopy' path including your home directory (~) should now expand correctly</li>
+          <li>Thanks to a user, the url and hdd downloaders now have 'stop/abort' buttons</li>
+          <li>Fixed an issue with successive drag and drop file exports that gave different files the same filename</li>
+          <li>File filter objects are now serialisable</li>
+        </ul>
+      </description>
+    </release>
       <release version="547" date="2023-10-12">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_547</url>
       <description>
