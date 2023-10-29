@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="549" date="2023-10-26">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_549</url>
+      <description>
+        <p>Changes in Version 549</p>
+        <ul>
+          <li>Optimised taglist sorting code</li>
+          <li>Optimised taglist internal update recalc by updating existing items in place instead of remove/replace and skipping cleanup-sort when no new items are added and/or the sort is not count-based</li>
+          <li>A new section for potential duplicate search now duplicates the 'do search in idle time' setting you see in the duplicates page and has new 'work packet time' and 'rest time percentage' settings</li>
+        </ul>
+      </description>
+    </release>
       <release version="548" date="2023-10-19">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_548</url>
       <description>
