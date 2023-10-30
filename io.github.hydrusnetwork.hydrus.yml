@@ -5,7 +5,7 @@ runtime-version: '6.6'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm15
+  - org.freedesktop.Sdk.Extension.llvm16
 
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: '6.6'
@@ -266,8 +266,8 @@ modules:
   - name: python3-shiboken6
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/llvm15/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
+      append-path: /usr/lib/sdk/llvm16/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
     build-commands:
       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS}
         --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
@@ -283,8 +283,8 @@ modules:
       - -DBUILD_TESTS=OFF
       - -DNO_QT_TOOLS=yes
     build-options:
-      append-path: /usr/lib/sdk/llvm15/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
+      append-path: /usr/lib/sdk/llvm16/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
