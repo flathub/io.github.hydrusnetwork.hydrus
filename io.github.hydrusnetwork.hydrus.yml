@@ -273,8 +273,8 @@ modules:
         --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
-        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.0-src/pyside-setup-everywhere-src-6.6.0.tar.xz
+        sha256: 2dd002db8851a87173354f38aa8c6ec42d0ff1fac99ea422b29e2dfce52d1638
 
   - name: pyside6
     buildsystem: cmake-ninja
@@ -287,8 +287,8 @@ modules:
       prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
-        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.0-src/pyside-setup-everywhere-src-6.6.0.tar.xz
+        sha256: 2dd002db8851a87173354f38aa8c6ec42d0ff1fac99ea422b29e2dfce52d1638
       - type: shell
         commands:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
