@@ -154,6 +154,8 @@ modules:
           project-id: 5405
           stable-only: true
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.gz
+      - type: patch
+        path: patches/ffmpeg-binutils.patch
     cleanup:
       - /share/ffmpeg/examples
 
