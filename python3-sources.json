@@ -4,6 +4,60 @@
     "build-commands": [],
     "modules": [
         {
+            "name": "python3-tomli",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tomli\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
+                    "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"
+                }
+            ]
+        },
+        {
+            "name": "python3-setuptools_scm_git_archive",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"setuptools_scm_git_archive\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/38/b3/529d516b25ec768b8ebc2df35785a50c90e481c80e2c0d6ce68c81d60afa/setuptools_scm_git_archive-1.4.1-py2.py3-none-any.whl",
+                    "sha256": "4a0b90286f469df220769a66ed1e910a11f524c61f3caa2cd4fad95750ac3b4f"
+                }
+            ],
+            "cleanup": ['*']
+        },
+        {
+            "name": "python3-setuptools_scm",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"setuptools_scm\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl",
+                    "sha256": "8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0e/a3/b9a8b0adfe672bf0df5901707aa929d30a97ee390ba651910186776746d2/setuptools_scm-8.0.4-py3-none-any.whl",
+                    "sha256": "b47844cd2a84b83b3187a5782c71128c28b4c94cad8bfb871da2784a5cb54c4f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl",
+                    "sha256": "8f92fc8806f9a6b641eaa5318da32b44d401efaac0f6678c9bc448ba3605faa0"
+                }
+            ],
+            "cleanup": ['*']
+        },
+        {
             "name": "python3-pympler",
             "buildsystem": "simple",
             "build-commands": [
@@ -348,21 +402,6 @@
             "cleanup": ['*']
         },
         {
-            "name": "meson",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-index --no-build-isolation --prefix=\"${FLATPAK_DEST}\" --ignore-installed ."
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/f2/21/3326fe66aa091b3653d12affd1c3928e17c9ac386708ec42b4fad87eefac/meson-1.2.1.tar.gz",
-                    "sha256": "b1db3a153087549497ee52b1c938d2134e0338214fe14f7efd16fecd57b639f5"
-                }
-            ],
-            "cleanup": ['*']
-        },
-        {
             "name": "python3-meson-python",
             "buildsystem": "simple",
             "build-commands": [
@@ -396,19 +435,18 @@
             "name": "python3-scipy",
             "buildsystem": "simple",
             "build-commands": [
-                "PYTHONPATH=/app/lib/python3.10/site-packages python3 _setup.py install --prefix=\"${FLATPAK_DEST}\" --root=/"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"scipy\" --no-build-isolation"
             ],
             "build-options": {
                 "env": {
                     "ATLAS": "None",
                     "BLAS": "/app/lib",
-                    "LAPACK": "/app/lib",
-                    "LDFLAGS": "-shared"
+                    "LAPACK": "/app/lib"
                 }
             },
             "sources": [
                 {
-                    "type": "archive",
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/9c/ef/87a5565907645998d7c62e76b84b0ca9f0b7c25cd433f5617a968051cec3/scipy-1.11.2.tar.gz",
                     "sha256": "b29318a5e39bd200ca4381d80b065cdf3076c7d7281c5e36569e99273867f61d"
                 }
@@ -508,28 +546,21 @@
             ]
         },
         {
-            "name": "python3-pillow-heif",
+            "name": "python3-pillow_heif",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow-heif>=0.12.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow_heif\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0f/8b/2ebaf9adcf4260c00f842154865f8730cf745906aa5dd499141fb6063e26/Pillow-10.0.0.tar.gz",
-                    "sha256": "9c82b5b3e043c7af0d95792d0d20ccf68f61a1fec6b3530e718b688422727396"
+                    "url": "https://files.pythonhosted.org/packages/80/d7/c4b258c9098b469c4a4e77b0a99b5f4fd21e359c2e486c977d231f52fc71/Pillow-10.1.0.tar.gz",
+                    "sha256": "e6bf8de6c36ed96c86ea3b6e1d5273c53f46ef518a062464cd7ef5dd2cf92e38"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c7/e2/3fcac4689e18d06f69bce46cd34f1de9bb02ee064fea295c2a58e77cd15e/pillow_heif-0.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-                    "sha256": "ded3a1a467dace13511b3de0d1976c25096e440429214d2cebbdcfd42f2b3fbb",
-                    "only-arches": ["x86_64"]
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/de/b1/a85ec87df82075a7b2d428a9e23d90477c1b4e1bd19353650109b0623124/pillow_heif-0.13.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
-                    "sha256": "2c3a42e5ba890f4b27ad9d5a1bb77f33a3ca5eb5490f21d784b02e4055614eae",
-                    "only-arches": ["aarch64"]
+                    "url": "https://files.pythonhosted.org/packages/a0/84/263270d62f1f367dc43814506069db89d43ffe9c7a354d0b482d5483926f/pillow_heif-0.13.1.tar.gz",
+                    "sha256": "0d46adc8a8afb515297fd47fc0b15657b8927f7ec52ad1fb8d63250413d4c6ba"
                 }
             ]
         },
