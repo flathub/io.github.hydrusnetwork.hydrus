@@ -277,6 +277,10 @@ modules:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.0-src/pyside-setup-everywhere-src-6.6.0.tar.xz
         sha256: 2dd002db8851a87173354f38aa8c6ec42d0ff1fac99ea422b29e2dfce52d1638
+      - type: patch
+        path: patches/fix-build.patch
+      - type: patch
+        path: patches/fix-install-dir.patch
 
   - name: pyside6
     buildsystem: cmake-ninja
@@ -296,6 +300,10 @@ modules:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
           - cp /usr/include/pthread.h ${FLATPAK_DEST}/include/qt6tmp/pthread.h
           - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
+      - type: patch
+        path: patches/fix-build.patch
+      - type: patch
+        path: patches/fix-install-dir.patch
 
   - name: hydrus
     buildsystem: simple
