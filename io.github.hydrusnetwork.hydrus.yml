@@ -1,14 +1,14 @@
 app-id: io.github.hydrusnetwork.hydrus
 
 runtime: org.kde.Platform
-runtime-version: '6.5'
+runtime-version: '6.6'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-  - org.freedesktop.Sdk.Extension.llvm15
+  - org.freedesktop.Sdk.Extension.llvm16
 
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.5'
+base-version: '6.6'
 
 command: hydrus_client
 
@@ -154,6 +154,8 @@ modules:
           project-id: 5405
           stable-only: true
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.gz
+      - type: patch
+        path: patches/ffmpeg-binutils.patch
     cleanup:
       - /share/ffmpeg/examples
 
@@ -266,15 +268,19 @@ modules:
   - name: python3-shiboken6
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/llvm15/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
+      append-path: /usr/lib/sdk/llvm16/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
     build-commands:
       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS}
         --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
-        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.0-src/pyside-setup-everywhere-src-6.6.0.tar.xz
+        sha256: 2dd002db8851a87173354f38aa8c6ec42d0ff1fac99ea422b29e2dfce52d1638
+      - type: patch
+        path: patches/fix-build.patch
+      - type: patch
+        path: patches/fix-install-dir.patch
 
   - name: pyside6
     buildsystem: cmake-ninja
@@ -283,17 +289,21 @@ modules:
       - -DBUILD_TESTS=OFF
       - -DNO_QT_TOOLS=yes
     build-options:
-      append-path: /usr/lib/sdk/llvm15/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
+      append-path: /usr/lib/sdk/llvm16/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.5.3-src/pyside-setup-everywhere-src-6.5.3.tar.xz
-        sha256: 6606b1634fb2981f9ca7ce2e206cc92c252401de328df4ce23f63e8c998de8d3
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.0-src/pyside-setup-everywhere-src-6.6.0.tar.xz
+        sha256: 2dd002db8851a87173354f38aa8c6ec42d0ff1fac99ea422b29e2dfce52d1638
       - type: shell
         commands:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
           - cp /usr/include/pthread.h ${FLATPAK_DEST}/include/qt6tmp/pthread.h
           - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
+      - type: patch
+        path: patches/fix-build.patch
+      - type: patch
+        path: patches/fix-install-dir.patch
 
   - name: hydrus
     buildsystem: simple
