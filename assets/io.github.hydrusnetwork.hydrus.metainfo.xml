@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="550" date="2023-11-02">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_550</url>
+      <description>
+        <p>Changes in Version 550</p>
+        <ul>
+          <li>If you enter invalid URLs (i.e. non-parsing) into 'manage URLs', the dialog now lets you know they were not apparently good and asks if you want to enter them anyway</li>
+          <li>The client now explicitly closes and clears its network connections after five minutes of inactivity</li>
+          <li>Optimised deselection of a large number of files when you already have a lot of thumbnails selected</li>
+        </ul>
+      </description>
+    </release>
       <release version="549" date="2023-10-26">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_549</url>
       <description>
