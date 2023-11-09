@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="551a" date="2023-11-09">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_551</url>
+      <description>
+        <p>Changes in Version 551</p>
+        <ul>
+          <li>New checkbox under options->thumbnails that disables thumbnail fading</li>
+          <li>Fixed the crashes users on PyQt were seeing</li>
+          <li>Sped up some random iteration across the program</li>
+        </ul>
+      </description>
+    </release>
       <release version="550" date="2023-11-02">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_550</url>
       <description>
