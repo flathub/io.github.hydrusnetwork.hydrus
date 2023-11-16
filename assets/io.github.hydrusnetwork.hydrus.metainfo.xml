@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="552a" date="2023-11-16">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_552</url>
+      <description>
+        <p>Changes in Version 552</p>
+        <ul>
+          <li>Menu commands will no longer have their unadjusted label as their tooltip. All tooltips are either the full status bar description or the full label if it was long enough to be elided</li>
+          <li>The 'open externally' panel now shows the default filetype thumbnail for formats like zip and epub</li>
+          <li>Cleaned up the file/folder move/copy error statements a little more</li>
+        </ul>
+      </description>
+    </release>
       <release version="551a" date="2023-11-09">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_551</url>
       <description>
