@@ -66,6 +66,7 @@ modules:
       - -DENABLE_TESTDATA=OFF
       - -DENABLE_TESTS=OFF
       - -DENABLE_TOOLS=OFF
+      - -DENABLE_DOCS=OFF
     sources:
       - type: archive
         url: https://storage.googleapis.com/aom-releases/libaom-3.7.1.tar.gz
@@ -78,6 +79,10 @@ modules:
 
   - name: libde265
     buildsystem: cmake-ninja
+    config-opts:
+      - -DENABLE_SDL=OFF
+      - -DENABLE_DECODER=OFF
+      - -DENABLE_ENCODER=OFF
     sources:
       - type: archive
         url: https://github.com/strukturag/libde265/archive/v1.0.14/libde265-1.0.14.tar.gz
@@ -97,7 +102,8 @@ modules:
     subdir: source
     buildsystem: cmake-ninja
     config-opts:
-      - -DBUILD_SHARED_LIBS=ON
+      - -DENABLE_SHARED=ON
+      - -DENABLE_CLI=FALSE
     sources:
       - type: archive
         url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
@@ -111,8 +117,8 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     config-opts:
-      - -DAOM_ENCODER=ON
       - -DWITH_EXAMPLES=OFF
+      - -DBUILD_TESTING=OFF
     sources:
       - type: archive
         url: https://github.com/strukturag/libheif/archive/v1.17.5/libheif-1.17.5.tar.gz
