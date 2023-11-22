@@ -412,8 +412,8 @@ modules:
         path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
 
 cleanup:
+  - '*.a'
   - '*.la'
-  - /lib/*.la
   - /include
   - /etc
   - /man
