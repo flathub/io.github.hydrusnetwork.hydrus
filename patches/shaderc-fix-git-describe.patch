@@ -1,0 +1,26 @@
+diff --git a/utils/update_build_version.py b/utils/update_build_version.py
+index 11ee53e..6af763b 100755
+--- a/utils/update_build_version.py
++++ b/utils/update_build_version.py
+@@ -99,7 +99,7 @@ def describe(directory):
+         # Popen.communicate() returns a bytes instance, which needs to be
+         # decoded into text data first in Python3. And this decode() won't
+         # hurt Python2.
+-        return command_output(['git', 'describe'], directory).rstrip().decode()
++        return command_output(['abracadabra'], directory).rstrip().decode()
+     except:
+         try:
+             return command_output(
+diff --git a/third_party/spirv-tools/utils/update_build_version.py b/third_party/spirv-tools/utils/update_build_version.py
+index 5a78ada2..29f67b32 100755
+--- a/third_party/spirv-tools/utils/update_build_version.py
++++ b/third_party/spirv-tools/utils/update_build_version.py
+@@ -111,7 +111,7 @@ def describe(repo_path):
+     Runs 'git describe', or alternately 'git rev-parse HEAD', in directory.  If
+     successful, returns the output; otherwise returns 'unknown hash, <date>'."""
+ 
+-    success, output = command_output(['git', 'describe'], repo_path)
++    success, output = command_output(['git', 'describe', '--tags'], repo_path)
+     if not success:
+       output = command_output(['git', 'rev-parse', 'HEAD'], repo_path)
+ 
