@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="553" date="2023-11-23">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_553</url>
+      <description>
+        <p>Changes in Version 553</p>
+        <ul>
+          <li>Fixed the false positive "serious I/O Error! This is a significant hard drive problem"</li>
+          <li>Fixed some PIL alpha gif rendering on backwards seek and loop</li>
+          <li>The file-info-summary lines that appear in the top row thumbnail menu submenu now show if a file has audio/transparency/exif/other metadata/icc profile</li>
+        </ul>
+      </description>
+    </release>
       <release version="552a" date="2023-11-16">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_552</url>
       <description>
