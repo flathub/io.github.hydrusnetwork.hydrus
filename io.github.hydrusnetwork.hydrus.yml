@@ -239,7 +239,7 @@ modules:
         url: https://files.pythonhosted.org/packages/b6/8c/d5cc5123e8e4bd6c54b781d3bf19139c4d591629c677d3d3529bfc8da127/glad2-2.0.4-py3-none-any.whl
         sha256: 73ef167a919c93861f21b86a3cd6dc595b3a41c04902a4b94c8611d3eaaaccab
     cleanup:
-      - "*"
+      - '*'
 
   - name: libplacebo
     buildsystem: meson
@@ -264,8 +264,8 @@ modules:
       - -Dmanpage-build=disabled
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz
-        sha256: 1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf
+        url: https://github.com/mpv-player/mpv/archive/v0.36.0.tar.gz
+        sha256: 29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6
         x-checker-data:
           type: anitya
           project-id: 5348
