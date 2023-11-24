@@ -239,7 +239,7 @@ modules:
         url: https://files.pythonhosted.org/packages/b6/8c/d5cc5123e8e4bd6c54b781d3bf19139c4d591629c677d3d3529bfc8da127/glad2-2.0.4-py3-none-any.whl
         sha256: 73ef167a919c93861f21b86a3cd6dc595b3a41c04902a4b94c8611d3eaaaccab
     cleanup:
-      - "*"
+      - '*'
 
   - name: libplacebo
     buildsystem: meson
@@ -299,8 +299,8 @@ modules:
       - -DCMAKE_Fortran_COMPILER=gfortran
     sources:
       - type: archive
-        url: https://github.com/Reference-LAPACK/lapack/archive/refs/tags/v3.11.0.tar.gz
-        sha256: 4b9ba79bfd4921ca820e83979db76ab3363155709444a787979e81c22285ffa9
+        url: https://github.com/Reference-LAPACK/lapack/archive/refs/tags/v3.12.0.tar.gz
+        sha256: af3c3fe01dd739e98ad3f455260c77128707c3d994879e45800ab377b6e49fad
         x-checker-data:
           type: anitya
           project-id: 1534
