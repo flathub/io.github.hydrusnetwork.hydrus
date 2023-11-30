@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="554" date="2023-11-30">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_554</url>
+      <description>
+        <p>Changes in Version 554</p>
+        <ul>
+          <li>The 'static check interval' logic is much much simpler</li>
+          <li>Fixed a bug in the new static check time code that was stopping certain in-limbo watchers from calculating their correct next check time on program load</li>
+          <li>Fixed a bug in the new static check time code that was causing too many checks in long-paused-and-now-unpaused downloaders</li>
+        </ul>
+      </description>
+    </release>
       <release version="553" date="2023-11-23">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_553</url>
       <description>
