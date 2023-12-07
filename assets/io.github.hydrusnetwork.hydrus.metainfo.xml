@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+      <release version="555" date="2023-12-07">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_555</url>
+      <description>
+        <p>Changes in Version 555</p>
+        <ul>
+          <li>PIL can now load images in int32 or float32 greyscale, with or without ICC Profiles</li>
+          <li>The system predicate parser is now plugged into the excellent dateparser library that we already use in downloader parsing</li>
+          <li>Fixed some borked page/popup permission checks in the client api</li>
+        </ul>
+      </description>
+    </release>
       <release version="554" date="2023-11-30">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_554</url>
       <description>
