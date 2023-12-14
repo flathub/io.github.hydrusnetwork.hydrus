@@ -71,7 +71,18 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
-      <release version="555" date="2023-12-07">
+    <release version="556" date="2023-12-14">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_556</url>
+      <description>
+        <p>Changes in Version 556</p>
+        <ul>
+          <li>Fixed, on a file drag and drop, the new export path eliding code from raising an error when the default export phrase would give an empty filename</li>
+          <li>Export folders will now fallback to using hash if their normal export filename raises an error</li>
+          <li>Holding down ctrl shift while selecting thumbnails now does the same thing as a bare shift and select</li>
+        </ul>
+      </description>
+    </release>
+    <release version="555" date="2023-12-07">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_555</url>
       <description>
         <p>Changes in Version 555</p>
@@ -82,7 +93,7 @@
         </ul>
       </description>
     </release>
-      <release version="554" date="2023-11-30">
+    <release version="554" date="2023-11-30">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_554</url>
       <description>
         <p>Changes in Version 554</p>
