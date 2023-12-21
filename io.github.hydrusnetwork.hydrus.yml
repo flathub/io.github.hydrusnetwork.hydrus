@@ -248,6 +248,11 @@ modules:
     build-options:
       append-path: /usr/lib/sdk/llvm16/bin
       prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
+      arch:
+        aarch64:
+          prepend-pkg-config-path: /app/lib/aarch64-linux-gnu/pkgconfig
+        x86_64:
+          prepend-pkg-config-path: /app/lib/x86_64-linux-gnu/pkgconfig
     build-commands:
       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS}
         --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
