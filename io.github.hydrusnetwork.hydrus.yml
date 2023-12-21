@@ -1,19 +1,22 @@
 app-id: io.github.hydrusnetwork.hydrus
-
 runtime: org.kde.Platform
 runtime-version: '6.6'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
   - org.freedesktop.Sdk.Extension.llvm16
-
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: '6.6'
-
+add-build-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    directory: lib/ffmpeg
+    add-ld-path: .
+    no-autodownload: true
+    version: '23.08'
 command: hydrus_client
-
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
+  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
 
 build-options:
   env:
@@ -30,140 +33,6 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
 
 modules:
-
-  - name: libass
-    config-opts:
-      - --disable-static
-    sources:
-      - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz
-        sha256: f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784
-        x-checker-data:
-          type: anitya
-          project-id: 1560
-          stable-only: true
-          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
-
-  - name: opencl-headers
-    buildsystem: simple
-    build-commands:
-      - cp -av CL /app/include
-    sources:
-      - type: archive
-        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.12.14.tar.gz
-        sha256: 407d5e109a70ec1b6cd3380ce357c21e3d3651a91caae6d0d8e1719c69a1791d
-        x-checker-data:
-          type: anitya
-          project-id: 223257
-          stable-only: true
-          url-template: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v$version.tar.gz
-
-  - name: libaom
-    buildsystem: cmake-ninja
-    builddir: true
-    config-opts:
-      - -DBUILD_SHARED_LIBS=1
-      - -DENABLE_EXAMPLES=OFF
-      - -DENABLE_TESTDATA=OFF
-      - -DENABLE_TESTS=OFF
-      - -DENABLE_TOOLS=OFF
-      - -DENABLE_DOCS=OFF
-    sources:
-      - type: archive
-        url: https://storage.googleapis.com/aom-releases/libaom-3.8.0.tar.gz
-        sha256: a768d3e54c7f00cd38b01208d1ae52d671be410cfc387ff7881ea71c855f3600
-        x-checker-data:
-          type: anitya
-          project-id: 17628
-          stable-only: true
-          url-template: https://storage.googleapis.com/aom-releases/libaom-$version.tar.gz
-
-  - name: libde265
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DENABLE_SDL=OFF
-      - -DENABLE_DECODER=OFF
-      - -DENABLE_ENCODER=OFF
-    sources:
-      - type: archive
-        url: https://github.com/strukturag/libde265/archive/v1.0.15/libde265-1.0.15.tar.gz
-        sha256: d4e55706dfc5b2c5c9702940b675ce2d3e7511025c6894eaddcdbaf0b15fd3f3
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/strukturag/libde265/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/strukturag/libde265/archive/\($tag)/libde265-\($version).tar.gz"'
-    cleanup:
-      - /bin
-
-  - name: x265
-    builddir: true
-    subdir: source
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DENABLE_SHARED=ON
-      - -DENABLE_CLI=FALSE
-    sources:
-      - type: archive
-        url: https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz
-        sha256: e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8
-        x-checker-data:
-          type: anitya
-          project-id: 7275
-          url-template: https://bitbucket.org/multicoreware/x265_git/downloads/x265_$version.tar.gz
-
-  - name: libheif
-    buildsystem: cmake-ninja
-    builddir: true
-    config-opts:
-      - -DWITH_EXAMPLES=OFF
-      - -DBUILD_TESTING=OFF
-    sources:
-      - type: archive
-        url: https://github.com/strukturag/libheif/archive/v1.17.6/libheif-1.17.6.tar.gz
-        sha256: 55bae7858bfd1679923d4a7db08ce1dcf3216667fa8f1da193a0577876b8a904
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/strukturag/libheif/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/strukturag/libheif/archive/\($tag)/libheif-\($version).tar.gz"'
-
-  - name: ffmpeg
-    config-opts:
-      - --enable-gnutls
-      - --enable-gpl
-      - --enable-opencl
-      - --enable-opengl
-      - --enable-libaom
-      - --enable-libass
-      - --enable-libdav1d
-      - --enable-libdrm
-      - --enable-libopenjpeg
-      - --enable-libvpx
-      - --enable-libx265
-      - --enable-shared
-      - --enable-version3
-      - --disable-doc
-      - --disable-manpages
-      - --disable-podpages
-      - --disable-static
-      - --disable-txtpages
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-6.1.tar.gz
-        sha256: 938dd778baa04d353163ca5cb06c909c918850055f549205b29b1224e45a5316
-        x-checker-data:
-          type: anitya
-          project-id: 5405
-          stable-only: true
-          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.gz
-    cleanup:
-      - /share/ffmpeg/examples
-
   - name: libXmu
     buildsystem: autotools
     sources:
