@@ -17,11 +17,9 @@ command: hydrus_client
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
   - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
-
 build-options:
   env:
     - BASEAPP_REMOVE_WEBENGINE=1
-
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
@@ -31,7 +29,19 @@ finish-args:
   - --device=dri
   - --filesystem=home
   - --talk-name=org.kde.StatusNotifierWatcher
-
+cleanup:
+  - '*.a'
+  - '*.la'
+  - /include
+  - /etc
+  - /man
+  - /lib/cmake
+  - /lib/pkgconfig
+  - /lib/metatypes
+  - /share/bash-completion
+  - /share/doc
+  - /share/man
+  - /share/zsh
 modules:
   - name: mpv
     buildsystem: meson
@@ -83,8 +93,6 @@ modules:
               - -DBUILD_SHARED_LIBS=ON
             cleanup:
               - /bin
-              - /include
-              - /lib/cmake
             sources:
               - type: archive
                 url: https://github.com/KhronosGroup/glslang/archive/13.1.1.tar.gz
@@ -282,23 +290,3 @@ modules:
         path: assets/io.github.hydrusnetwork.hydrus.desktop
       - type: file
         path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
-
-cleanup:
-  - '*.a'
-  - '*.la'
-  - /include
-  - /etc
-  - /man
-  - /lib/pkgconfig
-  - /lib/metatypes
-  - /share/applications/mpv.desktop
-  - /share/bash-completion
-  - /share/doc
-  - /share/man
-  - /share/zsh
-  - /share/icons/hicolor/16x16
-  - /share/icons/hicolor/32x32
-  - /share/icons/hicolor/64x64
-  - /share/icons/hicolor/128x128/apps/mpv.png
-  - /share/icons/hicolor/scalable/apps/mpv.svg
-  - /share/icons/hicolor/symbolic/apps/mpv-symbolic.svg
