@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Hydrus Server
-Comment=A booru-like media organizer for the desktop
-Exec=hydrus_server
-Icon=io.github.hydrusnetwork.hydrus
-Terminal=false
-Type=Application
-Categories=FileTools;Utility;

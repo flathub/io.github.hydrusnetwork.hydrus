@@ -221,7 +221,6 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 io.github.hydrusnetwork.hydrus.desktop /app/share/applications/io.github.hydrusnetwork.hydrus.desktop
-      - install -Dm644 io.github.hydrusnetwork.hydrus.server.desktop /app/share/applications/io.github.hydrusnetwork.hydrus.server.desktop
       - install -Dm644 io.github.hydrusnetwork.hydrus.metainfo.xml /app/share/metainfo/io.github.hydrusnetwork.hydrus.metainfo.xml
       - install -Dm644 io.github.hydrusnetwork.hydrus.128.png /app/share/icons/hicolor/128x128/apps/io.github.hydrusnetwork.hydrus.png
       - mkdir -p /app/hydrus
@@ -241,8 +240,6 @@ modules:
         path: assets/icon/io.github.hydrusnetwork.hydrus.128.png
       - type: file
         path: assets/io.github.hydrusnetwork.hydrus.desktop
-      - type: file
-        path: assets/io.github.hydrusnetwork.hydrus.server.desktop
       - type: file
         path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
 
