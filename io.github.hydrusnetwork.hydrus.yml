@@ -95,8 +95,8 @@ modules:
               - /bin
             sources:
               - type: archive
-                url: https://github.com/KhronosGroup/glslang/archive/13.1.1.tar.gz
-                sha256: 1c4d0a5a38c8aaf89a2d7e6093be734320599f5a6775b2726beeb05b0c054e66
+                url: https://github.com/KhronosGroup/glslang/archive/14.0.0.tar.gz
+                sha256: 80bbb916a23e94ea9cbfb1acb5d1a44a7e0c9613bcf5b5947c03f2273bdc92b0
                 x-checker-data:
                   type: anitya
                   project-id: 205796
@@ -204,8 +204,8 @@ modules:
       - -DDYNAMIC_ARCH=ON
     sources:
       - type: archive
-        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.25.tar.gz
-        sha256: 4c25cb30c4bb23eddca05d7d0a85997b8db6144f5464ba7f8c09ce91e2f35543
+        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.26.tar.gz
+        sha256: 4e6e4f5cb14c209262e33e6816d70221a2fe49eb69eaf0a06f065598ac602c68
         x-checker-data:
           type: anitya
           project-id: 2540
@@ -256,7 +256,8 @@ modules:
     build-commands:
       - python setup.py install --build-type=shiboken6 --ignore-git --parallel=${FLATPAK_BUILDER_N_JOBS}
         --skip-docs --prefix=${FLATPAK_DEST} --root=/ --optimize=1
-      - cmake -Bbuild -GNinja -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_INSTALL_LIBDIR=/app/lib -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DNO_QT_TOOLS=yes
+      - cmake -Bbuild -GNinja -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_INSTALL_LIBDIR=/app/lib
+        -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DNO_QT_TOOLS=yes
       - ninja -j $FLATPAK_BUILDER_N_JOBS -C build install
     sources:
       - type: archive
