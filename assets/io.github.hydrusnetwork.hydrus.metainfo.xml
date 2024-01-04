@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="557" date="2024-01-04">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_557</url>
+      <description>
+        <p>Changes in Version 557</p>
+        <ul>
+          <li>Optimised large tag filter edit UI</li>
+          <li>The cbz scanning tech should now recognise cbzs with four or fewer pages</li>
+          <li>Fixed the delete file pre-flight logic</li>
+        </ul>
+      </description>
+    </release>
     <release version="556" date="2023-12-14">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_556</url>
       <description>
