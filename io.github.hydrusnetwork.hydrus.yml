@@ -105,6 +105,7 @@ modules:
           - name: glslang
             buildsystem: cmake-ninja
             config-opts:
+              - -DCMAKE_BUILD_TYPE=Release
               - -DBUILD_SHARED_LIBS=ON
             cleanup:
               - /bin
