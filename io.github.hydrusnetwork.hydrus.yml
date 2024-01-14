@@ -244,19 +244,22 @@ modules:
           version-query: $tag | sub("^[vV]"; "")
           url-query: '"https://github.com/strukturag/libheif/archive/\($tag)/libheif-\($version).tar.gz"'
 
-  - python3-sources.json
+  - python3-sources.yaml
 
   - name: python3-patchelf
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "patchelf==0.15" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/5f/e8/15f86533acbb50ad672c18e2fc2a0e6975b4dcc19dcd01ca24e2cb8b6fd9/patchelf-0.15.0.0.tar.gz
-        sha256: 0f8dcf0df0ba919ce37e8aef67a08bde5326897098451df94ab3a5eedc9e08d9
+        --prefix=${FLATPAK_DEST} "patchelf" --no-build-isolation
     cleanup:
       - '*'
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/83/ec/ac383eb82792e092d8037649b382cf78a7b79c2ce4e5b861f61519b9b14e/patchelf-0.17.2.1.tar.gz
+        sha256: a6eb0dd452ce4127d0d5e1eb26515e39186fa609364274bc1b0b77539cfa7031
+        x-checker-data:
+          name: patchelf
+          type: pypi
 
   - name: pyside6
     buildsystem: simple
