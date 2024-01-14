@@ -274,6 +274,8 @@ modules:
         -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DNO_QT_TOOLS=yes -DSHIBOKEN_PYTHON_LIBRARIES='-lpython3.11'
         -DNUMPY_INCLUDE_DIR=/app/lib/python3.11/site-packages/numpy/core/include
       - ninja -j $FLATPAK_BUILDER_N_JOBS -C build install
+    cleanup:
+      - /share/PySide6
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.1-src/pyside-setup-everywhere-src-6.6.1.tar.xz
