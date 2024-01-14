@@ -288,6 +288,25 @@ modules:
       - type: patch
         path: patches/fix-build.patch
 
+  - name: swftools
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: http://www.swftools.org/swftools-0.9.2.tar.gz
+        sha256: bf6891bfc6bf535a1a99a485478f7896ebacbe3bbf545ba551298080a26f01f1
+      - type: shell
+        commands:
+          - rm config.sub config.guess
+          - cp /usr/share/automake-*/config.{sub,guess} .
+      - type: patch
+        path: patches/swftools-pointer.patch
+      - type: patch
+        path: patches/swftools-giflib-5.1.patch
+      - type: patch
+        path: patches/swftools-extern.patch
+      - type: patch
+        path: patches/swftools-install.patch
+
   - name: hydrus
     buildsystem: simple
     build-commands:
@@ -296,6 +315,8 @@ modules:
       - install -Dm644 io.github.hydrusnetwork.hydrus.128.png /app/share/icons/hicolor/128x128/apps/io.github.hydrusnetwork.hydrus.png
       - mkdir -p /app/hydrus
       - mv * /app/hydrus/
+      - rm /app/hydrus/bin/swfrender_linux
+      - ln -s /app/bin/swfrender /app/hydrus/bin/swfrender_linux
       - chmod +x /app/hydrus/hydrus_client.py /app/hydrus/hydrus_server.py
       - ln -s /app/hydrus/hydrus_client.py /app/bin/hydrus_client
       - ln -s /app/hydrus/hydrus_server.py /app/bin/hydrus_server
