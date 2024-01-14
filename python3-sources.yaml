@@ -337,15 +337,15 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "opencv-python-headless==4.7.0.72" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "opencv-python-headless" --no-build-isolation
     sources:
       - *id003
       - type: file
         url: https://files.pythonhosted.org/packages/4b/88/4ad713bd596cb82738cbf7b0549d57e3544a8f4771f6d5901715a73e3632/opencv-python-headless-4.7.0.72.tar.gz
         sha256: eea59caa92b28b197f9d2a2dd8275ca3869718b2a857c8e53203de6ef3f9f4db
-        x-checker-data:
-          name: opencv-python-headless
-          type: pypi
+        #x-checker-data:
+        #  name: opencv-python-headless
+        #  type: pypi
   - name: python3-pybind11
     buildsystem: simple
     build-commands:
@@ -638,11 +638,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "python-mpv==1.0.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "python-mpv" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/42/c3/c692825f7b1460164e85a9f0e5b7b2ceea48a1b89e270d369a786eceb0a2/python_mpv-1.0.3-py3-none-any.whl
-        sha256: d0a0e9266f560a9de0bd60add93ba83577c58e3d904f2b1a7e71a16b9249a83a
+        url: https://files.pythonhosted.org/packages/2b/fb/71a1af53867518f757bb9269a1466b2ee163325c9519f8b3ea1358b0e2ec/python_mpv-1.0.5-py3-none-any.whl
+        sha256: 1f6261b2a36954bcca84d31cb6ec2608cab6a3d1c13b2b8ed1a3bc5a84efd378
         x-checker-data:
           name: python_mpv
           packagetype: bdist_wheel
@@ -663,11 +663,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "QtPy==2.3.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "QtPy" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/51/9f/495736f9bbebc56b9f2ba3d95df1045fd367378254f799e86463b0037ab0/QtPy-2.3.1-py3-none-any.whl
-        sha256: 5193d20e0b16e4d9d3bc2c642d04d9f4e2c892590bd1b9c92bfe38a95d5a2e12
+        url: https://files.pythonhosted.org/packages/7e/a9/2146d5117ad8a81185331e0809a6b48933c10171f5bac253c6df9fce991c/QtPy-2.4.1-py3-none-any.whl
+        sha256: 1c1d8c4fa2c884ae742b069151b0abe15b3f70491f3972698c683b8e38de839b
         x-checker-data:
           name: QtPy
           packagetype: bdist_wheel
@@ -677,7 +677,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "requests==2.31.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
       - *id010
       - *id011
