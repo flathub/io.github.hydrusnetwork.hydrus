@@ -387,10 +387,10 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/a3/58/35da89ee790598a0700ea49b2a66594140f44dec458c07e8e3d4979137fc/ply-3.11-py2.py3-none-any.whl
         sha256: 096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce
-        x-checker-data:
-          name: ply
-          packagetype: bdist_wheel
-          type: pypi
+        # x-checker-data:
+        #  name: ply
+        #  packagetype: bdist_wheel
+        #  type: pypi
       - type: file
         url: https://files.pythonhosted.org/packages/05/f9/7b83b106557c98b26a4452c092416f521ede035d9f6f6fb6ffd9a4ec771b/pythran-0.15.0-py3-none-any.whl
         sha256: 74d52f9b5fc4d307a48c7ee741dff3bcb55014f91b6fb851a22cd8f381d404d1
@@ -752,10 +752,10 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/6e/aa/8caf6a0a3e62863cbb9dab27135660acba46903b703e224f14f447e57934/hyperlink-21.0.0-py2.py3-none-any.whl
         sha256: e6b14c37ecb73e89c77d78cdb4c2cc8f3fb59a885c5b3f819ff4ed80f25af1b4
-        x-checker-data:
-          name: hyperlink
-          packagetype: bdist_wheel
-          type: pypi
+        # x-checker-data:
+        #  name: hyperlink
+        #  packagetype: bdist_wheel
+        #  type: pypi
       - *id012
       - type: file
         url: https://files.pythonhosted.org/packages/77/51/8073577012492fcd15628e811db585f447c500fa407e944ab3a18ec55fb7/incremental-22.10.0-py2.py3-none-any.whl

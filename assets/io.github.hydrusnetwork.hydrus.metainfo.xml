@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="559" date="2024-01-18">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_559</url>
+      <description>
+        <p>Changes in Version 559</p>
+        <ul>
+          <li>Updated vacuum_timestamps to timestamp_ms and adjusted read/write and the dialog handling to ms</li>
+          <li>The file viewing stats manager now tracks 'last viewed time' as ms, and the update pipeline is also updated</li>
+          <li>The locations manager now handles all file times in ms, and all the archive/add/delete pipelines are also updated</li>
+        </ul>
+      </description>
+    </release>
     <release version="558" date="2024-01-11">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_558</url>
       <description>
