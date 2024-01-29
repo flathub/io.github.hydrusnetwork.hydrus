@@ -103,8 +103,8 @@ modules:
           type: pypi
       - *id001
       - type: file
-        url: https://files.pythonhosted.org/packages/32/4d/aaf7eff5deb402fd9a24a1449a8119f00d74ae9c2efa79f8ef9994261fc2/pytz-2023.3.post1-py2.py3-none-any.whl
-        sha256: ce42d816b81b68506614c11e8937d3aa9e41007ceb50bfdcb0749b921bf646c7
+        url: https://files.pythonhosted.org/packages/3b/dd/9b84302ba85ac6d3d3042d3e8698374838bde1c386b4adb1223d7a0efd4e/pytz-2023.4-py2.py3-none-any.whl
+        sha256: f90ef520d95e7c46951105338d918664ebfd6f1d995bd7d153127ce90efafa6a
         x-checker-data:
           name: pytz
           packagetype: bdist_wheel
@@ -504,8 +504,8 @@ modules:
           type: pypi
       - *id005
       - type: file
-        url: https://files.pythonhosted.org/packages/54/a4/569fc717831969cf48bced350bdaf070cdeab06918d179429899e144358d/tifffile-2023.12.9-py3-none-any.whl
-        sha256: 9b066e4b1a900891ea42ffd33dab8ba34c537935618b9893ddef42d7d422692f
+        url: https://files.pythonhosted.org/packages/16/09/b9f5e4f9448fd39b7c0c9cbb592409ab28e90a1913795260b975d8424cde/tifffile-2024.1.30-py3-none-any.whl
+        sha256: 40cb48f661acdfea16cb00dc8941bd642b8eb5c59bca6de6a54091bee9ee2699
         x-checker-data:
           name: tifffile
           packagetype: bdist_wheel
@@ -599,8 +599,8 @@ modules:
       - *id007
       - &id009
         type: file
-        url: https://files.pythonhosted.org/packages/ce/b3/13a12ea7edb068de0f62bac88a8ffd92cc2901881b391839851846b84a81/cryptography-41.0.7.tar.gz
-        sha256: 13f93ce9bea8016c253b34afc6bd6a75993e5c40672ed5405a9c832f0d4a00bc
+        url: https://files.pythonhosted.org/packages/3f/ed/a233522ab5201b988a482cbb19ae3b63bef8ad2ad3e11fc5216b7053b2e4/cryptography-42.0.1.tar.gz
+        sha256: fd33f53809bb363cf126bebe7a99d97735988d9b0131a2be59fbf83e1259a5b7
         x-checker-data:
           name: cryptography
           type: pypi
@@ -614,8 +614,8 @@ modules:
       - *id007
       - *id009
       - type: file
-        url: https://files.pythonhosted.org/packages/db/de/007b832ad7a95e6a73745609bbe123c407aa2c46bb0b8f765c8718294e7f/pyOpenSSL-23.3.0-py3-none-any.whl
-        sha256: 6756834481d9ed5470f4a9393455154bc92fe7a64b7bc6ee2c804e78c52099b2
+        url: https://files.pythonhosted.org/packages/3f/0e/c6656e62d9424d9c9f14b27be27220602f4af1e64b77f2c86340b671d439/pyOpenSSL-24.0.0-py3-none-any.whl
+        sha256: ba07553fb6fd6a7a2259adb9b84e12302a9a8a75c44046e8bb5d3e5ee887e3c3
         x-checker-data:
           name: pyOpenSSL
           packagetype: bdist_wheel
