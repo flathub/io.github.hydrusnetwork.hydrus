@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="560" date="2024-02-01">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_560</url>
+      <description>
+        <p>Changes in Version 560</p>
+        <ul>
+          <li>The 'edit times' dialog is now available when selecting multiple files</li>
+          <li>When the edit times dialog is set to change more than 100 total times, it now verifies with the user that this is correct on dialog ok</li>
+          <li>The gallery downloader page 'cog' icon now has a 'do not allow new duplicates' option</li>
+        </ul>
+      </description>
+    </release>
     <release version="559" date="2024-01-18">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_559</url>
       <description>
