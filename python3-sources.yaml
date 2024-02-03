@@ -525,8 +525,8 @@ modules:
     sources:
       - *id006
       - type: file
-        url: https://files.pythonhosted.org/packages/07/23/bc7a261401034b289a60c22015f47ad98d40d7681fd06d2cefa6e1ac2e6d/pillow_heif-0.14.0.tar.gz
-        sha256: 7abd0279f0ec8b5ba1513dc586e52173666ed9278b38e219bf47da92704262cb
+        url: https://files.pythonhosted.org/packages/bb/72/b0385fcc17c277af764617e1b60c9dbacca55201dadcea2a8da0ee2c3b78/pillow_heif-0.15.0.tar.gz
+        sha256: 97a3ad62515fa7945ff0d7e4951ea7375eed2d7dc1cc258f0585709df89517e3
         x-checker-data:
           name: pillow_heif
           type: pypi
