@@ -71,6 +71,12 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="560a" date="2024-02-04">
+      <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v560a</url>
+      <description>
+        <p>Hotfix release for the duplicate filter in v560</p>
+      </description>
+    </release>
     <release version="560" date="2024-02-01">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_560</url>
       <description>
