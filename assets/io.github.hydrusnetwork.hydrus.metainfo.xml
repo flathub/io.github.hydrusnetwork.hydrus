@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="561" date="2024-02-08">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_561</url>
+      <description>
+        <p>Changes in Version 561</p>
+        <ul>
+          <li>On the thumbnail menu, there is a new 'move' submenu</li>
+          <li>Added these rearrange commands to the shortcuts system, as 'move thumbnails' under the 'thumbnails' set</li>
+          <li>The file log arrow button menu now has entries for 'delete already in db' and 'delete everything'</li>
+        </ul>
+      </description>
+    </release>
     <release version="560a" date="2024-02-04">
       <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v560a</url>
       <description>
