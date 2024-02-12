@@ -53,7 +53,7 @@ modules:
           name: setuptools_scm
           packagetype: bdist_wheel
           type: pypi
-      - &id016
+      - &id015
         type: file
         url: https://files.pythonhosted.org/packages/b7/f4/6a90020cd2d93349b442bfcb657d0dc91eee65491600b2cb1d388bc98e6b/typing_extensions-4.9.0-py3-none-any.whl
         sha256: af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd
@@ -173,7 +173,7 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "cloudscraper>=1.2.33" --no-build-isolation
     sources:
-      - &id010
+      - &id009
         type: file
         url: https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl
         sha256: dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1
@@ -181,7 +181,7 @@ modules:
           name: certifi
           packagetype: bdist_wheel
           type: pypi
-      - &id011
+      - &id010
         type: file
         url: https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz
         sha256: f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5
@@ -195,7 +195,7 @@ modules:
           name: cloudscraper
           packagetype: bdist_wheel
           type: pypi
-      - &id012
+      - &id011
         type: file
         url: https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl
         sha256: c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f
@@ -210,7 +210,7 @@ modules:
           name: pyparsing
           packagetype: bdist_wheel
           type: pypi
-      - &id013
+      - &id012
         type: file
         url: https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl
         sha256: 58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f
@@ -225,7 +225,7 @@ modules:
           name: requests_toolbelt
           packagetype: bdist_wheel
           type: pypi
-      - &id014
+      - &id013
         type: file
         url: https://files.pythonhosted.org/packages/88/75/311454fd3317aefe18415f04568edc20218453b709c63c58b9292c71be17/urllib3-2.2.0-py3-none-any.whl
         sha256: ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224
@@ -284,8 +284,7 @@ modules:
         --prefix=${FLATPAK_DEST} "pyproject-metadata" --no-build-isolation
     sources:
       - *id002
-      - &id004
-        type: file
+      - type: file
         url: https://files.pythonhosted.org/packages/c4/cb/4678dfd70cd2f2d8969e571cdc1bb1e9293c698f8d1cf428fadcf48d6e9f/pyproject_metadata-0.7.1-py3-none-any.whl
         sha256: 28691fbb36266a819ec56c9fa1ecaf36f879d6944dfde5411e87fc4ff793aa60
         x-checker-data:
@@ -431,7 +430,7 @@ modules:
         --prefix=${FLATPAK_DEST} "scipy" --no-build-isolation
     sources:
       - *id003
-      - &id005
+      - &id004
         type: file
         url: https://files.pythonhosted.org/packages/30/85/cdbf2c3c460fe5aae812917866392068a88d02f07de0fe31ce738734c477/scipy-1.12.0.tar.gz
         sha256: 4bf5abab8a36d20193c698b0f1fc282c1d083c94723902c447e5d2f1780936a3
@@ -450,7 +449,7 @@ modules:
         x-checker-data:
           name: aggdraw
           type: pypi
-      - &id015
+      - &id014
         type: file
         url: https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl
         sha256: 99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1
@@ -465,8 +464,8 @@ modules:
           name: docopt
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/c0/69/3aaa69cb0748e33e644fda114c9abd3186ce369edd4fca11107e9f39c6a7/imageio-2.33.1-py3-none-any.whl
-        sha256: c5094c48ccf6b2e6da8b4061cd95e1209380afafcbeae4a4e280938cce227e1d
+        url: https://files.pythonhosted.org/packages/02/25/66533a8390e3763cf8254dee143dbf8a830391ea60d2762512ba7f9ddfbe/imageio-2.34.0-py3-none-any.whl
+        sha256: 08082bf47ccb54843d9c73fe9fc8f3a88c72452ab676b58aca74f36167e8ccba
         x-checker-data:
           name: imageio
           packagetype: bdist_wheel
@@ -487,7 +486,7 @@ modules:
           type: pypi
       - *id003
       - *id002
-      - &id006
+      - &id005
         type: file
         url: https://files.pythonhosted.org/packages/f8/3e/32cbd0129a28686621434cbf17bb64bf1458bfb838f1f668262fefce145c/pillow-10.2.0.tar.gz
         sha256: e87f0b2c78157e12d7686b27d63c070fd65d994e8ddae6f328e0dcf4a0cd007e
@@ -506,7 +505,7 @@ modules:
         x-checker-data:
           name: scikit_image
           type: pypi
-      - *id005
+      - *id004
       - type: file
         url: https://files.pythonhosted.org/packages/16/09/b9f5e4f9448fd39b7c0c9cbb592409ab28e90a1913795260b975d8424cde/tifffile-2024.1.30-py3-none-any.whl
         sha256: 40cb48f661acdfea16cb00dc8941bd642b8eb5c59bca6de6a54091bee9ee2699
@@ -520,14 +519,14 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "Pillow>=10.0.1" --no-build-isolation
     sources:
-      - *id006
+      - *id005
   - name: python3-pillow-heif
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pillow-heif>=0.12.0" --no-build-isolation
     sources:
-      - *id006
+      - *id005
       - type: file
         url: https://files.pythonhosted.org/packages/bb/72/b0385fcc17c277af764617e1b60c9dbacca55201dadcea2a8da0ee2c3b78/pillow_heif-0.15.0.tar.gz
         sha256: 97a3ad62515fa7945ff0d7e4951ea7375eed2d7dc1cc258f0585709df89517e3
@@ -574,14 +573,14 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "cffi" --no-build-isolation
     sources:
-      - &id007
+      - &id006
         type: file
         url: https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz
         sha256: bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0
         x-checker-data:
           name: cffi
           type: pypi
-      - &id008
+      - &id007
         type: file
         url: https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl
         sha256: 8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9
@@ -600,23 +599,23 @@ modules:
         --prefix=${FLATPAK_DEST} "cryptography" --no-build-isolation
     sources:
       - cargo-sources.json
-      - *id007
-      - &id009
+      - *id006
+      - &id008
         type: file
         url: https://files.pythonhosted.org/packages/0f/6f/40f1b5c6bafc809dd21a9e577458ecc1d8062a7e10148d140f402b535eaa/cryptography-42.0.2.tar.gz
         sha256: e0ec52ba3c7f1b7d813cd52649a5b3ef1fc0d433219dc8c93827c57eab6cf888
         x-checker-data:
           name: cryptography
           type: pypi
-      - *id008
+      - *id007
   - name: python3-pyOpenSSL
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pyOpenSSL>=19.1.0" --no-build-isolation
     sources:
-      - *id007
-      - *id009
+      - *id006
+      - *id008
       - type: file
         url: https://files.pythonhosted.org/packages/3f/0e/c6656e62d9424d9c9f14b27be27220602f4af1e64b77f2c86340b671d439/pyOpenSSL-24.0.0-py3-none-any.whl
         sha256: ba07553fb6fd6a7a2259adb9b84e12302a9a8a75c44046e8bb5d3e5ee887e3c3
@@ -624,7 +623,7 @@ modules:
           name: pyOpenSSL
           packagetype: bdist_wheel
           type: pypi
-      - *id008
+      - *id007
   - name: python3-PySocks
     buildsystem: simple
     build-commands:
@@ -683,11 +682,11 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "requests" --no-build-isolation
     sources:
+      - *id009
       - *id010
       - *id011
       - *id012
       - *id013
-      - *id014
   - name: python3-Send2Trash
     buildsystem: simple
     build-commands:
@@ -707,9 +706,9 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "service-identity>=18.1.0" --no-build-isolation
     sources:
-      - *id015
-      - *id007
-      - *id009
+      - *id014
+      - *id006
+      - *id008
       - type: file
         url: https://files.pythonhosted.org/packages/d1/75/4686d2872bf2fc0b37917cbc8bbf0dd3a5cdb0990799be1b9cbf1e1eb733/pyasn1-0.5.1-py2.py3-none-any.whl
         sha256: 4439847c58d40b1d0a573d07e3856e95333f1976294494c325775aeca506eb58
@@ -724,7 +723,7 @@ modules:
           name: pyasn1_modules
           packagetype: bdist_wheel
           type: pypi
-      - *id008
+      - *id007
       - type: file
         url: https://files.pythonhosted.org/packages/3b/92/44669afe6354a7bed9968013862118c401690d8b5a805bab75ac1764845f/service_identity-24.1.0-py3-none-any.whl
         sha256: a28caf8130c8a5c1c7a6f5293faaf239bbfb7751e4862436920ee6f2616f568a
@@ -745,7 +744,7 @@ modules:
           name: Automat
           packagetype: bdist_wheel
           type: pypi
-      - *id015
+      - *id014
       - type: file
         url: https://files.pythonhosted.org/packages/b8/40/c199d095151addf69efdb4b9ca3a4f20f70e20508d6222bffb9b76f58573/constantly-23.10.4-py3-none-any.whl
         sha256: 3fd9b4d1c3dc1ec9757f3c52aef7e53ad9323dbe39f51dfd4c43853b68dfa3f9
@@ -760,7 +759,7 @@ modules:
         #  name: hyperlink
         #  packagetype: bdist_wheel
         #  type: pypi
-      - *id012
+      - *id011
       - type: file
         url: https://files.pythonhosted.org/packages/77/51/8073577012492fcd15628e811db585f447c500fa407e944ab3a18ec55fb7/incremental-22.10.0-py2.py3-none-any.whl
         sha256: b864a1f30885ee72c5ac2835a761b8fe8aa9c28b9395cacf27286602688d3e51
@@ -775,7 +774,7 @@ modules:
           name: twisted
           packagetype: bdist_wheel
           type: pypi
-      - *id016
+      - *id015
       - type: file
         url: https://files.pythonhosted.org/packages/87/03/6b85c1df2dca1b9acca38b423d1e226d8ffdf30ebd78bcb398c511de8b54/zope.interface-6.1.tar.gz
         sha256: 2fdc7ccbd6eb6b7df5353012fbed6c3c5d04ceaca0038f75e601060e95345309
