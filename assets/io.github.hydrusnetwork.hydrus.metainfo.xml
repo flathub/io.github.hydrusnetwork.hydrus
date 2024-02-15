@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="562" date="2024-02-15">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_562</url>
+      <description>
+        <p>Changes in Version 562</p>
+        <ul>
+          <li>Page tab drag and drops will now not start unless the click has lasted more than 100ms</li>
+          <li>The manage tags dialog now shows the current count of tags for each page tab, and, if there are outstanding changes, shows an asterisk</li>
+          <li>The migrate database dialog is renamed move media files</li>
+        </ul>
+      </description>
+    </release>
     <release version="561" date="2024-02-08">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_561</url>
       <description>
