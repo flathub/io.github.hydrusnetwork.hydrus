@@ -149,8 +149,8 @@ modules:
         --prefix=${FLATPAK_DEST} "cbor2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9e/58/127a9e0750667e7ec98b4c04a16233ff2b5fcc78de940e16d0d5839273b6/cbor2-5.6.1.tar.gz
-        sha256: 752130e38644319f3dae7f91fabb08f58bc454ca671b72875e6228d423890efd
+        url: https://files.pythonhosted.org/packages/ca/39/0d0a29671be102bd0c717c60f9c805b46042ff98d4a63282cfaff3704b45/cbor2-5.6.2.tar.gz
+        sha256: b7513c2dea8868991fad7ef8899890ebcf8b199b9b4461c3c11d7ad3aef4820d
         x-checker-data:
           name: cbor2
           type: pypi
