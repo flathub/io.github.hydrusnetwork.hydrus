@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="563" date="2024-02-22">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_563</url>
+      <description>
+        <p>Changes in Version 563</p>
+        <ul>
+          <li>By default, Alt+Home/End/Left/Right now does the new thumbnail rearranging</li>
+          <li>The tag service menu button that appears in the autocomplete panel and sometimes some other places in advanced mode now shows a proper check mark in its menu beside its current value</li>
+          <li>The location context menu button on the other side of an autocomplete panel and some other places also now shows a check mark in its menu beside its current value</li>
+        </ul>
+      </description>
+    </release>
     <release version="562" date="2024-02-15">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_562</url>
       <description>
