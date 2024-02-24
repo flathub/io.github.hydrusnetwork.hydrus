@@ -602,8 +602,8 @@ modules:
       - *id006
       - &id008
         type: file
-        url: https://files.pythonhosted.org/packages/81/d8/214d25515bf6034dce99aba22eeb47443b14c82160114e3d3f33067c6d3b/cryptography-42.0.4.tar.gz
-        sha256: 831a4b37accef30cccd34fcb916a5d7b5be3cbbe27268a02832c3e450aea39cb
+        url: https://files.pythonhosted.org/packages/13/9e/a55763a32d340d7b06d045753c186b690e7d88780cafce5f88cb931536be/cryptography-42.0.5.tar.gz
+        sha256: 6fe07eec95dfd477eb9530aef5bead34fec819b3aaf6c5bd6d20565da607bfe1
         x-checker-data:
           name: cryptography
           type: pypi
