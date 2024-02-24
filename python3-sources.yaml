@@ -561,8 +561,8 @@ modules:
           packagetype: bdist_wheel
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/e0/34/d88a7ceb193fbcee6c8992d1b1e33ed20361027e07fea1676efc45ec7a43/setuptools_rust-1.8.1-py3-none-any.whl
-        sha256: b5324493949ccd6aa0c03890c5f6b5f02de4512e3ac1697d02e9a6c02b18aa8e
+        url: https://files.pythonhosted.org/packages/f7/7f/8b1c33598b03ad612b8ced223f9ca54076b789fabf5a66ce37cc096d9cf7/setuptools_rust-1.9.0-py3-none-any.whl
+        sha256: 409caf49dcf7ad9bd510b4bf4011fbad504e745fae98f57fe1c06f3a97719638
         x-checker-data:
           name: setuptools_rust
           packagetype: bdist_wheel
@@ -602,8 +602,8 @@ modules:
       - *id006
       - &id008
         type: file
-        url: https://files.pythonhosted.org/packages/81/d8/214d25515bf6034dce99aba22eeb47443b14c82160114e3d3f33067c6d3b/cryptography-42.0.4.tar.gz
-        sha256: 831a4b37accef30cccd34fcb916a5d7b5be3cbbe27268a02832c3e450aea39cb
+        url: https://files.pythonhosted.org/packages/13/9e/a55763a32d340d7b06d045753c186b690e7d88780cafce5f88cb931536be/cryptography-42.0.5.tar.gz
+        sha256: 6fe07eec95dfd477eb9530aef5bead34fec819b3aaf6c5bd6d20565da607bfe1
         x-checker-data:
           name: cryptography
           type: pypi
