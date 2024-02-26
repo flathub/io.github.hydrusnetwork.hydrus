@@ -494,8 +494,8 @@ modules:
           name: pillow
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/00/6f/53508446a6dd9954644bf1a571704134aae6e2e93c7889e6fff0ddde8e34/psd-tools-1.9.30.tar.gz
-        sha256: a9d38fc0397f151930f2afe145a47bb5c8a7bff3ff9a80cf6578d1b1c0ac2671
+        url: https://files.pythonhosted.org/packages/0c/ca/634c2904ac24a530af32433aea9f4fec5e35cf6d5deae5f002ae455f74e6/psd-tools-1.9.31.tar.gz
+        sha256: a912cbaf3ec8acfb8269bbb9c3703081059e0eeec0f82aca00ac0063c9090b00
         x-checker-data:
           name: psd-tools
           type: pypi
