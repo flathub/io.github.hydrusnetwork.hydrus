@@ -768,8 +768,8 @@ modules:
           packagetype: bdist_wheel
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/24/83/8d34d264c72d5450cd3d3ef31c885bb36b94635aa8e9e223581793d9d6c8/twisted-23.10.0-py3-none-any.whl
-        sha256: 4ae8bce12999a35f7fe6443e7f1893e6fe09588c8d2bed9c35cdce8ff2d5b444
+        url: https://files.pythonhosted.org/packages/f8/f3/ff962a66ed957f4b51a669f25f6d0026a51dda1d25e3766a63d9a5aaf81e/twisted-24.3.0-py3-none-any.whl
+        sha256: 039f2e6a49ab5108abd94de187fa92377abe5985c7a72d68d0ad266ba19eae63
         x-checker-data:
           name: twisted
           packagetype: bdist_wheel
