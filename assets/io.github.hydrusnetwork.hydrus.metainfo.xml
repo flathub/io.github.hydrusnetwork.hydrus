@@ -71,6 +71,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="564" date="2024-02-29">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_564</url>
+      <description>
+        <p>Changes in Version 564</p>
+        <ul>
+          <li>The system predicates for width, height, num_notes, num_words, num_urls, num_frames, duration, and framerate now support two different kinds of approximate equals, ≈: absolute (±x), and percentage (±x%)</li>
+          <li>All system:framerate=x searches are now converted to ±5%, which is what they were behind the scenes</li>
+          <li>Updated the NumberTest object to hold specific percentage and absolute ± values</li>
+        </ul>
+      </description>
+    </release>
     <release version="563" date="2024-02-22">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_563</url>
       <description>
