@@ -5,7 +5,9 @@
   <launchable type="desktop-id">io.github.hydrusnetwork.hydrus.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>WTFPL</project_license>
-  <developer_name>Hydrus Network</developer_name>
+  <developer id="io.github.hydrusnetwork">
+    <name>Hydrus Network</name>
+  </developer>
   <summary>Organize media on the desktop</summary>
   <description>
     <p>The hydrus network client is a desktop application written for Anonymous and other internet enthusiasts with large media collections. It organises your files into an internal database and browses them with tags instead of folders, a little like a booru on your desktop. Tags and files can be anonymously shared through custom servers that any user may run. Everything is free, nothing phones home, and the source code is included with the release. It is developed mostly for Windows, but builds for Linux and macOS are available (perhaps with some limitations, depending on your situation).</p>
@@ -71,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="564" date="2024-02-29">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_564</url>
+      <description>
+        <p>Changes in Version 564</p>
+        <ul>
+          <li>The system predicates for width, height, num_notes, num_words, num_urls, num_frames, duration, and framerate now support two different kinds of approximate equals, ≈: absolute (±x), and percentage (±x%)</li>
+          <li>All system:framerate=x searches are now converted to ±5%, which is what they were behind the scenes</li>
+          <li>Updated the NumberTest object to hold specific percentage and absolute ± values</li>
+        </ul>
+      </description>
+    </release>
     <release version="563" date="2024-02-22">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_563</url>
       <description>
