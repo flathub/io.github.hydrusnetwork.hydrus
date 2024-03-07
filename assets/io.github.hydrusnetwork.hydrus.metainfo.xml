@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="565" date="2024-03-07">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_565</url>
+      <description>
+        <p>Changes in Version 565</p>
+        <ul>
+          <li>Options->sort/collect now offers four places to customise default tag sort. instead of having one default sort for everything, there's now sort for search pages, media viewers, and the manage tags dialogs launched off of them</li>
+          <li>When you copy namespaces from the tag filter list, it now copies the actual underlying data text like character:, which you can paste in elsewhere, rather than the pretty "character" tags display text</li>
+          <li>Brushed up some of the UI and help text on the tag filter UI</li>
+        </ul>
+      </description>
+    </release>
     <release version="564" date="2024-02-29">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_564</url>
       <description>
