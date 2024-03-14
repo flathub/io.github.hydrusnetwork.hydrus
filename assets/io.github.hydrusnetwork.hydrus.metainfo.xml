@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="566" date="2024-03-14">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_566</url>
+      <description>
+        <p>Changes in Version 566</p>
+        <ul>
+          <li>When you boot a 'manage tags' dialog on multiple files, a new ± button now lets you do 'incremental tagging'. this is where you, let's say for twenty files, tag them from page:1->page:20. this has been a long time in the works, but now we have thumbnail reorganisation tech, it is now sensible to do.</li>
+          <li>The dialog lets you set a namespace (or none), start point (e.g. you can start tagging at page:19 if you are doing the second chapter etc...), the step (you can count by +2 every file, instead of +1, or even -1 to decrement), the subtag prefix (so you can say 'page:insert-4' or something), and the subtag suffix (for, say, 'page:2 (wip)')</li>
+          <li>The last namespace is remembered between dialog opens, and if the first file in the selection has a number tag in that namespace, that is the number the 'start' will initialise with. a bit of overlap/prep may save time here!</li>
+        </ul>
+      </description>
+    </release>
     <release version="565" date="2024-03-07">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_565</url>
       <description>
