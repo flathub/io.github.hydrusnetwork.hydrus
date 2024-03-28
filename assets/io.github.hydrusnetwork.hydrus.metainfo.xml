@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="568" date="2024-03-28">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_568</url>
+      <description>
+        <p>Changes in Version 568</p>
+        <ul>
+          <li>Thanks to a user, the new docx, pptx, and xlsx support is improved, with better thumbnails</li>
+          <li>Thanks to a user, the cbz scanner now ignores the __MACOSX folder</li>
+          <li>Thanks to a user, setting the Qt style in options->style should be more reliable (fixing some name case sensitivity issues)</li>
+        </ul>
+      </description>
+    </release>
     <release version="566" date="2024-03-14">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_566</url>
       <description>
