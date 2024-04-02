@@ -528,8 +528,8 @@ modules:
     sources:
       - *id005
       - type: file
-        url: https://files.pythonhosted.org/packages/bb/72/b0385fcc17c277af764617e1b60c9dbacca55201dadcea2a8da0ee2c3b78/pillow_heif-0.15.0.tar.gz
-        sha256: 97a3ad62515fa7945ff0d7e4951ea7375eed2d7dc1cc258f0585709df89517e3
+        url: https://files.pythonhosted.org/packages/fc/79/973715ca134c78bfab1de17d51ae599df3816f05011bb9eb7f230f464f55/pillow_heif-0.16.0.tar.gz
+        sha256: 4d95004bb77aa640f80617716aa21bc092ec06307f6f2ad423deeeda07b4d29c
         x-checker-data:
           name: pillow_heif
           type: pypi
