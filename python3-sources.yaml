@@ -149,8 +149,8 @@ modules:
         --prefix=${FLATPAK_DEST} "cbor2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ca/39/0d0a29671be102bd0c717c60f9c805b46042ff98d4a63282cfaff3704b45/cbor2-5.6.2.tar.gz
-        sha256: b7513c2dea8868991fad7ef8899890ebcf8b199b9b4461c3c11d7ad3aef4820d
+        url: https://files.pythonhosted.org/packages/15/40/167a05149eff1c0b7d19e27d0e1c96a463c5f670f879bffb7d124e3a6539/cbor2-5.6.3.tar.gz
+        sha256: e6f0ae2751c2d333a960e0807c0611494eb1245631a167965acbc100509455d3
         x-checker-data:
           name: cbor2
           type: pypi
@@ -500,8 +500,8 @@ modules:
           name: psd-tools
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/65/c1/a49da20845f0f0e1afbb1c2586d406dc0acb84c26ae293bad6d7e7f718bc/scikit_image-0.22.0.tar.gz
-        sha256: 018d734df1d2da2719087d15f679d19285fce97cd37695103deadfaef2873236
+        url: https://files.pythonhosted.org/packages/4b/12/2337d523dc7085ef0e5a51dfde6059e7969442919aeac8de0064bdb8adb7/scikit_image-0.23.1.tar.gz
+        sha256: 4ff756161821568ed56523f1c4ab9094962ba79e817a9a8e818d9f51d223d669
         x-checker-data:
           name: scikit_image
           type: pypi
@@ -694,8 +694,8 @@ modules:
         --prefix=${FLATPAK_DEST} "Send2Trash>=1.5.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a9/78/e4df1e080ed790acf3a704edf521006dd96b9841bd2e2a462c0d255e0565/Send2Trash-1.8.2-py3-none-any.whl
-        sha256: a384719d99c07ce1eefd6905d2decb6f8b7ed054025bb0e618919f945de4f679
+        url: https://files.pythonhosted.org/packages/40/b0/4562db6223154aa4e22f939003cb92514c79f3d4dccca3444253fd17f902/Send2Trash-1.8.3-py3-none-any.whl
+        sha256: 0c31227e0bd08961c7665474a3d1ef7193929fedda4233843689baa056be46c9
         x-checker-data:
           name: Send2Trash
           packagetype: bdist_wheel
