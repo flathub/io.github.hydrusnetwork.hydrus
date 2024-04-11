@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="570" date="2024-04-11">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_570</url>
+      <description>
+        <p>Changes in Version 570</p>
+        <ul>
+          <li>Wrote a thing to wrap tooltips and applied it everywhere. every tooltip in the program should now wrap to 80 characters</li>
+          <li>The thumbnail view is now better about pausing the current video if you open it externally in various ways</li>
+          <li>The 'open' submenu you get off of a file right-click is now exactly the same for the thumbnail menu and the media viewer menu, with all commands working in either place, the labels are also brushed up a little</li>
+        </ul>
+      </description>
+    </release>
     <release version="568" date="2024-03-28">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_568</url>
       <description>
