@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="571" date="2024-04-18">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_571</url>
+      <description>
+        <p>Changes in Version 571</p>
+        <ul>
+          <li>When you finish an archive/delete filter and there are several domains you could delete from, the 'commit' buttons are now disabled for 1.2 seconds. this catches you from accidentally spamming enter through a surprise complicated decision</li>
+          <li>Under options->files and trash, you can now say 'when finishing filtering, always delete from all possible domains', which makes the above decision always single domain. hit this if you do want to spam through this and are fine always deleting from everywhere</li>
+          <li>The client will now, by default, attempt to load truncated images. this was previously off until you set it per-session-on in a debug menu, but is now a checkbox under options->media. some weird damaged jpegs and pngs should now load, fingers crossed</li>
+        </ul>
+      </description>
+    </release>
     <release version="570" date="2024-04-11">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_570</url>
       <description>
