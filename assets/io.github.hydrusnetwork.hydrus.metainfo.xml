@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="573" date="2024-05-02">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_573</url>
+      <description>
+        <p>Changes in Version 573</p>
+        <ul>
+          <li>The archive/delete and duplicate filters now yes/no confirm when you say to 'forget' at the end of a filtering run</li>
+          <li>The duplicate filter page now only allows you to set the search location to local file domains--so it'll only ever try to search and show pairs for files you actually have</li>
+          <li>Refactored some question/button dialog stuff</li>
+        </ul>
+      </description>
+    </release>
     <release version="571" date="2024-04-18">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_571</url>
       <description>
