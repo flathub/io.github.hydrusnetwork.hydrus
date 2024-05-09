@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="574" date="2024-05-09">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_574</url>
+      <description>
+        <p>Changes in Version 574</p>
+        <ul>
+          <li>The filetype selector in system:filetype now expands to eat extra vertical space if the dialog is resized</li>
+          <li>The filetype selector in file import options is moved a bit and also now expands to eat extra vertical space</li>
+          <li>Added a new 'apply image ICC Profile colour adjustments' checkbox to options->media. this simply turns off ICC profile loading and application, for debug purposes</li>
+        </ul>
+      </description>
+    </release>
     <release version="573" date="2024-05-02">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_573</url>
       <description>
