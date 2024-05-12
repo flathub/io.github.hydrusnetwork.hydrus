@@ -361,8 +361,13 @@ modules:
     sources:
       - *id003
       - type: file
-        url: https://files.pythonhosted.org/packages/4b/88/4ad713bd596cb82738cbf7b0549d57e3544a8f4771f6d5901715a73e3632/opencv-python-headless-4.7.0.72.tar.gz
-        sha256: eea59caa92b28b197f9d2a2dd8275ca3869718b2a857c8e53203de6ef3f9f4db
+        only-arches: [x86_64]
+        url: https://files.pythonhosted.org/packages/9d/d7/e2aaf344254292d2046f9984b54212e4e7d69a57d30ae15e7294840710f6/opencv_python_headless-4.8.1.78-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        sha256: 58e70d2f0915fe23e02c6e405588276c9397844a47d38b9c87fac5f7f9ba2dcc
+      - type: file
+        only-arches: [aarch64]
+        url: https://files.pythonhosted.org/packages/70/cf/205f6e18dddaa75375d34d809788708b1f1d4ce747194de511274fe6bd0a/opencv_python_headless-4.8.1.78-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        sha256: 3b6bd6e1132b6f5dcb3a5bfe30fc4d341a7bfb26134da349a06c9255288ded94
         #x-checker-data:
         #  name: opencv-python-headless
         #  type: pypi
