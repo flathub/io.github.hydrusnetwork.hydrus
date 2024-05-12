@@ -644,8 +644,8 @@ modules:
         --prefix=${FLATPAK_DEST} "python-mpv" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2b/fb/71a1af53867518f757bb9269a1466b2ee163325c9519f8b3ea1358b0e2ec/python_mpv-1.0.5-py3-none-any.whl
-        sha256: 1f6261b2a36954bcca84d31cb6ec2608cab6a3d1c13b2b8ed1a3bc5a84efd378
+        url: https://files.pythonhosted.org/packages/26/3d/b3599ab4ca816c174b682334e161dde920a646a5dbdaf030fd7bca19376a/python_mpv-1.0.6-py3-none-any.whl
+        sha256: cdb3801ba122b28f37f3a019f265ee793500cd43b1d531c0ac1b7cb644d0c62a
         #x-checker-data:
         #  name: python_mpv
         #  packagetype: bdist_wheel
