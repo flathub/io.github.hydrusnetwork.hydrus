@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="575" date="2024-05-16">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_575</url>
+      <description>
+        <p>Changes in Version 575</p>
+        <ul>
+          <li>The new 'children' tab now sorts its results by count, and it only shows the top n (default 40) results. you can edit the n under options->tags. let me know how this works IRL, as this new count-sorting needs a bit of extra CPU</li>
+          <li>When you ask subscriptions to 'check now', either in the 'edit subscription' or 'edit subscriptions' dialogs, if there is a mix of DEAD and ALIVE subs, it now pops up a quick question dialog asking whether you want to check now for all/alive/dead</li>
+          <li>Thanks to a user, I think we have fixed ICC profile processing when your system ICC Profile is non-sRGB</li>
+        </ul>
+      </description>
+    </release>
     <release version="574" date="2024-05-09">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_574</url>
       <description>
