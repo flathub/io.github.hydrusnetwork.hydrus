@@ -278,8 +278,8 @@ modules:
       - /share/PySide6
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.1-src/pyside-setup-everywhere-src-6.6.1.tar.xz
-        sha256: 341f42483fbe58c88fa5b353eefa83ffcc4ec440bf6e87c1c7ffd278ed54d1ca
+        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.7.0-src/pyside-setup-everywhere-src-6.7.0.tar.xz
+        sha256: 82eae370737df5ecf539c165d09d7c81d5fc6153a541b8d3d37b11275f9e3e8f
       - type: shell
         commands:
           - mkdir -p ${FLATPAK_DEST}/include/qt6tmp && cp -R /usr/include/Qt* ${FLATPAK_DEST}/include/qt6tmp # https://bugreports.qt.io/projects/PYSIDE/issues/PYSIDE-787
