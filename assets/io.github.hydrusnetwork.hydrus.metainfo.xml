@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="576" date="2024-05-23">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_576</url>
+      <description>
+        <p>Changes in Version 576</p>
+        <ul>
+          <li>The mpv player no longer hangs the UI thread on file load if the file manager is busy. it now just shows a black square until things are freed up. sorry this took so long to fix!</li>
+          <li>The client file storage system has a new two-layer locking mechanism that allows for massively more parallel access, even when files are importing. file imports should lag out file/thumbnail load significantly less</li>
+          <li>Tthanks to a user, we now have support for legacy Microsoft Office documents (.doc, .ppt, .xls), and a framework for other OLE based documents in future</li>
+        </ul>
+      </description>
+    </release>
     <release version="575" date="2024-05-16">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_575</url>
       <description>
