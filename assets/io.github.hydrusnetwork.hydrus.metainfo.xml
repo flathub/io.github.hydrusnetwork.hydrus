@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="577" date="2024-05-30">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_577</url>
+      <description>
+        <p>Changes in Version 577</p>
+        <ul>
+          <li>Thanks to a user, we have some new OS-file-explorer integration</li>
+          <li>The 'media' shortcut set gets the new 'open file properties' and 'open with...' commands to plug into these new features</li>
+          <li>The manage times single-time edit dialog's paste button can now eat any datstring you can think of. try pasting 'yesterday 3am' into it, it'll work!</li>
+        </ul>
+      </description>
+    </release>
     <release version="576" date="2024-05-23">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_576</url>
       <description>
