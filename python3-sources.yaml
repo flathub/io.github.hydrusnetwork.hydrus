@@ -88,6 +88,30 @@ modules:
         #  name: python_dateutil
         #  packagetype: bdist_wheel
         #  type: pypi
+  - name: python3-show-in-file-manager
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "show-in-file-manager>=1.1.5" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl
+        sha256: 2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5
+      - type: file
+        url: https://files.pythonhosted.org/packages/e5/8d/cf41b66a8110670e3ad03dab9b759704eeed07fa96e90fdc0357b2ba70e2/pyxdg-0.28-py2.py3-none-any.whl
+        sha256: bdaf595999a0178ecea4052b7f4195569c1ff4d344567bccdc12dfdf02d545ab
+      - type: file
+        url: https://files.pythonhosted.org/packages/8e/2d/cbae20c55a7a5a327de940eb217a5572ff6473e04406e56ece28729e447a/show_in_file_manager-1.1.5-py3-none-any.whl
+        sha256: a92a9ab2cd20fca45db5a8b2d2136e4bec624b182f000900855b2d992abd0cbc
+  - name: python3-olefile
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "olefile>=0.47" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/17/d3/b64c356a907242d719fc668b71befd73324e47ab46c8ebbbede252c154b2/olefile-0.47-py2.py3-none-any.whl
+        sha256: 543c7da2a7adadf21214938bb79c83ea12b473a4b6ee4ad4bf854e7715e13d1f
   - name: python3-dateparser
     buildsystem: simple
     build-commands:
