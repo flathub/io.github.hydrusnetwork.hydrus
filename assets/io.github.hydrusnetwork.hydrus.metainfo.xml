@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="579" date="2024-06-20">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_579</url>
+      <description>
+        <p>Changes in Version 579</p>
+        <ul>
+          <li>Added some new scroll-to tech to my multi-column lists</li>
+          <li>Import folders now work in a far more efficient way</li>
+          <li>The default bandwidth rules for a hydrus repository are boosted from 512MB a day to 2GB</li>
+        </ul>
+      </description>
+    </release>
     <release version="578" date="2024-06-06">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_578</url>
       <description>
