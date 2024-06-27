@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="580" date="2024-06-27">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_580</url>
+      <description>
+        <p>Changes in Version 580</p>
+        <ul>
+          <li>The taglist right-click menu now has a maintenance->regenerate tag display command</li>
+          <li>Fixed an issue where read-only import files would not delete from the temp dir after import</li>
+          <li>The new 'eye' icon in the media viewer now has 'apply image ICC Profile colour adjustments'</li>
+        </ul>
+      </description>
+    </release>
     <release version="579" date="2024-06-20">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_579</url>
       <description>
