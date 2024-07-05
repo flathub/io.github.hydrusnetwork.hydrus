@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="581" date="2024-07-05">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_581</url>
+      <description>
+        <p>Changes in Version 581</p>
+        <ul>
+          <li>A new Dark Blue stylesheet is added</li>
+          <li>timedelta widgets now enforce their minimum time on focus-out rather than value change</li>
+          <li>The filename-import tagging panel no longer emits a slow update signal when typing with an unchecked checkbox</li>
+        </ul>
+      </description>
+    </release>
     <release version="580" date="2024-06-27">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_580</url>
       <description>
