@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="582" date="2024-07-11">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_582</url>
+      <description>
+        <p>Changes in Version 582</p>
+        <ul>
+          <li>Fixed an issue where setting a file 'collect' was not automatically sorting the collected objects internally properly</li>
+          <li>Fixed a weird internal error state in the import folders manager where it could get confused about and throw an error regarding the import folders' next work times if an internal update notification occured during an import folder working</li>
+          <li>Fixed a typo error with the shortcut set 'special duplicate' button</li>
+        </ul>
+      </description>
+    </release>
     <release version="581" date="2024-07-05">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_581</url>
       <description>
