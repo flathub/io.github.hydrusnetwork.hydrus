@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="583" date="2024-07-18">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_583</url>
+      <description>
+        <p>Changes in Version 582</p>
+        <ul>
+          <li>Added a 'command palette' options page. the ability to show menubar and media actions is now set here with a couple of checkboxes (previously these were hidden behind advanced mode)</li>
+          <li>You can also now search for 'page of pages' with the command palette. this is turned on in the same new options page</li>
+          <li>The new sidecar test panel now only shows its notebook tabs if there is more than one source. the tab labels, when shown, are now '1st' ... '2nd' ordinal strings respective to the source list on the left</li>
+        </ul>
+      </description>
+    </release>
     <release version="582" date="2024-07-11">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_582</url>
       <description>
