@@ -73,10 +73,21 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="584" date="2024-07-25">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_584</url>
+      <description>
+        <p>Changes in Version 584</p>
+        <ul>
+          <li>Fixed a logical hole in the recent 'is this URL that is saying (deleted/already in db) trustworthy,</li>
+          <li>The 'copy all' and paste buttons in the manage known urls dialog are replaced with icon buttons, and the copy button now copies the current selection if there is one</li>
+          <li>The newish Regex input widget (the one that goes green/red based on current text validity) now propagates an Enter key into a dialog ok event when appropriate</li>
+        </ul>
+      </description>
+    </release>
     <release version="583" date="2024-07-18">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_583</url>
       <description>
-        <p>Changes in Version 582</p>
+        <p>Changes in Version 583</p>
         <ul>
           <li>Added a 'command palette' options page. the ability to show menubar and media actions is now set here with a couple of checkboxes (previously these were hidden behind advanced mode)</li>
           <li>You can also now search for 'page of pages' with the command palette. this is turned on in the same new options page</li>
