@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="585" date="2024-08-08">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_585</url>
+      <description>
+        <p>Changes in Version 585</p>
+        <ul>
+          <li>The tags->manage tag siblings/parents dialogs now load quickly.</li>
+          <li>The main edit operations in this dialog are now 'asynchronous', which means there is actually a short delay between the action firing and the UI updating. most of the time it is so fast it isn't noticeable</li>
+          <li>The dialogs now have a sticky workspace 'memory'</li>
+        </ul>
+      </description>
+    </release>
     <release version="584" date="2024-07-25">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_584</url>
       <description>
