@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="586" date="2024-08-15">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_586</url>
+      <description>
+        <p>Changes in Version 586</p>
+        <ul>
+          <li>Fixed up a bad preload routine in the new sibling/parents dialogs that was doing busy wait and eating up bunch of extra CPU</li>
+          <li>Simplified the main sibling/parent chain-following search</li>
+          <li>Further optimised the recursive loop of this search, particularly for parents which has to do some additional sibling ideal lookup stuff to join chains coupled by sibling relations</li>
+        </ul>
+      </description>
+    </release>
     <release version="585" date="2024-08-08">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_585</url>
       <description>
