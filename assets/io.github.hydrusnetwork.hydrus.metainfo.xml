@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="587" date="2024-08-22">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_587</url>
+      <description>
+        <p>Changes in Version 587</p>
+        <ul>
+          <li>The current local file domains of a file (e.g. 'my files') are now simply listed in the top-right hover window, above any remote locations or URLs.</li>
+          <li>if you set up a share->export files job and one of the internal files is actually missing, the error message now tells you to go check for missing files using the database file maintenance stuff</li>
+          <li>If an export files job that is set to delete internal files breaks half way through, the routine now makes sure only to delete what was actually successful</li>
+        </ul>
+      </description>
+    </release>
     <release version="586" date="2024-08-15">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_586</url>
       <description>
