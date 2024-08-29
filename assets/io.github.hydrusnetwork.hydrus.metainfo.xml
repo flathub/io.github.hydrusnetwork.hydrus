@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="588" date="2024-08-29">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_588</url>
+      <description>
+        <p>Changes in Version 588</p>
+        <ul>
+          <li>Every multi-column list in the program (there's about 75 of them) now works on a more sophisticated model</li>
+          <li>Multi-column lists are much better about initialising/migrating the selection 'focus' (</li>
+          <li>Fixed the 'show' part of 'pages->sidebar and preview panels->show/hide sidebar and preview panel', which was busted last week in the page relayout cleanup</li>
+        </ul>
+      </description>
+    </release>
     <release version="587" date="2024-08-22">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_587</url>
       <description>
