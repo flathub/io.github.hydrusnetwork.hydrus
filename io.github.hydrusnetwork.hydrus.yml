@@ -93,8 +93,8 @@ modules:
               url-template: https://github.com/pallets/jinja/archive/refs/tags/$version.tar.gz
             dest: 3rdparty/jinja
           - type: archive
-            url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.6.tar.gz
-            sha256: 61a70234dc7da467cceb07fcdd6dec1213d6143a1b6b19ccc5d7b64cc247ea47
+            url: https://github.com/Dav1dde/glad/archive/refs/tags/v2.0.7.tar.gz
+            sha256: 45f5754fc91de428a840e6ad0237a5577c342b53448527ee073d055c9f8fc767
             x-checker-data:
               type: anitya
               project-id: 300234
