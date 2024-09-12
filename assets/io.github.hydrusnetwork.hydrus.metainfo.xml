@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="589" date="2024-07-12">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_589</url>
+      <description>
+        <p>Changes in Version 589</p>
+        <ul>
+          <li>The similar-files search maintenance code has an important update that corrects tree rebalancing for a variety of clients that initialised with an unlucky first import file. in the database update, I will check if you were affected here and immediately optimise your tree if so. it might take a couple minutes if you have millions of files</li>
+          <li>Added an item, 'sync now', to the tags->sibling/parent sync menu. this is a nice easy way to force 'work hard' on all services that need work. it tells you if there was no work to do</li>
+          <li>Reworked the 'new page chooser' mini-dialog and better fixed-in-place the intended static 3x3 button layout</li>
+        </ul>
+      </description>
+    </release>
     <release version="588" date="2024-08-29">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_588</url>
       <description>
