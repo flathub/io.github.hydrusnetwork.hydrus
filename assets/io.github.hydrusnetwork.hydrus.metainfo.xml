@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="590" date="2024-07-19">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_590</url>
+      <description>
+        <p>Changes in Version 590</p>
+        <ul>
+          <li>The 'check now' button in manage subscriptions is generally more intelligent and now offers questions around paused status</li>
+          <li>If you shrink the search page's preview window down to 0 size (which it will suddenly snap to, and which is a silghtly different hide state to the one caused by double-left-clicking the splitter sash), the preview canvas will now recognise it is hidden and no longer load media as you click on thumbs. previously this thing was loading noisy videos in the background etc..</li>
+          <li>the 'gui pages' options panel now has 'when closing tabs, move focus (left/right)', so if you'd rather move left when middle-clicking tabs etc.., you can now set it, and if your style's default behaviour is whack and never moved to the right before despite you wanting it, now you can force it; it is now explicit either way. let me know if any crazy edge-case focus logic happens in this mode with nested page of pages or whatever</li>
+        </ul>
+      </description>
+    </release>
     <release version="589" date="2024-07-12">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_589</url>
       <description>
