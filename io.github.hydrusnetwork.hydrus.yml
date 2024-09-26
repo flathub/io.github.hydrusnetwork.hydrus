@@ -54,11 +54,11 @@ modules:
       - type: archive
         url: https://github.com/mpv-player/mpv/archive/v0.38.0.tar.gz
         sha256: 86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066
-        x-checker-data:
-          type: anitya
-          project-id: 5348
-          stable-only: true
-          url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
+        #x-checker-data:
+        #  type: anitya
+        #  project-id: 5348
+        #  stable-only: true
+        #  url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
     modules:
       - name: libplacebo
         buildsystem: meson
@@ -113,11 +113,11 @@ modules:
               - type: archive
                 url: https://github.com/KhronosGroup/glslang/archive/14.3.0.tar.gz
                 sha256: be6339048e20280938d9cb399fcdd06e04f8654d43e170e8cce5a56c9a754284
-                x-checker-data:
-                  type: anitya
-                  project-id: 205796
-                  stable-only: true
-                  url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
+                #-checker-data:
+                #  type: anitya
+                #  project-id: 205796
+                #  stable-only: true
+                #  url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
               - type: archive
                 url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-1.3.261.1.tar.gz
                 sha256: ead95c626ad482882a141d1aa0ce47b9453871f72c42c0b28d39c82f60a52008
