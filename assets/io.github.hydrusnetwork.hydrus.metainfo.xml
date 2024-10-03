@@ -73,6 +73,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="592" date="2024-08-03">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_592</url>
+      <description>
+        <p>Changes in Version 592</p>
+        <ul>
+          <li>The 'read' autocomplete dropdown has a new one-click 'clear search' button, just beside the favourites 'star' menu button. the 'empty page' favourite is removed from new users' defaults</li>
+          <li>In an alteration to the recent Autocomplete key processing, Ctrl+c/Ctrl+Insert will now propagate to the results list if you currently have none of the text input selected (i.e. if it would have been a no-op on the text input, we assume you wanted whatever is selected in the list)</li>
+          <li>We now log any time (when the client is non-idle) that a database job's work inside the transaction wrapper takes more than 15 seconds to complete</li>
+        </ul>
+      </description>
+    </release>
     <release version="590" date="2024-07-19">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_590</url>
       <description>
