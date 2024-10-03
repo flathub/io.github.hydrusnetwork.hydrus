@@ -62,10 +62,6 @@
       <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_video.png</image>
       <caption>Many file formats are supported</caption>
     </screenshot>
-    <screenshot>
-      <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_booru.png</image>
-      <caption>You can run your own (simple!) booru</caption>
-    </screenshot>
  </screenshots>
   <url type="bugtracker">https://github.com/hydrusnetwork/hydrus/issues</url>
   <url type="homepage">https://hydrusnetwork.github.io/hydrus/</url>
