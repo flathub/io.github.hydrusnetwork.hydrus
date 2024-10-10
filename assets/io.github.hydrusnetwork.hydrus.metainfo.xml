@@ -69,6 +69,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="593" date="2024-08-10">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_593</url>
+      <description>
+        <p>Changes in Version 593</p>
+        <ul>
+          <li>OR predicates are now multi-line</li>
+          <li>When you right-click an OR predicate, the 'copy' menu now recognises this as '3 selected tags' etc.. and will copy all the involved tags and handle subtags correctly</li>
+          <li>The 'remove/reset for all selected' file relationship menu is no longer hidden behind advanced mode. it being buried five layers deep is enough</li>
+        </ul>
+      </description>
+    </release>
     <release version="592" date="2024-08-03">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_592</url>
       <description>
