@@ -69,6 +69,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="594" date="2024-08-17">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_594</url>
+      <description>
+        <p>Changes in Version 594</p>
+        <ul>
+          <li>Fixed some bad layout in the edit predicates dialog for system:hash</li>
+          <li>Fixed some content update logic for the advanced delete choices of 'delete from all local file domains' and 'physically delete now', where the UI-side thumbnail logic was not removing the file from the 'all my files' or 'all local files' domains respectively, which caused some funny thumbnail display and hide/show rules until a restart rebuilt the media object from the (correct) db source</li>
+          <li>The system predicate parser no longer removes all underscores from to-be-parsed text. this fixes parsing for namespaces, URLs, service names, etc.. with underscores</li>
+        </ul>
+      </description>
+    </release>
     <release version="593" date="2024-08-10">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_593</url>
       <description>
