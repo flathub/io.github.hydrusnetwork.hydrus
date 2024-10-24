@@ -69,6 +69,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="595" date="2024-08-24">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_595</url>
+      <description>
+        <p>Changes in Version 595</p>
+        <ul>
+          <li>All existing ugoiras will be metadata rescanned and thumbnail regenned on update</li>
+          <li>Ugoira metadata and thumbnail generation is cleaner</li>
+          <li>A bug in ugoira thumbnail selection, when the file contains non-image files, is fixed</li>
+        </ul>
+      </description>
+    </release>
     <release version="594" date="2024-08-17">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_594</url>
       <description>
