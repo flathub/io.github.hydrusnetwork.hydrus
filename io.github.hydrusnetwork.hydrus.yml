@@ -235,8 +235,8 @@ modules:
       - -DBUILD_TESTING=OFF
     sources:
       - type: archive
-        url: https://github.com/strukturag/libheif/archive/v1.18.2/libheif-1.18.2.tar.gz
-        sha256: c2bf75ff61250fcdcb831f0d5d9d06808205d9ee3dd0749ef7a7c6f85dd30dc9
+        url: https://github.com/strukturag/libheif/archive/v1.19.4/libheif-1.19.4.tar.gz
+        sha256: db3d13203f3cb11ccbee67c868fb21ebb734ce1cccc02c9823808a3582d1f0f8
         x-checker-data:
           type: json
           url: https://api.github.com/repos/strukturag/libheif/releases/latest
