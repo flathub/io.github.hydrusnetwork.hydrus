@@ -84,8 +84,8 @@ modules:
               url-template: https://github.com/pallets/markupsafe/archive/refs/tags/$version.tar.gz
             dest: 3rdparty/markupsafe
           - type: archive
-            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.4.tar.gz
-            sha256: ed06f67abd2c8b7697dfb714f80715903ab0507e3c5acc11e92477e4ea51033b
+            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.5.tar.gz
+            sha256: 684d78790cc747f4b4b68b365783af8cac770c2c66d9f414b21c8b8480e019d0
             x-checker-data:
               type: anitya
               project-id: 3894
@@ -235,8 +235,8 @@ modules:
       - -DBUILD_TESTING=OFF
     sources:
       - type: archive
-        url: https://github.com/strukturag/libheif/archive/v1.18.2/libheif-1.18.2.tar.gz
-        sha256: c2bf75ff61250fcdcb831f0d5d9d06808205d9ee3dd0749ef7a7c6f85dd30dc9
+        url: https://github.com/strukturag/libheif/archive/v1.19.5/libheif-1.19.5.tar.gz
+        sha256: 5cd9a3e28493310358e1c1299cd596cc4c7ae5fb985eceb758fa6141424e58bb
         x-checker-data:
           type: json
           url: https://api.github.com/repos/strukturag/libheif/releases/latest
