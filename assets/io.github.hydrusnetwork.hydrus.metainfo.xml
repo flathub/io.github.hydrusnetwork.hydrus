@@ -69,6 +69,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="603" date="2024-12-19">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_603</url>
+      <description>
+        <p>Changes in Version 603</p>
+        <ul>
+          <li>Fixed a typo that caused the 'sort files by' menu to (ironically) sort by crazy means</li>
+          <li>Fixed a bug with the time delta widget where the ms would not set to 0 when it initialised with a value that has no milliseconds component but the minimum allowed value had a milliseconds component</li>
+          <li>Added some EXPERIMENTAL options just for me to options->speed and memory</li>
+        </ul>
+      </description>
+    </release>
     <release version="595" date="2024-08-24">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_595</url>
       <description>
