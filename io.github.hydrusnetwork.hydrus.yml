@@ -289,19 +289,19 @@ modules:
       append-ld-library-path: /usr/lib/sdk/llvm18/lib
       env:
         LLVM_INSTALL_DIR: /usr/lib/sdk/llvm18
-    build-commands:
-      - python3 setup.py build --qtpaths=/usr/bin/qtpaths --ignore-git --parallel=8
-        --log-level=verbose --no-qt-tools --shiboken-force-process-system-headers
-      - python3 create_wheels.py --build-dir ./build/qfp-*-release
-      - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
     cleanup:
       - /share/PySide6
-      - ${FLATPAK_DEST}/bin/pyside6-*
-      - ${FLATPAK_DEST}/lib/python*/site-packages/PySide6/scripts
+      - /bin/pyside6-*
+      - /lib/python*/site-packages/PySide6/scripts
+    build-commands:
+      - python3 setup.py build --qtpaths=/usr/bin/qtpaths --ignore-git --parallel=8
+        --log-level=verbose --no-qt-tools --flatpak
+      - python3 create_wheels.py --build-dir ./build/qfp-*-release
+      - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
     sources:
-      - type: archive
-        url: https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.8.0.2-src/pyside-setup-everywhere-src-6.8.0.tar.xz
-        sha256: 1a1a219a8f327e340d258275fad3a9f261b8f04bc57041747e73dd6ad252b4e1
+      - type: git
+        url: "https://code.qt.io/pyside/pyside-setup.git"
+        tag: "v6.8.0.2"
 
   - name: swftools
     buildsystem: autotools
