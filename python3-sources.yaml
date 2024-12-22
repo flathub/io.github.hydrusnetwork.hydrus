@@ -284,9 +284,9 @@ modules:
         --prefix=${FLATPAK_DEST} "lxml>=4.5.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ea/e2/3834472e7f18801e67a3cd6f3c203a5456d6f7f903cfb9a990e62098a2f3/lxml-5.2.1.tar.gz
-        sha256: 3f7765e69bbce0906a7c74d5fe46d2c7a7596147318dbc08e4a2431f3060e306
-        #x-checker-data:
+        url: https://files.pythonhosted.org/packages/e7/6b/20c3a4b24751377aaa6307eb230b66701024012c29dd374999cc92983269/lxml-5.3.0.tar.gz
+        sha256: 4e109ca30d1edec1ac60cdbe341905dc3b8f55b16855e03a54aaf59e51ec8c6f
+        # x-checker-data:
         #  name: lxml
         #  type: pypi
   - name: python3-lz4
@@ -686,9 +686,9 @@ modules:
         --prefix=${FLATPAK_DEST} "PyYAML>=5.0.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz
-        sha256: bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43
-        #x-checker-data:
+        url: https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz
+        sha256: d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e
+        # x-checker-data:
         #  name: PyYAML
         #  type: pypi
   - name: python3-QtPy

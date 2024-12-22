@@ -57,13 +57,13 @@ modules:
       - -Dmanpage-build=disabled
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.38.0.tar.gz
-        sha256: 86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066
-        #x-checker-data:
-        #  type: anitya
-        #  project-id: 5348
-        #  stable-only: true
-        #  url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
+        url: https://github.com/mpv-player/mpv/archive/v0.39.0.tar.gz
+        sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+        x-checker-data:
+          type: anitya
+          project-id: 5348
+          stable-only: true
+          url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
     modules:
       - name: libplacebo
         buildsystem: meson
@@ -89,8 +89,8 @@ modules:
               url-template: https://github.com/pallets/markupsafe/archive/refs/tags/$version.tar.gz
             dest: 3rdparty/markupsafe
           - type: archive
-            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.4.tar.gz
-            sha256: ed06f67abd2c8b7697dfb714f80715903ab0507e3c5acc11e92477e4ea51033b
+            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.5.tar.gz
+            sha256: 684d78790cc747f4b4b68b365783af8cac770c2c66d9f414b21c8b8480e019d0
             x-checker-data:
               type: anitya
               project-id: 3894
@@ -116,9 +116,9 @@ modules:
               - /bin
             sources:
               - type: archive
-                url: https://github.com/KhronosGroup/glslang/archive/14.3.0.tar.gz
-                sha256: be6339048e20280938d9cb399fcdd06e04f8654d43e170e8cce5a56c9a754284
-                #-checker-data:
+                url: https://github.com/KhronosGroup/glslang/archive/15.0.0.tar.gz
+                sha256: c31c8c2e89af907507c0631273989526ee7d5cdf7df95ececd628fd7b811e064
+                # x-checker-data:
                 #  type: anitya
                 #  project-id: 205796
                 #  stable-only: true
