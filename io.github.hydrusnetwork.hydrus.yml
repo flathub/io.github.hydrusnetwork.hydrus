@@ -305,6 +305,8 @@ modules:
 
   - name: swftools
     buildsystem: autotools
+    build-options:
+      cflags: -Wno-error=incompatible-pointer-types
     sources:
       - type: archive
         url: http://www.swftools.org/swftools-0.9.2.tar.gz
