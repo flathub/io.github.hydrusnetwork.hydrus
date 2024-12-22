@@ -232,24 +232,6 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
-  - name: libheif
-    buildsystem: cmake-ninja
-    builddir: true
-    config-opts:
-      - -DWITH_EXAMPLES=OFF
-      - -DBUILD_TESTING=OFF
-    sources:
-      - type: archive
-        url: https://github.com/strukturag/libheif/archive/v1.18.2/libheif-1.18.2.tar.gz
-        sha256: c2bf75ff61250fcdcb831f0d5d9d06808205d9ee3dd0749ef7a7c6f85dd30dc9
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/strukturag/libheif/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/strukturag/libheif/archive/\($tag)/libheif-\($version).tar.gz"'
-
   - python3-sources.yaml
 
   - name: python3-patchelf
