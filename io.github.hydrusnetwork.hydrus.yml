@@ -185,8 +185,8 @@ modules:
       - -DUPNPC_BUILD_SAMPLE=FALSE
     sources:
       - type: archive
-        sha256: 05b929679091b9921b6b6c1f25e39e4c8d1f4d46c8feb55a412aa697aee03a93
-        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.2.8.tar.gz
+        sha256: 025c9ab95677f02a69bc64ac0a747f07e02ba99cf797bc679a5a552fed8d990c
+        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.3.0.tar.gz
         x-checker-data:
           type: anitya
           project-id: 1986
@@ -300,8 +300,8 @@ modules:
       - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
     sources:
       - type: git
-        url: "https://code.qt.io/pyside/pyside-setup.git"
-        tag: "v6.8.0.2"
+        url: https://code.qt.io/pyside/pyside-setup.git
+        tag: v6.8.0.2
 
   - name: swftools
     buildsystem: autotools
