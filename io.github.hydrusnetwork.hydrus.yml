@@ -203,8 +203,8 @@ modules:
       - -DCMAKE_Fortran_COMPILER=gfortran
     sources:
       - type: archive
-        url: https://github.com/Reference-LAPACK/lapack/archive/refs/tags/v3.12.0.tar.gz
-        sha256: eac9570f8e0ad6f30ce4b963f4f033f0f643e7c3912fc9ee6cd99120675ad48b
+        url: https://github.com/Reference-LAPACK/lapack/archive/refs/tags/v3.12.1.tar.gz
+        sha256: 2ca6407a001a474d4d4d35f3a61550156050c48016d949f0da0529c0aa052422
         x-checker-data:
           type: anitya
           project-id: 1534
@@ -225,8 +225,8 @@ modules:
       - -DDYNAMIC_ARCH=ON
     sources:
       - type: archive
-        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.28.tar.gz
-        sha256: f1003466ad074e9b0c8d421a204121100b0751c96fc6fcf3d1456bd12f8a00a1
+        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.29.tar.gz
+        sha256: 38240eee1b29e2bde47ebb5d61160207dc68668a54cac62c076bb5032013b1eb
         x-checker-data:
           type: anitya
           project-id: 2540
