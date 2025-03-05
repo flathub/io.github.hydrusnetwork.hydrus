@@ -89,8 +89,8 @@ modules:
               url-template: https://github.com/pallets/markupsafe/archive/refs/tags/$version.tar.gz
             dest: 3rdparty/markupsafe
           - type: archive
-            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.5.tar.gz
-            sha256: 684d78790cc747f4b4b68b365783af8cac770c2c66d9f414b21c8b8480e019d0
+            url: https://github.com/pallets/jinja/archive/refs/tags/3.1.6.tar.gz
+            sha256: 2074b22a72caa65474902234b320d73463d6d4c223ee49f4b433495758356337
             x-checker-data:
               type: anitya
               project-id: 3894
