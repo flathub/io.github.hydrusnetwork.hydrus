@@ -69,6 +69,17 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
+    <release version="614" date="2025-03-20">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_614</url>
+      <description>
+        <p>Changes in Version 614</p>
+        <ul>
+          <li>The new system:tag (advanced) edit panel now has a 'write/edit' tag autocomplete to help you quickly enter what you want to search</li>
+          <li>Thanks to a user, we have two new QSS styles--'catmocchin blue' and 'catmocchin lavender'. there are additional style and colour suggestions inside the QSS files themselves</li>
+          <li>If you try to run profile mode on python 3.12+, you now get a popup saying it is broke atm and hydev will fix</li>
+        </ul>
+      </description>
+    </release>
     <release version="603" date="2024-12-19">
       <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_603</url>
       <description>
@@ -77,160 +88,6 @@
           <li>Fixed a typo that caused the 'sort files by' menu to (ironically) sort by crazy means</li>
           <li>Fixed a bug with the time delta widget where the ms would not set to 0 when it initialised with a value that has no milliseconds component but the minimum allowed value had a milliseconds component</li>
           <li>Added some EXPERIMENTAL options just for me to options->speed and memory</li>
-        </ul>
-      </description>
-    </release>
-    <release version="595" date="2024-08-24">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_595</url>
-      <description>
-        <p>Changes in Version 595</p>
-        <ul>
-          <li>All existing ugoiras will be metadata rescanned and thumbnail regenned on update</li>
-          <li>Ugoira metadata and thumbnail generation is cleaner</li>
-          <li>A bug in ugoira thumbnail selection, when the file contains non-image files, is fixed</li>
-        </ul>
-      </description>
-    </release>
-    <release version="594" date="2024-08-17">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_594</url>
-      <description>
-        <p>Changes in Version 594</p>
-        <ul>
-          <li>Fixed some bad layout in the edit predicates dialog for system:hash</li>
-          <li>Fixed some content update logic for the advanced delete choices of 'delete from all local file domains' and 'physically delete now', where the UI-side thumbnail logic was not removing the file from the 'all my files' or 'all local files' domains respectively, which caused some funny thumbnail display and hide/show rules until a restart rebuilt the media object from the (correct) db source</li>
-          <li>The system predicate parser no longer removes all underscores from to-be-parsed text. this fixes parsing for namespaces, URLs, service names, etc.. with underscores</li>
-        </ul>
-      </description>
-    </release>
-    <release version="593" date="2024-08-10">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_593</url>
-      <description>
-        <p>Changes in Version 593</p>
-        <ul>
-          <li>OR predicates are now multi-line</li>
-          <li>When you right-click an OR predicate, the 'copy' menu now recognises this as '3 selected tags' etc.. and will copy all the involved tags and handle subtags correctly</li>
-          <li>The 'remove/reset for all selected' file relationship menu is no longer hidden behind advanced mode. it being buried five layers deep is enough</li>
-        </ul>
-      </description>
-    </release>
-    <release version="592" date="2024-08-03">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_592</url>
-      <description>
-        <p>Changes in Version 592</p>
-        <ul>
-          <li>The 'read' autocomplete dropdown has a new one-click 'clear search' button, just beside the favourites 'star' menu button. the 'empty page' favourite is removed from new users' defaults</li>
-          <li>In an alteration to the recent Autocomplete key processing, Ctrl+c/Ctrl+Insert will now propagate to the results list if you currently have none of the text input selected (i.e. if it would have been a no-op on the text input, we assume you wanted whatever is selected in the list)</li>
-          <li>We now log any time (when the client is non-idle) that a database job's work inside the transaction wrapper takes more than 15 seconds to complete</li>
-        </ul>
-      </description>
-    </release>
-    <release version="590" date="2024-07-19">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_590</url>
-      <description>
-        <p>Changes in Version 590</p>
-        <ul>
-          <li>The 'check now' button in manage subscriptions is generally more intelligent and now offers questions around paused status</li>
-          <li>If you shrink the search page's preview window down to 0 size (which it will suddenly snap to, and which is a silghtly different hide state to the one caused by double-left-clicking the splitter sash), the preview canvas will now recognise it is hidden and no longer load media as you click on thumbs. previously this thing was loading noisy videos in the background etc..</li>
-          <li>the 'gui pages' options panel now has 'when closing tabs, move focus (left/right)', so if you'd rather move left when middle-clicking tabs etc.., you can now set it, and if your style's default behaviour is whack and never moved to the right before despite you wanting it, now you can force it; it is now explicit either way. let me know if any crazy edge-case focus logic happens in this mode with nested page of pages or whatever</li>
-        </ul>
-      </description>
-    </release>
-    <release version="589" date="2024-07-12">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_589</url>
-      <description>
-        <p>Changes in Version 589</p>
-        <ul>
-          <li>The similar-files search maintenance code has an important update that corrects tree rebalancing for a variety of clients that initialised with an unlucky first import file. in the database update, I will check if you were affected here and immediately optimise your tree if so. it might take a couple minutes if you have millions of files</li>
-          <li>Added an item, 'sync now', to the tags->sibling/parent sync menu. this is a nice easy way to force 'work hard' on all services that need work. it tells you if there was no work to do</li>
-          <li>Reworked the 'new page chooser' mini-dialog and better fixed-in-place the intended static 3x3 button layout</li>
-        </ul>
-      </description>
-    </release>
-    <release version="588" date="2024-08-29">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_588</url>
-      <description>
-        <p>Changes in Version 588</p>
-        <ul>
-          <li>Every multi-column list in the program (there's about 75 of them) now works on a more sophisticated model</li>
-          <li>Multi-column lists are much better about initialising/migrating the selection 'focus' (</li>
-          <li>Fixed the 'show' part of 'pages->sidebar and preview panels->show/hide sidebar and preview panel', which was busted last week in the page relayout cleanup</li>
-        </ul>
-      </description>
-    </release>
-    <release version="587" date="2024-08-22">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_587</url>
-      <description>
-        <p>Changes in Version 587</p>
-        <ul>
-          <li>The current local file domains of a file (e.g. 'my files') are now simply listed in the top-right hover window, above any remote locations or URLs.</li>
-          <li>if you set up a share->export files job and one of the internal files is actually missing, the error message now tells you to go check for missing files using the database file maintenance stuff</li>
-          <li>If an export files job that is set to delete internal files breaks half way through, the routine now makes sure only to delete what was actually successful</li>
-        </ul>
-      </description>
-    </release>
-    <release version="586" date="2024-08-15">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_586</url>
-      <description>
-        <p>Changes in Version 586</p>
-        <ul>
-          <li>Fixed up a bad preload routine in the new sibling/parents dialogs that was doing busy wait and eating up bunch of extra CPU</li>
-          <li>Simplified the main sibling/parent chain-following search</li>
-          <li>Further optimised the recursive loop of this search, particularly for parents which has to do some additional sibling ideal lookup stuff to join chains coupled by sibling relations</li>
-        </ul>
-      </description>
-    </release>
-    <release version="585" date="2024-08-08">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_585</url>
-      <description>
-        <p>Changes in Version 585</p>
-        <ul>
-          <li>The tags->manage tag siblings/parents dialogs now load quickly.</li>
-          <li>The main edit operations in this dialog are now 'asynchronous', which means there is actually a short delay between the action firing and the UI updating. most of the time it is so fast it isn't noticeable</li>
-          <li>The dialogs now have a sticky workspace 'memory'</li>
-        </ul>
-      </description>
-    </release>
-    <release version="584" date="2024-07-25">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_584</url>
-      <description>
-        <p>Changes in Version 584</p>
-        <ul>
-          <li>Fixed a logical hole in the recent 'is this URL that is saying (deleted/already in db) trustworthy,</li>
-          <li>The 'copy all' and paste buttons in the manage known urls dialog are replaced with icon buttons, and the copy button now copies the current selection if there is one</li>
-          <li>The newish Regex input widget (the one that goes green/red based on current text validity) now propagates an Enter key into a dialog ok event when appropriate</li>
-        </ul>
-      </description>
-    </release>
-    <release version="583" date="2024-07-18">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_583</url>
-      <description>
-        <p>Changes in Version 583</p>
-        <ul>
-          <li>Added a 'command palette' options page. the ability to show menubar and media actions is now set here with a couple of checkboxes (previously these were hidden behind advanced mode)</li>
-          <li>You can also now search for 'page of pages' with the command palette. this is turned on in the same new options page</li>
-          <li>The new sidecar test panel now only shows its notebook tabs if there is more than one source. the tab labels, when shown, are now '1st' ... '2nd' ordinal strings respective to the source list on the left</li>
-        </ul>
-      </description>
-    </release>
-    <release version="582" date="2024-07-11">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_582</url>
-      <description>
-        <p>Changes in Version 582</p>
-        <ul>
-          <li>Fixed an issue where setting a file 'collect' was not automatically sorting the collected objects internally properly</li>
-          <li>Fixed a weird internal error state in the import folders manager where it could get confused about and throw an error regarding the import folders' next work times if an internal update notification occured during an import folder working</li>
-          <li>Fixed a typo error with the shortcut set 'special duplicate' button</li>
-        </ul>
-      </description>
-    </release>
-    <release version="581" date="2024-07-05">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_581</url>
-      <description>
-        <p>Changes in Version 581</p>
-        <ul>
-          <li>A new Dark Blue stylesheet is added</li>
-          <li>timedelta widgets now enforce their minimum time on focus-out rather than value change</li>
-          <li>The filename-import tagging panel no longer emits a slow update signal when typing with an unchecked checkbox</li>
         </ul>
       </description>
     </release>
