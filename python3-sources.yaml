@@ -531,7 +531,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "mpv==1.0.7" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "mpv==1.0.8" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/aa/3f/d835556e34804cd0078507ed0f8a550f15d2861b875656193dd3451b720b/mpv-1.0.7-py3-none-any.whl
