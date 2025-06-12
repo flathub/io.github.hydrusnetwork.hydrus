@@ -69,27 +69,16 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
-    <release version="614" date="2025-03-20">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_614</url>
+    <release version="625" date="2025-06-05">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_625</url>
       <description>
-        <p>Changes in Version 614</p>
+        <p>Changes in Version 625</p>
         <ul>
-          <li>The new system:tag (advanced) edit panel now has a 'write/edit' tag autocomplete to help you quickly enter what you want to search</li>
-          <li>Thanks to a user, we have two new QSS styles--'catmocchin blue' and 'catmocchin lavender'. there are additional style and colour suggestions inside the QSS files themselves</li>
-          <li>If you try to run profile mode on python 3.12+, you now get a popup saying it is broke atm and hydev will fix</li>
+          <li>In services->manage services, all numerical rating services have a new 'icon padding' value, which allows you to squeeze the stars together or push them apart. set to 0 to restore the old 'loading bar' way of presenting (square) numerical ratings</li>
+          <li>The manage ratings dialog has better layout</li>
+          <li>Also, two new checkboxes in options->gui pages allow you to have the client ask you to auto-name new 'page of pages' on either creation or 'send pages to a new page of pages' events</li>
         </ul>
       </description>
-    </release>
-    <release version="603" date="2024-12-19">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_603</url>
-      <description>
-        <p>Changes in Version 603</p>
-        <ul>
-          <li>Fixed a typo that caused the 'sort files by' menu to (ironically) sort by crazy means</li>
-          <li>Fixed a bug with the time delta widget where the ms would not set to 0 when it initialised with a value that has no milliseconds component but the minimum allowed value had a milliseconds component</li>
-          <li>Added some EXPERIMENTAL options just for me to options->speed and memory</li>
-        </ul>
-      </description>
-    </release>
+      </release>
   </releases>
 </component>
