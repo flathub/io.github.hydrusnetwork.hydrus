@@ -324,8 +324,8 @@ modules:
       - pip install ./dist/*.whl --prefix=${FLATPAK_DEST}
     sources:
       - type: git
-        url: https://code.qt.io/pyside/pyside-setup.git
-        tag: v6.8.0.2
+        url: http://code.qt.io/pyside/pyside-setup.git
+        tag: v6.8.3
 
   - name: swftools
     buildsystem: autotools
