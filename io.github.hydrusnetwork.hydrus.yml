@@ -118,11 +118,11 @@ modules:
               - type: archive
                 url: https://github.com/KhronosGroup/glslang/archive/15.0.0.tar.gz
                 sha256: c31c8c2e89af907507c0631273989526ee7d5cdf7df95ececd628fd7b811e064
-                # x-checker-data:
-                #  type: anitya
-                #  project-id: 205796
-                #  stable-only: true
-                #  url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
+                x-checker-data:
+                  type: anitya
+                  project-id: 205796
+                  stable-only: true
+                  url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
               - type: archive
                 url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
                 sha256: 6b60f723345ceed5291cceebbcfacf7fea9361a69332261fa08ae57e2a562005
