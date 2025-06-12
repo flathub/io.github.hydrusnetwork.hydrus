@@ -57,8 +57,8 @@ modules:
       - -Dmanpage-build=disabled
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.39.0.tar.gz
-        sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+        url: https://github.com/mpv-player/mpv/archive/v0.40.0.tar.gz
+        sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
         x-checker-data:
           type: anitya
           project-id: 5348
@@ -146,8 +146,8 @@ modules:
           - --disable-static
         sources:
           - type: archive
-            url: https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.xz
-            sha256: eae425da50f0015c21f7b3a9c7262a910f0218af469e22e2931462fed3c50959
+            url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
+            sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
             x-checker-data:
               type: anitya
               project-id: 1560
@@ -185,8 +185,8 @@ modules:
       - -DUPNPC_BUILD_SAMPLE=FALSE
     sources:
       - type: archive
-        sha256: 985de16d2e5449c3ba0d3663a0c76cb2bff82472a0eb7a306107d93f44586ffe
-        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.3.2.tar.gz
+        sha256: d52a0afa614ad6c088cc9ddff1ae7d29c8c595ac5fdd321170a05f41e634bd1a
+        url: https://miniupnp.tuxfamily.org/files/miniupnpc-2.3.3.tar.gz
         x-checker-data:
           type: anitya
           project-id: 1986
