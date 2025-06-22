@@ -47,9 +47,15 @@ cleanup:
   - /share/doc
   - /share/man
   - /share/zsh
+build-options:
+  build-args:
+    - --share=network
 modules:
   - name: mpv
     buildsystem: meson
+    build-options:
+      build-args:
+        - --share=network
     config-opts:
       - -Dbuild-date=false
       - -Dlibmpv=true
