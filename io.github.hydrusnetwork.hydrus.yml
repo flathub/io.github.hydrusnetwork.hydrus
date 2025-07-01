@@ -34,6 +34,24 @@ finish-args:
   - --device=dri
   - --filesystem=home
   - --talk-name=org.kde.StatusNotifierWatcher
+  - --filesystem=host
+  - --system-talk-name=org.freedesktop.PolicyKit1
+  - --system-talk-name=org.bluez
+  - --talk-name=org.freedesktop.Notifications
+  - --filesystem=xdg-run/dconf
+  - --filesystem=~/.config/dconf:ro
+  - --talk-name=ca.desrt.dconf
+  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  - --env=GSCDAT=/app/share/GSC
+  - --filesystem=home
+  - --talk-name=org.kde.*
+  - --talk-name=org.freedesktop.DBus
+  - --system-talk-name=org.freedesktop.DBus
+  - --own-name=org.kde.*
+  - --system-talk-name=org.freedesktop.UPower
+  - --system-talk-name=org.freedesktop.login1
+  - --system-talk-name=org.freedesktop.NetworkManager
+  - --system-talk-name=org.freedesktop.UDisks2
 cleanup:
   - '*.a'
   - '*.la'
@@ -193,7 +211,7 @@ modules:
           url-template: https://miniupnp.tuxfamily.org/files/miniupnpc-$version.tar.gz
 
   - name: lapack
-    buildsystem: cmake-ninja
+    buildsystem: cmake
     builddir: true
     config-opts:
       - -DBUILD_SHARED_LIBS=ON
