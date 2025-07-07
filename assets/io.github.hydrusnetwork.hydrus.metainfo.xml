@@ -69,14 +69,14 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
-    <release version="625" date="2025-06-05">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_625</url>
+    <release version="628" date="2025-06-05">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_628</url>
       <description>
-        <p>Changes in Version 625</p>
+        <p>Changes in Version 628</p>
         <ul>
-          <li>In services->manage services, all numerical rating services have a new 'icon padding' value, which allows you to squeeze the stars together or push them apart. set to 0 to restore the old 'loading bar' way of presenting (square) numerical ratings</li>
-          <li>The manage ratings dialog has better layout</li>
-          <li>Also, two new checkboxes in options->gui pages allow you to have the client ask you to auto-name new 'page of pages' on either creation or 'send pages to a new page of pages' events</li>
+          <li>Under options->media viewer you can now have the ratings hover window and background appear, just like in the normal media viewer! quick ratings setting from the preview!</li>
+          <li>Under the new options->ratings, you can now customise the size of ratings in the manage ratings dialog and the preview viewer. you can also set a different width for inc/dec ratings</li>
+          <li>Also under options->ratings, you can now set numerical ratings to only show the 3/5 fraction and a single star on the thumbnail view</li>
         </ul>
       </description>
       </release>
