@@ -10,25 +10,34 @@
   </developer>
   <summary>Organize media on the desktop</summary>
   <description>
-    <p>The hydrus network client is a desktop application written for Anonymous and other internet enthusiasts with large media collections. It organises your files into an internal database and browses them with tags instead of folders, a little like a booru on your desktop. Tags and files can be anonymously shared through custom servers that any user may run. Everything is free, nothing phones home, and the source code is included with the release. It is developed mostly for Windows, but builds for Linux and macOS are available (perhaps with some limitations, depending on your situation).</p>
+    <p>The hydrus network client is a desktop application written for Anonymous and other internet
+      enthusiasts with large media collections. It organises your files into an internal database
+      and browses them with tags instead of folders, a little like a booru on your desktop. Tags and
+      files can be anonymously shared through custom servers that any user may run. Everything is
+      free, nothing phones home, and the source code is included with the release. It is developed
+      mostly for Windows, but builds for Linux and macOS are available (perhaps with some
+      limitations, depending on your situation).</p>
     <p>Currently importable filetypes are:</p>
     <ul>
-        <li>images - jpg, gif (including animated), png (including animated!), tiff, webp, bmp</li>
-        <li>video - webm, mp4, mpeg, avi, mov, mkv, flv, wmv</li>
-        <li>audio - mp3, flac, ogg, wma</li>
-        <li>misc - swf, pdf, psd, zip, rar, 7z</li>
+      <li>images - jpg, gif (including animated), png (including animated!), tiff, webp, bmp</li>
+      <li>video - webm, mp4, mpeg, avi, mov, mkv, flv, wmv</li>
+      <li>audio - mp3, flac, ogg, wma</li>
+      <li>misc - swf, pdf, psd, zip, rar, 7z</li>
     </ul>
     <p>The client can download files and parse tags from a number of websites, including by default:</p>
     <ul>
-        <li>various imageboards, with a thread watcher</li>
-        <li>the popular boorus</li>
-        <li>gallery sites like deviant art, and pixiv</li>
-        <li>tumblr and twitter</li>
+      <li>various imageboards, with a thread watcher</li>
+      <li>the popular boorus</li>
+      <li>gallery sites like deviant art, and pixiv</li>
+      <li>tumblr and twitter</li>
     </ul>
-    <p>And can be extended to download from more locations using easily shareable user-made downloaders. It can also be set to 'subscribe' to any gallery search, repeating it every few days to keep up with new results.</p>
-    <p>The program's emphasis is on your freedom. There is no DRM, no spying, no censorship. The program never phones home.</p>
+    <p>And can be extended to download from more locations using easily shareable user-made
+      downloaders. It can also be set to 'subscribe' to any gallery search, repeating it every few
+      days to keep up with new results.</p>
+    <p>The program's emphasis is on your freedom. There is no DRM, no spying, no censorship. The
+      program never phones home.</p>
   </description>
-  <content_rating type="oars-1.1"/>
+  <content_rating type="oars-1.1" />
   <screenshots>
     <screenshot type="default">
       <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_general_search.png</image>
@@ -38,7 +47,7 @@
       <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_desu.png</image>
       <caption>Media viewer</caption>
     </screenshot>
-   <screenshot>
+    <screenshot>
       <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_thread_watcher.png</image>
       <caption>The thread watcher works for 4chan and 8chan</caption>
     </screenshot>
@@ -62,23 +71,33 @@
       <image>https://hydrusnetwork.github.io/hydrus/images/screenshot_video.png</image>
       <caption>Many file formats are supported</caption>
     </screenshot>
- </screenshots>
+  </screenshots>
   <url type="bugtracker">https://github.com/hydrusnetwork/hydrus/issues</url>
   <url type="homepage">https://hydrusnetwork.github.io/hydrus/</url>
   <url type="donation">https://www.patreon.com/hydrus_dev</url>
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
-    <release version="628" date="2025-06-05">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_628</url>
+    <release version="632" date="2025-07-30">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_632</url>
       <description>
-        <p>Changes in Version 628</p>
+        <p>Changes in Version 632</p>
         <ul>
-          <li>Under options->media viewer you can now have the ratings hover window and background appear, just like in the normal media viewer! quick ratings setting from the preview!</li>
-          <li>Under the new options->ratings, you can now customise the size of ratings in the manage ratings dialog and the preview viewer. you can also set a different width for inc/dec ratings</li>
-          <li>Also under options->ratings, you can now set numerical ratings to only show the 3/5 fraction and a single star on the thumbnail view</li>
+          <li>
+            I did a v631a hotfix last week that fixed a looping network job(!!) under the particular
+            conditions where a Post URL A1) used subsidiary parsers and failed to parse any URLs or,
+            A2) did not parse anything generally, and B) had a certain environment, I think most
+            probably ffmpeg version, that judged the respective html/json to not be potentially
+            importable. I am very sorry for this problem and I thank the users who reported it and
+            helped me test
+          </li>
+          <li>
+            I added additional safety checks to the file and gallery import objects to stop this
+            type of error happening again. if an import job works and produces no status change, it
+            will now auto-veto with an appropriate note
+          </li>
         </ul>
       </description>
-      </release>
+    </release>
   </releases>
 </component>
