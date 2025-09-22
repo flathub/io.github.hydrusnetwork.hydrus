@@ -69,27 +69,28 @@
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <releases>
-    <release version="634" date="2025-08-13">
-      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_634</url>
+    <release version="639" date="2025-09-17">
+      <url type="details">https://hydrusnetwork.github.io/hydrus/changelog.html#version_639</url>
       <description>
-        <p>Changes in Version 634</p>
+        <p>Changes in Version 639</p>
         <ul>
           <li>
-            hotfix
-            I screwed up with a couple of bad typos in v633, and a couple bad bits of logic in the previous two weeks, so I ended up fixing it on Saturday and putting out a v633a hotfix. the full problems were--
-            export folders doing work (issue #1775)
-            setting forced filetypes
-            the 'repair missing locations' pre-boot dialog
-            the migrate files dialog when a path did not exist
-            some weird webms
-            sorry for the trouble and hassle--it looks like I just had some bad weeks recently and this just slipped through linting and my tests. I particularly regret export folders, since that isn't some super rare system, and I have written some a nicer unit tests to ensure they don't get hit by another stupid mistake like this
+            system:number of tags and system:tag as number have a nicer new namespace selection widget
           </li>
           <li>
-          inc/dec ratings
-            thanks to a user, inc/dec ratings now grow to be as wide as they need to! this affects numbers over 999. their size options are now based on height rather than width (issue #1759)
-          duplicates
-            if the two 'jpeg quality' statements have the same label, e.g. 'high quality vs high quality', the score is now 0. previously, if the behind the scenes quality scores were 728 vs 731, it'd colour green and give points, which was confusing and over-confident
-            last eek's ugly 'group mode' checkbox in the duplicates sidebar is now a scrollable menu button
+          fixed the duplicate filter group mode finding a new group after the previous group was resolved. I messed this up in last week's rewrite and it slipped through testing
+          </li>
+          <li>
+            huge multi-column lists handle large selections much more efficiently, particularly when they have lots of buttons. all the various logic that handles 'should this accompanying button be enabled?' and so on now uses calls that work much faster when there are thousands of items selected. in my tests, a sublist with 5,000 test items now updates to a new selection in under 30ms--previously it was about a second. similarly, pasting all those items to a new list now takes about six seconds, whereas previously it was locking up for ages and ages, perhaps forever (issue #1737)
+          </li>
+          <li>
+            fixed an issue where the 'move media files' dialog was saying all files were in their ideal location if the thumbnail location override was not set. this was happening because an error was being quashed over-eagerly. if this dialog has a similar problem in future, you might get some spammy reports, but it'll show. also a side thing, the 'set' button of the thumbnail location override no longer disables if you have a path set--feel free to move it to a new location in one step mate
+          </li>
+          <li>
+            the system that positions windows off the topLeft corner of their parent is now more forgiving of unusual window manager frame geometry. if you kept getting 'hey I just rescued a window from ( 24, -14 )'-style popups every time you open the options off a maximised main GUI, let me know what happens now--are your dialogs appearing offscreen, auto-repositioning to (0, 0), or is everything good now?
+          </li>
+          <li>
+            if you are feeling clever and can get an OR predicate into the duplicates auto-resolution 'test A or B' comparator, it now works! I'll brush up the UI in future to make it easy to enter an OR here (issue #1790)
           </li>
         </ul>
       </description>
