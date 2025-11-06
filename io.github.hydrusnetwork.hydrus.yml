@@ -72,8 +72,8 @@ modules:
           - -Ddemos=False
         sources:
           - type: archive
-            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.349.0/libplacebo-v7.349.0.tar.gz
-            sha256: 79120e685a1836344b51b13b6a5661622486a84e4d4a35f6c8d01679a20fbc86
+            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.gz
+            sha256: 4efe1c8d4da3c61295eb5fdfa50e6037409d8425eb3c15dd86788679c4ce59ee
             # x-checker-data:
             #  type: anitya
             #  project-id: 20101
@@ -124,8 +124,8 @@ modules:
                   stable-only: true
                   url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
               - type: archive
-                url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-                sha256: 6b60f723345ceed5291cceebbcfacf7fea9361a69332261fa08ae57e2a562005
+                url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz
+                sha256: bdd1692ad5cba1bdf8ace0850bcacc32abc2abfaef373328689fa2809ab7027f
                 dest: External/spirv-tools
                 #x-checker-data:
                 #  type: anitya
@@ -133,8 +133,8 @@ modules:
                 #  project-id: 334920
                 #  url-template: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-$version.tar.gz
               - type: archive
-                url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-                sha256: f68be549d74afb61600a1e3a7d1da1e6b7437758c8e77d664909f88f302c5ac1
+                url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.328.0.tar.gz
+                sha256: 00284a33e1e19014723c8e88ca7a16e8988cd23f839ec2b7da6bb1808fd2a751
                 dest: External/spirv-tools/external/spirv-headers
                 #x-checker-data:
                 #  type: anitya
@@ -225,8 +225,8 @@ modules:
       - -DDYNAMIC_ARCH=ON
     sources:
       - type: archive
-        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.29.tar.gz
-        sha256: 38240eee1b29e2bde47ebb5d61160207dc68668a54cac62c076bb5032013b1eb
+        url: https://github.com/xianyi/OpenBLAS/archive/v0.3.30.tar.gz
+        sha256: 27342cff518646afb4c2b976d809102e368957974c250a25ccc965e53063c95d
         #x-checker-data:
         #  type: anitya
         #  project-id: 2540
@@ -341,8 +341,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v639
-        commit: f5058a09eccc1f58f9a047a9b36352c44cc8345d
+        tag: v646
+        commit: 23db2447c3cfb8bc8d74880a60fb47797ee8c28f
 #        x-checker-data:
 #          type: git
 #          tag-pattern: ^v([\d.]+)$
