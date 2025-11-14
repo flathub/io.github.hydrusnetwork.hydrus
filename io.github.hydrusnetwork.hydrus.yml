@@ -214,20 +214,10 @@ modules:
   - name: openblas
     buildsystem: cmake-ninja
     builddir: true
-    build-options:  # Temporary workaround to build openblas until this patch has been included in a release https://github.com/OpenMathLib/OpenBLAS/pull/5365  targeted for 0.3.31
-      arch:
-        aarch64:
-          config-opts:
-            - -DHAVE_SME=TRUE
     config-opts:
+      - -DBUILD_TESTING:BOOL=OFF
+      - -DDYNAMIC_ARCH:BOOL=ON
       - -DBUILD_SHARED_LIBS=ON
-      - -DBUILD_TESTING=OFF
-      - -DNO_AFFINITY=ON
-      - -DUSE_OPENMP=1
-      - -DNO_WARMUP=1
-      - -DCORE=CORE2
-      - -DNUM_THREADS=64
-      - -DDYNAMIC_ARCH=ON
     cleanup:
       - /bin
       - /include
