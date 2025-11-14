@@ -216,12 +216,9 @@ modules:
     builddir: true
     build-options:  # Temporary workaround to build openblas until this patch has been included in a release https://github.com/OpenMathLib/OpenBLAS/pull/5365  targeted for 0.3.31
       arch:
-        x86_64:
-          config-opts:
-            - -DTARGET=CORE2
         aarch64:
           config-opts:
-            - -DTARGET=ARMV8
+            - -DHAVE_SME=FALSE
     config-opts:
       - -DBUILD_SHARED_LIBS=ON
       - -DBUILD_TESTING=OFF
