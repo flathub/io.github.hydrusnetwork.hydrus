@@ -235,6 +235,18 @@ modules:
           project-id: 2540
           url-template: https://github.com/OpenMathLib/OpenBLAS/archive/v$version.tar.gz
 
+      # Temporary until the patch makes it into 0.3.31
+      - type: file
+        url: https://patch-diff.githubusercontent.com/raw/OpenMathLib/OpenBLAS/pull/5365.patch
+        dest-filename: 5365.patch
+        sha512: ebd33ad0ddc35f48df55fe01ff9f379966384eb3e8e939839fec606de507ba0f0ac32ed648297a23d2f2a3b681255418d022151006cc9d423cdaa60508739234
+
+      - type: script
+        commands:
+          - patch -p1 < 5356.patch
+
+
+
   - python3-sources.yaml
 
   - name: python3-scikit_build
