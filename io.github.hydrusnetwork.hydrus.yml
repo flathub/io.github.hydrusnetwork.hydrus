@@ -218,7 +218,7 @@ modules:
       arch:
         aarch64:
           config-opts:
-            - -DHAVE_SME=FALSE
+            - -DHAVE_SME=TRUE
     config-opts:
       - -DBUILD_SHARED_LIBS=ON
       - -DBUILD_TESTING=OFF
