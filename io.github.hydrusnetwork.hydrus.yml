@@ -99,41 +99,6 @@ modules:
               stable-only: true
               url-template: https://github.com/Dav1dde/glad/archive/refs/tags/v$version.tar.gz
             dest: 3rdparty/glad
-        modules:
-          - name: glslang
-            buildsystem: cmake-ninja
-            config-opts:
-              - -DCMAKE_BUILD_TYPE=Release
-              - -DBUILD_SHARED_LIBS=ON
-            cleanup:
-              - /bin
-            sources:
-              - type: archive
-                url: https://github.com/KhronosGroup/glslang/archive/16.0.0.tar.gz
-                sha256: 172385478520335147d3b03a1587424af0935398184095f24beab128a254ecc7
-                x-checker-data:
-                  type: anitya
-                  project-id: 205796
-                  stable-only: true
-                  url-template: https://github.com/KhronosGroup/glslang/archive/$version.tar.gz
-              - type: archive
-                url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-                sha256: 6b60f723345ceed5291cceebbcfacf7fea9361a69332261fa08ae57e2a562005
-                dest: External/spirv-tools
-                #x-checker-data:
-                #  type: anitya
-                #  stable-only: true
-                #  project-id: 334920
-                #  url-template: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-$version.tar.gz
-              - type: archive
-                url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-                sha256: f68be549d74afb61600a1e3a7d1da1e6b7437758c8e77d664909f88f302c5ac1
-                dest: External/spirv-tools/external/spirv-headers
-                #x-checker-data:
-                #  type: anitya
-                #  stable-only: true
-                #  project-id: 334920
-                #  url-template: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-$version.tar.gz
       - name: libass
         config-opts:
           - --disable-static
