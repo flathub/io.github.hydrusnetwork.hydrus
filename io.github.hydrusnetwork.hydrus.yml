@@ -72,6 +72,8 @@ modules:
               project-id: 20101
               stable-only: true
               url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
+          - type: patch
+            path: patches/libplacebo-python-xml.patch
           - type: archive
             url: https://github.com/pallets/markupsafe/archive/refs/tags/3.0.3.tar.gz
             sha256: f1d9d06c34515dd3ad210ec769da613057b536d11d6c039183b87757a883a254
