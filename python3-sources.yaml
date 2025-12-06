@@ -304,6 +304,8 @@ modules:
         sha256: 79f0687a4f3250547e02b852e79966f45d9786467bfc8dc6b1271011ef14ff62
   - name: python3-pillow-avif-plugin
     buildsystem: simple
+    build-options:
+      cflags: -Wno-incompatible-pointer-types
     build-commands:
     - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
       --prefix=${FLATPAK_DEST} "pillow-avif-plugin" --no-build-isolation
