@@ -302,12 +302,14 @@ modules:
         url: https://github.com/hydrusnetwork/hydrus.git
         tag: v639
         commit: f5058a09eccc1f58f9a047a9b36352c44cc8345d
-#        x-checker-data:
-#          type: git
-#          tag-pattern: ^v([\d.]+)$
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+          release-url-template: https://github.com/hydrusnetwork/hydrus/releases/tag/v$version
+          is-main-source: true
       - type: file
         path: assets/icon/io.github.hydrusnetwork.hydrus.128.png
       - type: file
         path: assets/io.github.hydrusnetwork.hydrus.desktop
       - type: file
-        path: assets/io.github.hydrusnetwork.hydrus.metainfo.xml
+        path: io.github.hydrusnetwork.hydrus.metainfo.xml
