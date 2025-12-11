@@ -32,7 +32,12 @@ finish-args:
   - --share=ipc
   - --share=network
   - --device=dri
-  - --filesystem=home
+  - --filesystem=~/Hydrus:create
+  - --filesystem=xdg-desktop
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-pictures
+  - --filesystem=xdg-videos
   - --talk-name=org.kde.StatusNotifierWatcher
 cleanup:
   - '*.a'
