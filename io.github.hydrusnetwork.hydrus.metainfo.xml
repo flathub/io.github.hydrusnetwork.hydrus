@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>io.github.hydrusnetwork.hydrus</id>
   <name>Hydrus</name>
   <launchable type="desktop-id">io.github.hydrusnetwork.hydrus.desktop</launchable>
@@ -68,6 +68,7 @@
   <url type="donation">https://www.patreon.com/hydrus_dev</url>
   <url type="contact">https://hydrusnetwork.github.io/hydrus/contact.html</url>
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
+  <url type="vcs-browser">https://github.com/hydrusnetwork/hydrus</url>
   <releases>
     <release version="653" date="2026-01-01">
       <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v653</url>
