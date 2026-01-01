@@ -50,8 +50,8 @@ modules:
       - -Dmanpage-build=disabled
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.40.0.tar.gz
-        sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
+        url: https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz
+        sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
         x-checker-data:
           type: anitya
           project-id: 5348
@@ -300,8 +300,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v650
-        commit: 2c74ca873aef512fcf8f82bcf7d7eaae239dc524
+        tag: v653
+        commit: 5520a978d3d975d7b07aa7f3cb3d84acd349acd6
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
