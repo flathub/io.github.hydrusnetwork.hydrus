@@ -65,8 +65,8 @@ modules:
           - -Ddemos=False
         sources:
           - type: archive
-            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.351.0/libplacebo-v7.351.0.tar.gz
-            sha256: 4efe1c8d4da3c61295eb5fdfa50e6037409d8425eb3c15dd86788679c4ce59ee
+            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.0/libplacebo-v7.360.0.tar.gz
+            sha256: 7f4e182526b738805ff793717c67a256bc3f6bc10025017f0b10193f2c79abb9
             x-checker-data:
               type: anitya
               project-id: 20101
@@ -300,8 +300,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v657
-        commit: e181bcc801a1dea97c7bd9bdc020fa1435e6cb7e
+        tag: v661
+        commit: 788ab62e6ef679dcfe82fa6fb4734023708c3f31
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
