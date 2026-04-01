@@ -65,8 +65,8 @@ modules:
           - -Ddemos=False
         sources:
           - type: archive
-            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.0/libplacebo-v7.360.0.tar.gz
-            sha256: 7f4e182526b738805ff793717c67a256bc3f6bc10025017f0b10193f2c79abb9
+            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.1/libplacebo-v7.360.1.tar.gz
+            sha256: 14c0a99f4b01557ec9826ce6b1d52f6de21be274ba03fd5aab7307f18766dc39
             x-checker-data:
               type: anitya
               project-id: 20101
@@ -180,8 +180,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.31/OpenBLAS-0.3.31.tar.gz
-        sha256: 6dd2a63ac9d32643b7cc636eab57bf4e57d0ed1fff926dfbc5d3d97f2d2be3a6
+        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.32/OpenBLAS-0.3.32.tar.gz
+        sha256: f8a1138e01fddca9e4c29f9684fd570ba39dedc9ca76055e1425d5d4b1a4a766
         x-checker-data:
           type: anitya
           project-id: 2540
@@ -298,8 +298,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v661
-        commit: 788ab62e6ef679dcfe82fa6fb4734023708c3f31
+        tag: v665
+        commit: 4bac11766e271eaff4574b220d9a4e9e078ef434
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
