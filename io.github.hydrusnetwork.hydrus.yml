@@ -180,8 +180,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.32/OpenBLAS-0.3.32.tar.gz
-        sha256: f8a1138e01fddca9e4c29f9684fd570ba39dedc9ca76055e1425d5d4b1a4a766
+        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.33/OpenBLAS-0.3.33.tar.gz
+        sha256: 6761af1d9f5d353ab4f0b7497be2643313b36c8f31caec0144bfef198e71e6ab
         x-checker-data:
           type: anitya
           project-id: 2540
@@ -298,8 +298,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v665
-        commit: 4bac11766e271eaff4574b220d9a4e9e078ef434
+        tag: v670
+        commit: 2128a06ca700a6334cdbe40959cfd4ed350f2876
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
