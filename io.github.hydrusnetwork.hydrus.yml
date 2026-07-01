@@ -104,8 +104,8 @@ modules:
           - --disable-static
         sources:
           - type: archive
-            url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
-            sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
+            url: https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.xz
+            sha256: 2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc
             x-checker-data:
               type: anitya
               project-id: 1560
@@ -298,8 +298,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v673
-        commit: 54d3a4e1e85144fa3f797be9a56bd7234f2614d8
+        tag: v676
+        commit: 6038d0680311205497f96dcffedbb6b26d49eeb8
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
