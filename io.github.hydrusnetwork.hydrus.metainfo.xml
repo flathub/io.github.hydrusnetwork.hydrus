@@ -70,9 +70,13 @@
   <url type="faq">https://hydrusnetwork.github.io/hydrus/faq.html</url>
   <url type="vcs-browser">https://github.com/hydrusnetwork/hydrus</url>
   <releases>
+    <release version="681" date="2026-08-01">
+      <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v681</url>
+      <description></description>
+    </release>
     <release version="676" date="2026-07-01">
       <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v676</url>
-      <description></description>
+      <description/>
     </release>
     <release version="673" date="2026-06-01">
       <url type="details">https://github.com/hydrusnetwork/hydrus/releases/tag/v673</url>
