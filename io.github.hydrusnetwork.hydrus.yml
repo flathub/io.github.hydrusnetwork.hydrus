@@ -65,16 +65,16 @@ modules:
           - -Ddemos=False
         sources:
           - type: archive
-            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.1/libplacebo-v7.360.1.tar.gz
-            sha256: 14c0a99f4b01557ec9826ce6b1d52f6de21be274ba03fd5aab7307f18766dc39
+            url: https://code.videolan.org/videolan/libplacebo/-/archive/v7.387.0/libplacebo-v7.387.0.tar.gz
+            sha256: 3bf5d72786682c194387c33d563872f6bfe202a9816f9dde6535a31a9b2e0d74
             x-checker-data:
               type: anitya
               project-id: 20101
               stable-only: true
               url-template: https://code.videolan.org/videolan/libplacebo/-/archive/v$version/libplacebo-v$version.tar.gz
           - type: archive
-            url: https://github.com/pallets/markupsafe/archive/refs/tags/3.0.3.tar.gz
-            sha256: f1d9d06c34515dd3ad210ec769da613057b536d11d6c039183b87757a883a254
+            url: https://github.com/pallets/markupsafe/archive/refs/tags/3.0.4.tar.gz
+            sha256: d10493b310df657ec6e719f2c3e49a2e9189bfe065e3ba4b9c339c586979d5bc
             x-checker-data:
               type: anitya
               project-id: 3918
@@ -180,8 +180,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.33/OpenBLAS-0.3.33.tar.gz
-        sha256: 6761af1d9f5d353ab4f0b7497be2643313b36c8f31caec0144bfef198e71e6ab
+        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.34/OpenBLAS-0.3.34.tar.gz
+        sha256: cd7e129868320cc2d033afa920e31202dfe0b8066a5b66661900ccc0f197dfed
         x-checker-data:
           type: anitya
           project-id: 2540
@@ -298,8 +298,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/hydrusnetwork/hydrus.git
-        tag: v676
-        commit: 6038d0680311205497f96dcffedbb6b26d49eeb8
+        tag: v693
+        commit: b90ba0fd26031981c22c838d5f7660d8568f8a75
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
